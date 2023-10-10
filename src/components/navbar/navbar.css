@@ -1,0 +1,134 @@
+.navbar__bg {
+  background-color: #00000075;
+  position: fixed;
+  width: 100vw;
+  z-index: 1;
+  text-align: center;
+}
+.navbar-item a {
+  text-decoration: none;
+  color: white;
+  margin: 0px 25px;
+  font-size: 16px;
+  padding: 35px 0px;
+  transition: 0.4s ease-in-out;
+}
+
+.logo {
+  width: 49px;
+  height: auto;
+  object-fit: cover;
+
+  object-position: center;
+}
+.navbar-item:hover a {
+  cursor: pointer;
+  transition: color 0.3s ease;
+  color: var(--color-secondary);
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  position: relative;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  color: white;
+  z-index: 2;
+  position: relative;
+}
+.closed-icone {
+  width: 52px;
+  height: 52px;
+}
+.navbar-menu {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+.menu__icone {
+  cursor: pointer;
+  width: 49px;
+  height: 48px;
+}
+.toggle-menu {
+  display: block;
+}
+.contact {
+  display: none;
+}
+.open-button {
+  display: block;
+  background-color: #9e9e9ef7;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  opacity: 1;
+  height: auto;
+  transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
+  top: 306px;
+  color: white;
+  padding: 25px 16px;
+  border-radius: 0px;
+}
+.open-button a {
+  font-size: 18px;
+  animation: appear 0.3 ease-in-out;
+}
+.open-button:hover {
+  color: black;
+  background-color: var(--color-secondary);
+  cursor: pointer;
+}
+.navbar-menu.open {
+  display: block;
+  background-color: var(--color-primary);
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  top: 71px;
+  opacity: 1;
+  height: auto;
+  transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+.navbar-item {
+  font-size: 18px;
+  padding: 25px 16px;
+  border: 2px solid transparent;
+  border-bottom-color: var(--color-secondary);
+}
+.navbar-menu.open .navbar-item a {
+  font-size: 18px;
+  animation: appear 0.3 ease-in-out;
+}
+@keyframes colorChange {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    padding: 1rem 2rem;
+  }
+  .navbar-item {
+    padding: 18px 9px;
+  }
+  .open-button {
+    top: 445px;
+  }
+}
