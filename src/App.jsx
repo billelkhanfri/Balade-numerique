@@ -7,7 +7,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-   <h1> Balade Numérique</h1>
+   <h1> Balade </h1>
   )
 }
 
