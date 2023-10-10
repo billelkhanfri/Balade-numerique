@@ -1,35 +1,30 @@
-import { useState } from "react";
 import "./navbar.css";
 import { RiMenu3Line, RiCloseFill } from "react-icons/ri";
-import Logo from "../../assets/images/android-chrome-192x192.png"
+import Logo from "../../assets/images/android-chrome-192x192.png";
+import { Link } from "react-router-dom";
 
-const Navbar = () => {
-  const [menuOpen, setMeuOpen] = useState(false);
-  const toggleMenu = () => {
-    setMeuOpen(!menuOpen);
-  };
+const Navbar = ({ menuOpen, toggleMenu }) => {
   return (
     <div className="navbar__bg">
       <div className="container">
         <nav className="navbar">
           <div className="navbar-logo">
-            <a href="/">
-               <img  className="logo" src={Logo} alt="" /> 
-              </a>
+            <Link to="/">
+              <img className="logo" src={Logo} alt="" />
+            </Link>
           </div>
 
           <ul className={` navbar-menu ${menuOpen ? "open" : ""}`}>
             <li className="navbar-item">
-              <a href="/accueil">Accueil</a>
+              <Link to="/">Accueil</Link>
             </li>
 
             <li className="navbar-item">
-              <a href="/Lieux">Lieux</a>
+              <Link to="/lieux">Lieux</Link>
             </li>
             <li className="navbar-item">
-              <a href="/Carte">Carte</a>
+              <Link to="/carte">Carte</Link>
             </li>
-           
           </ul>
 
           <div className={` contact ${menuOpen ? "open-button" : ""}`}>

@@ -7,7 +7,7 @@ const SplashScreen = () => {
   useEffect(() => {
     const interval = setTimeout(() => {
       setShow(false);
-    }, 2000);
+    }, 500);
     return () => clearInterval(interval);
   }, []);
 

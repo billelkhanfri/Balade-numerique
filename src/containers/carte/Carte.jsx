@@ -1,8 +1,12 @@
+import Navbar from "../../components/navbar/Navbar";
 
 function Carte() {
   return (
-    <div>Carte</div>
-  )
+    <>
+      <Navbar></Navbar>
+      <div>Carte</div>
+    </>
+  );
 }
 
-export default Carte
+export default Carte;

@@ -1,8 +1,12 @@
+import Navbar from "../../components/navbar/Navbar";
 
 function Lieux() {
   return (
-    <div>Lieux</div>
-  )
+    <>
+      <Navbar></Navbar>
+      <div>Lieux</div>
+    </>
+  );
 }
 
-export default Lieux
+export default Lieux;

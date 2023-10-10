@@ -4,6 +4,8 @@
   width: 100vw;
   z-index: 1;
   text-align: center;
+  top: O;
+  left: 0;
 }
 .navbar-item a {
   text-decoration: none;

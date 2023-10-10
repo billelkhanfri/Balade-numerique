@@ -1,0 +1,11 @@
+.white-section {
+  height: 70px;
+}
+.section {
+  text-align: center;
+  margin-top: 20px;
+}
+.menu-open.section {
+  margin-top: 330px;
+  transition: all 0.3 ease-in-out;
+}
