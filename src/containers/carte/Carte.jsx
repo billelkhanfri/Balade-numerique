@@ -1,10 +1,15 @@
 import Navbar from "../../components/navbar/Navbar";
-
+import { useState } from "react";
 function Carte() {
+  const [menuOpen, setMeuOpen] = useState(false);
+  const toggleMenu = () => {
+    setMeuOpen(!menuOpen);
+  };
   return (
     <>
-      <Navbar></Navbar>
-      <div>Carte</div>
+            <Navbar menuOpen={menuOpen} toggleMenu={toggleMenu} />
+
+      <h1>je suis dans la page Carte</h1>
     </>
   );
 }

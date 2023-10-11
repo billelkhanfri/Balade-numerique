@@ -1,23 +1,21 @@
 .navbar__bg {
-  background-color: #00000075;
-  position: fixed;
+  background-color: #00000099;
+  position: absolute;
   width: 100vw;
-  z-index: 1;
+  z-index: 1000;
   text-align: center;
-  top: O;
-  left: 0;
+bottom: 0;
 }
 .navbar-item a {
   text-decoration: none;
   color: white;
-  margin: 0px 25px;
+  
   font-size: 16px;
-  padding: 35px 0px;
   transition: 0.4s ease-in-out;
 }
 
 .logo {
-  width: 49px;
+  width: 60px;
   height: auto;
   object-fit: cover;
 
@@ -48,10 +46,7 @@
   height: 52px;
 }
 .navbar-menu {
-  opacity: 0;
-  height: 0;
-  overflow: hidden;
-  transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
+  display: none;
 }
 .menu__icone {
   cursor: pointer;
@@ -64,6 +59,36 @@
 .contact {
   display: none;
 }
+.menu{
+  
+}
+.menu-item{
+  list-style: none;
+  color: white;
+}
+.icons{
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+.fav-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  gap: 10px;
+}
+.fav-icons{
+  width: 20px;
+  height: 20px;
+  
+}
+.link{
+  color: white;
+}
+.link p {
+  font-size: 16px;
+}
 .open-button {
   display: block;
   background-color: #9e9e9ef7;
@@ -74,7 +99,7 @@
   opacity: 1;
   height: auto;
   transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
-  top: 306px;
+  bottom: 306px;
   color: white;
   padding: 25px 16px;
   border-radius: 0px;
@@ -95,7 +120,7 @@
   width: 100%;
   text-align: center;
   left: 0;
-  top: 71px;
+  bottom: 71px;
   opacity: 1;
   height: auto;
   transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
@@ -123,14 +148,4 @@
   }
 }
 
-@media screen and (max-width: 425px) {
-  .container {
-    padding: 1rem 2rem;
-  }
-  .navbar-item {
-    padding: 18px 9px;
-  }
-  .open-button {
-    top: 445px;
-  }
-}
+

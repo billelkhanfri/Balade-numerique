@@ -1,20 +1,22 @@
+import React from 'react'
 import { useState } from "react";
 import Navbar from "../../components/navbar/Navbar";
-import Map from "../../components/map/Map"
-import "./accueil.css";
-const Accueil = () => {
+
+
+
+function circuit() {
   const [menuOpen, setMeuOpen] = useState(false);
-  const toggleMenu = () => {
-    setMeuOpen(!menuOpen);
-  };
+const toggleMenu = () => {
+  setMeuOpen(!menuOpen);
+};
   return (
     <>
       <Navbar menuOpen={menuOpen} toggleMenu={toggleMenu} />
-    
-       
-        <Map/>
-      
+
+<h1>je suis dans la page Circuit</h1>
     </>
-  );
-};
-export default Accueil;
+  
+  )
+}
+
+export default circuit

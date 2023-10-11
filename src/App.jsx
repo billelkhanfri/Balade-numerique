@@ -4,6 +4,10 @@ import Lieux from "./containers/lieux/Lieux";
 import Carte from "./containers/carte/Carte";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SplashScreen from "./components/splashScreen/splashScreen";
+import About from "./containers/about/About";
+import Circuit from "./containers/circuit/Circuit";
+import Favoris from "./containers/favoris/Favoris";
+import Liens from "./containers/liens-utils/Liens";
 
 function App() {
   return (
@@ -15,6 +19,10 @@ function App() {
         </Route>
         <Route path="/lieux" element={<Lieux />}></Route>
         <Route path="/carte" element={<Carte />}></Route>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/circuit" element={<Circuit />}></Route>
+        <Route path="/favoris" element={<Favoris />}></Route>
+        <Route path="/liens" element={< Liens/>}></Route>
       </Routes>
     </BrowserRouter>
   );
