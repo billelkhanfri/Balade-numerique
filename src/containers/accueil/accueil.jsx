@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Navbar from "../../components/navbar/Navbar";
-import Map from "../../components/map/Map"
+
 import "./accueil.css";
+import CurrentLocationMap from "../../components/current-location/CurrentLocationMap";
 const Accueil = () => {
   const [menuOpen, setMeuOpen] = useState(false);
   const toggleMenu = () => {
@@ -11,8 +12,8 @@ const Accueil = () => {
     <>
       <Navbar menuOpen={menuOpen} toggleMenu={toggleMenu} />
     
-       
-        <Map/>
+       <CurrentLocationMap/>
+
       
     </>
   );
