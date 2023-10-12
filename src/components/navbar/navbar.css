@@ -1,15 +1,15 @@
 .navbar__bg {
   background-color: #00000099;
-  position: absolute;
+  position: fixed;
   width: 100vw;
   z-index: 1000;
   text-align: center;
-bottom: 0;
+  bottom: 0;
 }
 .navbar-item a {
   text-decoration: none;
   color: white;
-  
+
   font-size: 16px;
   transition: 0.4s ease-in-out;
 }
@@ -59,31 +59,29 @@ bottom: 0;
 .contact {
   display: none;
 }
-.menu{
-  
+.menu {
 }
-.menu-item{
+.menu-item {
   list-style: none;
   color: white;
 }
-.icons{
+.icons {
   width: 30px;
   height: 30px;
   text-align: center;
 }
-.fav-item{
+.fav-item {
   display: flex;
   justify-content: center;
   align-items: center;
   height: fit-content;
   gap: 10px;
 }
-.fav-icons{
+.fav-icons {
   width: 20px;
   height: 20px;
-  
 }
-.link{
+.link {
   color: white;
 }
 .link p {
@@ -147,5 +145,3 @@ bottom: 0;
     opacity: 100%;
   }
 }
-
-

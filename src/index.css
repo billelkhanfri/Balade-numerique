@@ -3,11 +3,11 @@
 :root {
   --font-base: "Cormorant Upright", serif;
   --font-alt: "Open Sans", sans-serif;
-  --color-golden: #dcca87;
-  --color-footer: #031b34;
-  --color-blog: #042c54;
-  --color-hover: #c2d500;
+  --color-red: #9e0e40;
+  --color-footer: #103d47;
+  --color-azur-light: #5ab1c7;
+  --color-hover: #8ee1ef;
   --color-subtext: #ff8a71;
-  --color-primary: rgb(28, 111, 143);
-  --color-secondary: rgb(251, 199, 17);
+  --color-primary: #26819e;
+  --color-secondary: #ffcf0d;
 }
