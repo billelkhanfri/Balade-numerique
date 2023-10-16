@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Navbar from "../../components/navbar/Navbar";
+import Thumb  from "../../components/thumb/Thumb"
 
 import "./accueil.css";
 import CurrentLocationMap from "../../components/current-location/CurrentLocationMap";
@@ -13,6 +14,7 @@ const Accueil = () => {
       <Navbar menuOpen={menuOpen} toggleMenu={toggleMenu} />
     
        <CurrentLocationMap/>
+       <Thumb/>
 
       
     </>

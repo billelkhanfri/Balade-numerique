@@ -4,8 +4,9 @@ import {  AiFillHome} from "react-icons/ai";
 import {  FaMapMarkedAlt} from "react-icons/fa";
 import {  MdPlace,MdFavorite} from "react-icons/md";
 import { GiThreePointedShuriken} from "react-icons/gi";
+import {PiPathBold} from "react-icons/pi"
 
-
+import Parcours from "../../assets/icones-pics/Parcours.png"
 import Logo from "../../assets/images/android-chrome-192x192.png";
 import { Link } from "react-router-dom";
 
@@ -37,6 +38,16 @@ const Navbar = ({ menuOpen, toggleMenu }) => {
             </li>
           </ul>
           </Link>
+          <Link    className=" link"to="/">
+          <ul className= "menu">
+            <li className="menu-item">
+              
+                <PiPathBold className="icons"/>
+                <p>Parcours</p>
+            </li>
+          </ul>
+          </Link>
+        
           <Link   className=" link"to="/lieux">
           <ul className= "menu">
             <li className="menu-item">

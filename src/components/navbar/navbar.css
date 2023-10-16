@@ -44,6 +44,7 @@
 .closed-icone {
   width: 52px;
   height: 52px;
+  color: var(--color-secondary);
 }
 .navbar-menu {
   display: none;
@@ -52,6 +53,7 @@
   cursor: pointer;
   width: 49px;
   height: 48px;
+  color: var(--color-secondary);
 }
 .toggle-menu {
   display: block;
@@ -63,7 +65,7 @@
 }
 .menu-item {
   list-style: none;
-  color: white;
+  color: var(--color-secondary);
 }
 .icons {
   width: 30px;
