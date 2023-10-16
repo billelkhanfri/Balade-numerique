@@ -9,3 +9,18 @@
   margin-top: 330px;
   transition: all 0.3 ease-in-out;
 }
+.thumbs-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media screen and (max-width: 425px) {
+  .thumbs-container {
+    gap: 0px;
+  }
+  .thumbs-container {
+    margin-top: 5px;
+  }
+}

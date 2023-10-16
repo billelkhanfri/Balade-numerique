@@ -1,7 +1,6 @@
 import Navbar from "../../components/navbar/Navbar";
 import { useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import { Icon } from "leaflet";
 import { divIcon } from "leaflet";
 import "./carte.css";
 
@@ -47,7 +46,7 @@ function Carte() {
     <>
       <Navbar menuOpen={menuOpen} toggleMenu={toggleMenu} />
 
-      <MapContainer center={[43.12566961111021, 5.930514335632324]} zoom={15}>
+      <MapContainer center={[43.12566961111021, 5.930514335632324]} zoom={14}>
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

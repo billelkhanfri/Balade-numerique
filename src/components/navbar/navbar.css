@@ -1,11 +1,12 @@
 .navbar__bg {
-  background-color: #00000099;
+  background-color: var(--color-footer);
   position: fixed;
-  width: 100vw;
+  width: 100%;
   z-index: 1000;
   text-align: center;
   bottom: 0;
 }
+
 .navbar-item a {
   text-decoration: none;
   color: white;
@@ -15,7 +16,7 @@
 }
 
 .logo {
-  width: 60px;
+  width: 49px;
   height: auto;
   object-fit: cover;
 
@@ -36,10 +37,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 72px;
+
   color: white;
   z-index: 2;
   position: relative;
+  padding: 4px 0px;
 }
 .closed-icone {
   width: 52px;
@@ -66,8 +68,8 @@
   color: white;
 }
 .icons {
-  width: 30px;
-  height: 30px;
+  width: 26px;
+  height: 26px;
   text-align: center;
 }
 .fav-item {
@@ -85,7 +87,7 @@
   color: white;
 }
 .link p {
-  font-size: 16px;
+  font-size: 12px;
 }
 .open-button {
   display: block;
@@ -143,5 +145,12 @@
   }
   100% {
     opacity: 100%;
+  }
+}
+@media (min-width: 769px) {
+  /* Apply styles for screens wider than 768px */
+  .navbar__bg {
+    width: 768px;
+    left: calc(50% - 384px); /* Center the navbar on larger screens */
   }
 }
