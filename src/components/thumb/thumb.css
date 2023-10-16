@@ -1,171 +1,80 @@
-<<<<<<< HEAD
-/* Thumbnail.css */
-.thumbnail {
-  width: 354px; /* Adjust the width as needed */
-  height: 181px; /* Adjust the height as needed */
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.thumbnail-image {
-  position: relative;
-}
-
-.thumbnail-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    transparent,
-    rgba(0, 0, 0, 0.6)
-  ); /* Add gradient overlay */
-  z-index: 1;
-  border-radius: 8px;
-}
-
-.thumbnail-content {
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  right: 0;
-  padding: 16px;
-  text-align: left;
-  z-index: 2;
-  color: #fff;
-}
-
-.thumbnail-content h2 {
-  font-size: 1.25rem;
-  margin: 0;
-}
-
-.thumbnail-content p {
-  font-size: 0.875rem;
-}
-
-/* Add a subtle border at the bottom of the thumbnail */
-.thumbnail:after {
-  content: "";
-  display: block;
-  height: 1px;
-  background: #e0e0e0;
-}
-@media screen and (max-width: 425px) {
-  .thumbnail {
-    width: 399px; /* Adjust the width as needed */
-
-    margin: 10px auto; /* Add margin for spacing between thumbnails */
-  }
-  .thumbnail-content {
-    position: absolute;
-    bottom: 12px;
-    left: 0;
-    right: 0;
-    padding: 16px;
-    text-align: left;
-    z-index: 2;
-    color: #fff;
-  }
-}
-=======
-.thumbs-wrapper{
-  padding-bottom: 400px;
+.thumbs-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 20px;
 }
-.thumb{
+.thumb {
   z-index: 100;
-    text-align: left;
-    width: 354px;
-    height: 300px;
-    background-color: var(--color-primary);
-    position: relative;
-    color: #fff;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-bottom: 20px;
+  text-align: left;
+  width: 354px;
+  height: 300px;
+  background-color: var(--color-primary);
+  position: relative;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
-.thumb::before{
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.65) 20%,
-      rgba(255, 255, 255, 0) 50%
-    );
-    z-index: 2;
-    border-radius: 8px;
-  }
-
-.text-wrapper{
-    position: absolute;
-    bottom: 20px;
-    padding:10px;
-    z-index: 5;
-}
-.wrapper{
-    width: 354px;
-    height: 300px;
-
-}
- .thum-img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-
-
-}
-.fav-icon{
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-    z-index: 2;
-    font-size: 28px;
-}
- .fill{
-    color: var(--color-red);
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-    z-index: 2;
-    font-size: 28px;
+.thumb::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.65) 20%,
+    rgba(255, 255, 255, 0) 50%
+  );
+  z-index: 2;
+  border-radius: 8px;
 }
 
+.text-wrapper {
+  position: absolute;
+  bottom: 20px;
+  padding: 10px;
+  z-index: 5;
+}
+.wrapper {
+  width: 354px;
+  height: 300px;
+}
+.thum-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.fav-icon {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 2;
+  font-size: 28px;
+}
+.fill {
+  color: var(--color-red);
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 2;
+  font-size: 28px;
+}
 
 @media (max-width: 425px) {
-    .thumbs-wrapper{
-      
-        justify-content: center;
-    
-      }
-      .thumb{
-    
-          width: 404px;
-          height: 350px;
-          margin-bottom: 10px;
-         
-      }
-      .wrapper{
-        width: 404px;
-          height: 350px;
-    
-    }
-    
+  .thumbs-wrapper {
+    justify-content: center;
   }
->>>>>>> 214942de2e6445e719e2f67eccdb2d8d0c819cb2
+  .thumb {
+    width: 404px;
+    height: 350px;
+    margin-bottom: 10px;
+  }
+  .wrapper {
+    width: 404px;
+    height: 350px;
+  }
+}

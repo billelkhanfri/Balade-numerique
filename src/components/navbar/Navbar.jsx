@@ -1,20 +1,12 @@
 import "./navbar.css";
 import { RiMenu3Line, RiCloseFill } from "react-icons/ri";
-<<<<<<< HEAD
+
 import { AiFillHome } from "react-icons/ai";
 import { FaMapMarkedAlt } from "react-icons/fa";
 import { MdPlace, MdFavorite } from "react-icons/md";
 import { GiThreePointedShuriken } from "react-icons/gi";
+import { PiPathBold } from "react-icons/pi";
 
-=======
-import {  AiFillHome} from "react-icons/ai";
-import {  FaMapMarkedAlt} from "react-icons/fa";
-import {  MdPlace,MdFavorite} from "react-icons/md";
-import { GiThreePointedShuriken} from "react-icons/gi";
-import {PiPathBold} from "react-icons/pi"
-
-import Parcours from "../../assets/icones-pics/Parcours.png"
->>>>>>> 214942de2e6445e719e2f67eccdb2d8d0c819cb2
 import Logo from "../../assets/images/android-chrome-192x192.png";
 import { Link } from "react-router-dom";
 
@@ -36,6 +28,15 @@ const Navbar = ({ menuOpen, toggleMenu }) => {
               </li>
             </ul>
           </Link>
+
+          <Link className=" link" to="/parcours">
+            <ul className="menu">
+              <li className="menu-item">
+                <PiPathBold className="icons" />
+                <p>Parcours</p>
+              </li>
+            </ul>
+          </Link>
           <Link className=" link" to="/carte">
             <ul className="menu">
               <li className="menu-item">
@@ -44,28 +45,12 @@ const Navbar = ({ menuOpen, toggleMenu }) => {
               </li>
             </ul>
           </Link>
-<<<<<<< HEAD
+
           <Link className=" link" to="/lieux">
             <ul className="menu">
               <li className="menu-item">
                 <MdPlace className="icons" />
-=======
-          <Link    className=" link"to="/">
-          <ul className= "menu">
-            <li className="menu-item">
-              
-                <PiPathBold className="icons"/>
-                <p>Parcours</p>
-            </li>
-          </ul>
-          </Link>
-        
-          <Link   className=" link"to="/lieux">
-          <ul className= "menu">
-            <li className="menu-item">
-              
-                <MdPlace className="icons"/>
->>>>>>> 214942de2e6445e719e2f67eccdb2d8d0c819cb2
+
                 <p>Lieux</p>
               </li>
             </ul>
