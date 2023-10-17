@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./thumb.css";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 
-function Thumb({ imageUrl, title, subtitle }) {
+function Thumb({ imageUrl, title, subtitle, id }) {
   const [toggle, setToggle] = useState(false);
 
   const handleToggle = () => {
@@ -12,7 +12,7 @@ function Thumb({ imageUrl, title, subtitle }) {
   };
   return (
     <>
-      <Link to="">
+      <Link to={`/lieu/${id}`} key={`${id}`}>
         <div className="thumb">
           <div className="wrapper">
             {!toggle ? (

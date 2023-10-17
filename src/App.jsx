@@ -9,6 +9,7 @@ import Circuit from "./containers/circuit/Circuit";
 import Favoris from "./containers/favoris/Favoris";
 import Liens from "./containers/liens-utils/Liens";
 import Parcours from "./containers/parcours/Parcours";
+import Lieu from "./containers/lieu/Lieu"
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/favoris" element={<Favoris />}></Route>
         <Route path="/liens" element={<Liens />}></Route>
         <Route path="/parcours" element={<Parcours />}></Route>
+        <Route path="/lieu/:lieuId" element={<Lieu />}></Route>
       </Routes>
     </BrowserRouter>
   );

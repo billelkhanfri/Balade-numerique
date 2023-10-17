@@ -10,7 +10,7 @@ const Accueil = () => {
   const toggleMenu = () => {
     setMeuOpen(!menuOpen);
   };
-  console.log(data);
+
   return (
     <>
       <Navbar menuOpen={menuOpen} toggleMenu={toggleMenu} />
@@ -24,6 +24,7 @@ const Accueil = () => {
               imageUrl={item.imageUrl}
               title={item.title}
               subtitle={item.subtitle}
+              id ={item.id}
             />
           ))}
       </div>
