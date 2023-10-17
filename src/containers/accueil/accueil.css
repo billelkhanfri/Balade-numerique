@@ -10,11 +10,12 @@
   transition: all 0.3 ease-in-out;
 }
 .thumbs-container {
-  margin-top: 20px;
+  margin-top: 40px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
+  padding-bottom: 50px;
 }
 @media screen and (max-width: 425px) {
   .thumbs-container {

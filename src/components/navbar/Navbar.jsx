@@ -15,11 +15,11 @@ const Navbar = ({ menuOpen, toggleMenu }) => {
     <div className="navbar__bg ">
       <div className="container">
         <nav className="navbar">
-          <div className="navbar-logo">
+          {/* <div className="navbar-logo">
             <Link to="/">
               <img className="logo" src={Logo} alt="" />
             </Link>
-          </div>
+          </div> */}
           <Link className=" link" to="/">
             <ul className="menu">
               <li className="menu-item">

@@ -41,7 +41,7 @@
   color: white;
   z-index: 2;
   position: relative;
-  padding: 4px 0px;
+  padding: 14px 0px;
 }
 .closed-icone {
   width: 52px;
@@ -63,15 +63,14 @@
 .contact {
   display: none;
 }
-.menu {
-}
+
 .menu-item {
   list-style: none;
   color: var(--color-secondary);
 }
 .icons {
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
   text-align: center;
 }
 .fav-item {
@@ -89,7 +88,7 @@
   color: white;
 }
 .link p {
-  font-size: 12px;
+  font-size: 14px;
 }
 .open-button {
   display: block;
