@@ -1,0 +1,110 @@
+.item-head{
+    width: 100%;
+    height: 85px;
+ background-color: var(--color-footer);
+ color: white;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+   
+   }
+   .item-wrapper{
+    height: 448px;
+    position: relative;
+    width: 100%;
+    
+
+  }
+  .item-wrapper .img-text{
+   position: absolute;
+   width: 728px;
+   height: auto;
+   border-radius: 14px;
+ background: linear-gradient(178.2deg, rgba(2, 45, 58, 0.746667) -49.66%, rgba(1, 57, 74, 0.746667) 98.48%);
+   color: white;
+   top: 115%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   display: flex;
+   padding: 28px ;
+  }
+
+   .img-text p{
+    font-weight: bold;
+    text-align: justify;
+    font-size: 18px;
+   }
+
+   /** Coup de coeur */
+   .coup-coeur{
+    text-align: center;
+   }
+   .coup-coeur h3{
+    font-size: 24px;
+    width: 434px;
+    margin: auto;
+    line-height: 30px;
+    text-transform: uppercase;
+    height: 73px;
+   }
+
+   .lieu-item{
+    overflow: hidden;
+   }
+   .underline{
+    width: 700px;
+    height: 4px;
+    position: absolute;
+    right: 0;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(180deg, rgba(142, 225, 239, 0.64) 0%, rgba(255, 207, 13, 0.8) 100%);
+   }
+
+   .circle{
+    position: absolute;
+    overflow: hidden;
+    width: 408px;  
+    height: 408px; 
+    background: linear-gradient(180deg, #FFCF0D 0%, rgba(254, 216, 60, 0) 100%);
+    border-radius:  50%; 
+    top: 780px;
+    right: -300px; 
+  
+   }
+  
+    .breaker{
+    height: 500px;
+    width: 100%;
+   } 
+   .triangle {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    border-left: 15px solid transparent; 
+    border-right: 15px solid transparent; 
+    border-top: 26px solid  rgba(255, 207, 13, 0.71);
+    ; 
+  }
+  .historic-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 728px;
+    margin: auto;
+    padding: 28px;
+    margin-top: 56px;
+    gap: 20px;
+  }
+  .historic-text h4{
+    color: rgba(38, 129, 158, 0.8);
+    font-size: 32px;
+
+  }
+  .historic-text p{
+   line-height: 35px;
+   font-size: 16px;
+   font-weight: 600;
+  }
