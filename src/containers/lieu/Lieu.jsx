@@ -23,6 +23,7 @@ backgroundPosition:  `center center, center `,
 backgroundRepeat: `no-repeat`,
 backgroundSize: `cover`,
 marginBottom:`370px`,
+
 };
     return (
         <> 
@@ -41,15 +42,16 @@ Au centre de la place se trouve la Fontaine de la Fédération, taillée dans la
 Situé derrière la statue, l’emblématique immeuble de l’ancien Grand Hôtel héberge désormais le Théâtre Liberté, dirigé par Charles et Philippe Berling depuis son inauguration en septembre 2011.</p>
 </div>
     </div>
+    <div className="circle "> </div>
     <div className="coup-coeur">
     <h3>Découvrir notre sélection 
 coup de coeur</h3>
 
     </div>
     
-    <div className="underline"></div>
+    <div className="underline s"></div>
    
-    <div className="circle "> </div>
+    
     <div className="triangle"></div>
     
 <div className="historic-text">

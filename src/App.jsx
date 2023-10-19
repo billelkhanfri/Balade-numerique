@@ -10,6 +10,7 @@ import Favoris from "./containers/favoris/Favoris";
 import Liens from "./containers/liens-utils/Liens";
 import Parcours from "./containers/parcours/Parcours";
 import Lieu from "./containers/lieu/Lieu"
+import Error from "./containers/error/Error"
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/liens" element={<Liens />}></Route>
         <Route path="/parcours" element={<Parcours />}></Route>
         <Route path="/lieu/:lieuId" element={<Lieu />}></Route>
+        <Route path="*" element={<Error />}></Route>
       </Routes>
     </BrowserRouter>
   );
