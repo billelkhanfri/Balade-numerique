@@ -9,19 +9,35 @@
   margin-top: 330px;
   transition: all 0.3 ease-in-out;
 }
-.thumbs-container {
+/* .thumbs-container {
   margin-top: 40px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
   padding-bottom: 50px;
+  background-color: #eee;
+  margin: 20px;
+  padding-top: 20px;
+  border-radius: 20px;
+} */
+.thumbs-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  background-color: #eee;
+  margin: 20px;
+  padding: 20px; /* Changed to padding for consistent spacing */
+  border-radius: 20px;
+  row-gap: 20px;
+  column-gap: 20px;
+
+  /* Center the container horizontally and vertically */
+  justify-content: center;
+  align-items: center;
 }
+
 @media screen and (max-width: 425px) {
   .thumbs-container {
-    gap: 0px;
-  }
-  .thumbs-container {
-    margin-top: 5px;
+    margin: 0;
   }
 }

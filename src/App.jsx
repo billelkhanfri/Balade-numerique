@@ -9,22 +9,29 @@ import Circuit from "./containers/circuit/Circuit";
 import Favoris from "./containers/favoris/Favoris";
 import Liens from "./containers/liens-utils/Liens";
 import Parcours from "./containers/parcours/Parcours";
-import Lieu from "./containers/lieu/Lieu"
-import Error from "./containers/error/Error"
+import Lieu from "./containers/lieu/Lieu";
+import Error from "./containers/error/Error";
+import { data } from "./data/data";
+import { useState } from "react";
 
 function App() {
+  const [favorites, setFavorites] = useState([]); // Initialize favorites state
+
   return (
     <BrowserRouter>
       <SplashScreen />
       <Routes>
-        <Route path="/" element={<Accueil />}>
+        <Route path="/" element={<Accueil data={data} favorites={favorites} />}>
           {" "}
         </Route>
         <Route path="/lieux" element={<Lieux />}></Route>
         <Route path="/carte" element={<Carte />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/circuit" element={<Circuit />}></Route>
-        <Route path="/favoris" element={<Favoris />}></Route>
+        <Route
+          path="/favoris"
+          element={<Favoris data={data} favorites={favorites} />}
+        ></Route>
         <Route path="/liens" element={<Liens />}></Route>
         <Route path="/parcours" element={<Parcours />}></Route>
         <Route path="/lieu/:lieuId" element={<Lieu />}></Route>

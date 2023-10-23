@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import "./thumb.css";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 
-function Thumb({ 
-  imageUrl, 
-  title, 
-  subtitle, 
+function Thumb({
+  imageUrl,
+  title,
+  subtitle,
   id,
-  history_one, 
+  history_one,
   coup_coeur_title,
   coup_coeur_text,
   coup_coeur_title2,
@@ -16,8 +16,9 @@ function Thumb({
   coup_coeur_title3,
   coup_coeur_text3,
   coup_coeur_title4,
+  coup_coeur_text4,
   coup_coeur_title5,
-  coup_coeur_text5 
+  coup_coeur_text5,
 }) {
   const [toggle, setToggle] = useState(false);
 
@@ -31,7 +32,11 @@ function Thumb({
       <div className="thumb">
         <div className="wrapper">
           <span onClick={handleToggle}>
-            {!toggle ? <AiOutlineHeart className="fav-icon" /> : <AiFillHeart className="fav-icon fill" />}
+            {!toggle ? (
+              <AiOutlineHeart className="fav-icon" />
+            ) : (
+              <AiFillHeart className="fav-icon fill" />
+            )}
           </span>
           <img className="thum-img" src={imageUrl} alt={title} />
         </div>
@@ -39,7 +44,6 @@ function Thumb({
           <h2>{title}</h2>
           <p>{subtitle}</p>
         </div>
-       
       </div>
     </Link>
   );

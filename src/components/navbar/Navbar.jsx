@@ -7,19 +7,19 @@ import { MdPlace, MdFavorite } from "react-icons/md";
 import { GiThreePointedShuriken } from "react-icons/gi";
 import { PiPathBold } from "react-icons/pi";
 
-import Logo from "../../assets/images/android-chrome-192x192.png";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
-const Navbar = ({ menuOpen, toggleMenu }) => {
+const Navbar = () => {
+  const [menuOpen, setMeuOpen] = useState(false);
+  const toggleMenu = () => {
+    setMeuOpen(!menuOpen);
+  };
   return (
-    <div className="navbar__bg ">
-      <div className="container">
+    <div className="container">
+      <div className="break"></div>
+      <div className="navbar__bg ">
         <nav className="navbar">
-          {/* <div className="navbar-logo">
-            <Link to="/">
-              <img className="logo" src={Logo} alt="" />
-            </Link>
-          </div> */}
           <Link className=" link" to="/">
             <ul className="menu">
               <li className="menu-item">
@@ -63,9 +63,9 @@ const Navbar = ({ menuOpen, toggleMenu }) => {
                 <span>Circuit</span>
               </li>
             </Link>
-            <li className="navbar-item">
-              <Link to="/liens">Liens utils</Link>
-            </li>
+            <Link to="/liens" className="link">
+              <li className="navbar-item">Liens utils</li>
+            </Link>
 
             <Link className="link" to="/favoris">
               <li className="navbar-item fav-item">

@@ -3,15 +3,20 @@ import { divIcon } from "leaflet";
 import "./carte.css";
 import "leaflet/dist/leaflet.css";
 import { useEffect, useState } from "react";
-import { MapContainer, TileLayer, Marker, Popup,Polyline } from "react-leaflet";
-
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Popup,
+  Polyline,
+} from "react-leaflet";
 
 import LeafletGeoCoder from "../../components/leafletGeoCoder/LeafletGeoCoder";
 
 function Carte() {
-  const [position, setPosition] = useState([43.125, 5.93]); 
-  const [loading, setLoading] = useState(false);
-  const [hasInternet, setHasInternet] = useState(true); 
+  const [position, setPosition] = useState([43.125, 5.93]);
+  const [loading, setLoading] = useState(true);
+  const [hasInternet, setHasInternet] = useState(true);
   const retryFetchLocation = () => {
     setLoading(true);
     setHasInternet(true);
@@ -37,11 +42,6 @@ function Carte() {
   useEffect(() => {
     retryFetchLocation(); // Fetch location on initial load
   }, []);
-
-  const [menuOpen, setMeuOpen] = useState(false);
-  const toggleMenu = () => {
-    setMeuOpen(!menuOpen);
-  };
 
   const bateauIcon = divIcon({
     html: ' <div  class="img-wrapper"> <img class ="custom-marker" src="/src/assets/icones-pics/Sculpture-bateau.png" alt="Custom Icon" /> <div/>',
@@ -76,13 +76,12 @@ function Carte() {
     html: ' <div  class="img-wrapper"><img class ="custom-marker" src="/src/assets/icones-pics/Carrée-du-port.png" alt="Custom Icon" /> <div/>',
   });
 
-
   const pathCoordinates = [
     [43.12566961111021, 5.930514335632324], // Marker 2
     [43.12314987182617, 5.931080341339111], // Marker 1
 
     [43.1207308, 5.9314906], // Marker 3
-    [43.11996078491211, 5.932811737060547], 
+    [43.11996078491211, 5.932811737060547],
     [43.11900586846106, 5.936736189260646],
     // Marker 4
     [43.121326754622004, 5.934564640175547], // Marker 5
@@ -94,15 +93,11 @@ function Carte() {
   ];
   const polylineStyle = {
     color: "#26819e",
-    weight: 6, 
-
+    weight: 6,
   };
-  
+
   return (
     <>
-      <Navbar menuOpen={menuOpen} toggleMenu={toggleMenu} />
-
-   
       {loading ? (
         <p>Loading...</p>
       ) : hasInternet ? (
@@ -111,84 +106,85 @@ function Carte() {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-              
 
           <Marker position={position}>
             <Popup>Ma Position</Popup>
           </Marker>
-         
-        <Marker
-          position={[43.12566961111021, 5.930514335632324]}
-          icon={libertyIcon}
-        >
-          <Popup>
-            {" "}
-            Place de la Liberté (+ Diagonale + Boulevard de Strasbourg) + Cinéma
-            Le Royal (coup de coeur)
-          </Popup>
-        </Marker>
-        <Marker
-          position={[43.12314987182617, 5.931080341339111]}
-          icon={bateauIcon}
-        >
-          <Popup> Bateau sculpture + Rue des Arts </Popup>
-        </Marker>
-        <Marker position={[43.1207308, 5.9314906]} icon={algerIcon}>
-          <Popup>Rue d Alger + Place Raimu</Popup>
-        </Marker>
-        <Marker
-          position={[43.11996078491211, 5.932811737060547]}
-          icon={portIcon}
-        >
-          <Popup>
-            Carré du Port + Mairie d honneur - Atlante + Le Génie de la
-            navigation{" "}
-          </Popup>
-        </Marker>
-        <Marker
-          position={[43.11900586846106, 5.936736189260646]}
-          icon={mayolIcon}
-        >
-          <Popup>Stade Mayol + Felix Mayol + RCT </Popup>
-        </Marker>
-        <Marker
-          position={[43.121326754622004, 5.934564640175547]}
-          icon={fayetteIcon}
-        >
-          <Popup>
-            Marché de Provence + Office de Tourisme + Eglise
-            Saint-François-de-Paule (coup de coeur)+ Cours Lafayette + Musée
-            vieux Toulon (petit pas) + Le Boulet{" "}
-          </Popup>
-        </Marker>
-        <Marker
-          position={[43.12165469161616, 5.933974953667892]}
-          icon={cathIcon}
-        >
-          <Popup>Cathédrale + Boutique de jouet (coup de coeur) </Popup>
-        </Marker>
-        <Marker
-          position={[43.12239778375607, 5.934633982047172]}
-          icon={lavoirIcon}
-        >
-          <Popup>Place Saint Vincent + Les halles + Le lavoir + Portes </Popup>
-        </Marker>
-        <Marker
-          position={[43.123485152129774, 5.932922946465119]}
-          icon={pugetIcon}
-        >
-          <Popup>
-            Place Puget + Fontaine des 3 dauphins + Le petit prince (coup de
-            coeur) + La savonnerie (coup de coeur){" "}
-          </Popup>
-        </Marker>
-        <Marker
-          position={[43.1244893904978, 5.932467694145099]}
-          icon={operaIcon}
-        >
-          <Popup>Opéra de Toulon </Popup>
-        </Marker>
-        <Polyline positions={pathCoordinates} pathOptions={polylineStyle} /> 
+
+          <Marker
+            position={[43.12566961111021, 5.930514335632324]}
+            icon={libertyIcon}
+          >
+            <Popup>
+              {" "}
+              Place de la Liberté (+ Diagonale + Boulevard de Strasbourg) +
+              Cinéma Le Royal (coup de coeur)
+            </Popup>
+          </Marker>
+          <Marker
+            position={[43.12314987182617, 5.931080341339111]}
+            icon={bateauIcon}
+          >
+            <Popup> Bateau sculpture + Rue des Arts </Popup>
+          </Marker>
+          <Marker position={[43.1207308, 5.9314906]} icon={algerIcon}>
+            <Popup>Rue d Alger + Place Raimu</Popup>
+          </Marker>
+          <Marker
+            position={[43.11996078491211, 5.932811737060547]}
+            icon={portIcon}
+          >
+            <Popup>
+              Carré du Port + Mairie d honneur - Atlante + Le Génie de la
+              navigation{" "}
+            </Popup>
+          </Marker>
+          <Marker
+            position={[43.11900586846106, 5.936736189260646]}
+            icon={mayolIcon}
+          >
+            <Popup>Stade Mayol + Felix Mayol + RCT </Popup>
+          </Marker>
+          <Marker
+            position={[43.121326754622004, 5.934564640175547]}
+            icon={fayetteIcon}
+          >
+            <Popup>
+              Marché de Provence + Office de Tourisme + Eglise
+              Saint-François-de-Paule (coup de coeur)+ Cours Lafayette + Musée
+              vieux Toulon (petit pas) + Le Boulet{" "}
+            </Popup>
+          </Marker>
+          <Marker
+            position={[43.12165469161616, 5.933974953667892]}
+            icon={cathIcon}
+          >
+            <Popup>Cathédrale + Boutique de jouet (coup de coeur) </Popup>
+          </Marker>
+          <Marker
+            position={[43.12239778375607, 5.934633982047172]}
+            icon={lavoirIcon}
+          >
+            <Popup>
+              Place Saint Vincent + Les halles + Le lavoir + Portes{" "}
+            </Popup>
+          </Marker>
+          <Marker
+            position={[43.123485152129774, 5.932922946465119]}
+            icon={pugetIcon}
+          >
+            <Popup>
+              Place Puget + Fontaine des 3 dauphins + Le petit prince (coup de
+              coeur) + La savonnerie (coup de coeur){" "}
+            </Popup>
+          </Marker>
+          <Marker
+            position={[43.1244893904978, 5.932467694145099]}
+            icon={operaIcon}
+          >
+            <Popup>Opéra de Toulon </Popup>
+          </Marker>
+          <Polyline positions={pathCoordinates} pathOptions={polylineStyle} />
         </MapContainer>
       ) : (
         <div className="offLigne-wrapper">
@@ -196,9 +192,7 @@ function Carte() {
           <button onClick={retryFetchLocation}>Rafraichir</button>
         </div>
       )}
-
-      
-    
+      <Navbar />
     </>
   );
 }

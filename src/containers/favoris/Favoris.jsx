@@ -1,21 +1,12 @@
-import React from 'react'
-import { useState } from "react";
 import Navbar from "../../components/navbar/Navbar";
 
-
-function Favoris( ) {
-  const [menuOpen, setMeuOpen] = useState(false);
-  const toggleMenu = () => {
-    setMeuOpen(!menuOpen);
-  };
+function Favoris({}) {
   return (
-    <> 
-     <Navbar menuOpen={menuOpen} toggleMenu={toggleMenu} />
-
-<h1> je suis dans Favoris</h1>
+    <>
+      <h1>je suis dans favoris</h1>
+      <Navbar />
     </>
-   
-  )
+  );
 }
 
-export default Favoris
+export default Favoris;
