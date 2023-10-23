@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./thumb.css";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
@@ -22,8 +22,32 @@ function Thumb({
 }) {
   const [toggle, setToggle] = useState(false);
 
+  // Load favorites from local storage on component mount
+  useEffect(() => {
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    if (favorites.includes(id)) {
+      setToggle(true);
+    }
+  }, [id]);
+
   const handleToggle = (e) => {
     e.preventDefault(); // Prevent the default Link navigation
+    const updatedFavorites =
+      JSON.parse(localStorage.getItem("favorites")) || [];
+
+    if (toggle) {
+      // Remove the item from favorites
+      const index = updatedFavorites.indexOf(id);
+      if (index !== -1) {
+        updatedFavorites.splice(index, 1);
+        localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+      }
+    } else {
+      // Add the item to favorites
+      updatedFavorites.push(id);
+      localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+    }
+
     setToggle(!toggle);
   };
 
