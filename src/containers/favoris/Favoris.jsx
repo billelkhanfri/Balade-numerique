@@ -3,7 +3,7 @@ import { useState } from "react";
 import Navbar from "../../components/navbar/Navbar";
 
 
-function Favoris() {
+function Favoris( ) {
   const [menuOpen, setMeuOpen] = useState(false);
   const toggleMenu = () => {
     setMeuOpen(!menuOpen);

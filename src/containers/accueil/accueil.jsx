@@ -4,7 +4,7 @@ import Thumb from "../../components/thumb/Thumb";
 import { data } from "../../data/data.js";
 import "./accueil.css";
 import Banner from "../../components/banner/Banner";
-import CurrentLocationMap from "../../components/current-location/CurrentLocationMap";
+
 
 const Accueil = () => {
   const [menuOpen, setMeuOpen] = useState(false);
@@ -16,7 +16,7 @@ const Accueil = () => {
     <>
       <Navbar menuOpen={menuOpen} toggleMenu={toggleMenu} />
 
-      {/* <CurrentLocationMap className="container" /> */}
+    
       <Banner/>
       <div className=" thumbs-container">
         {data &&

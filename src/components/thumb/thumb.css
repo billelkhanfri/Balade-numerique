@@ -54,6 +54,7 @@
   bottom: 10px;
   z-index: 2;
   font-size: 28px;
+  z-index: 1000;
 }
 .fill {
   color: var(--color-red);
@@ -62,6 +63,7 @@
   bottom: 10px;
   z-index: 2;
   font-size: 28px;
+  z-index: 1000;
 }
 
 @media (max-width: 425px) {
