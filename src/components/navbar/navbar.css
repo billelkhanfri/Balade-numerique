@@ -44,7 +44,7 @@
   color: white;
   z-index: 2;
   position: relative;
-  padding: 14px 16px;
+  padding: 14px 48px;
 }
 .closed-icone {
   width: 52px;
@@ -58,7 +58,6 @@
   cursor: pointer;
   width: 49px;
   height: 48px;
-  
 }
 .toggle-menu {
   display: block;
@@ -69,9 +68,8 @@
 
 .menu-item {
   list-style: none;
-
 }
-.link.active{
+.link.active {
   color: var(--color-secondary);
 }
 .icons {

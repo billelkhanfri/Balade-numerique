@@ -10,8 +10,7 @@ import {
   Popup,
   Polyline,
 } from "react-leaflet";
-
-import LeafletGeoCoder from "../../components/leafletGeoCoder/LeafletGeoCoder";
+import Loader from "../../components/loader/Loader";
 
 function Carte() {
   const [position, setPosition] = useState([43.125, 5.93]);
@@ -99,7 +98,7 @@ function Carte() {
   return (
     <>
       {loading ? (
-        <p>Loading...</p>
+        <Loader />
       ) : hasInternet ? (
         <MapContainer center={[43.12165469161616, 5.933974953667892]} zoom={16}>
           <TileLayer
