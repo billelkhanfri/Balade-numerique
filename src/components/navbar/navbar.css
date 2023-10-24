@@ -1,5 +1,5 @@
 .navbar__bg {
-  background-color: var(--color-footer);
+  background: var(--color-gradient-reversed);
   position: fixed;
   width: 100%;
   z-index: 1000;
@@ -58,7 +58,7 @@
   cursor: pointer;
   width: 49px;
   height: 48px;
-  color: var(--color-secondary);
+  
 }
 .toggle-menu {
   display: block;
@@ -69,6 +69,9 @@
 
 .menu-item {
   list-style: none;
+
+}
+.link.active{
   color: var(--color-secondary);
 }
 .icons {

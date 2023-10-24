@@ -10,4 +10,8 @@
   --color-subtext: #ff8a71;
   --color-primary: #26819e;
   --color-secondary: #ffcf0d;
+   --color-gradient-slogan: linear-gradient(180deg, #103d47 , #236c7e ); 
+   --color-gradient: linear-gradient(180deg, #103d47 , #236c7e ) ; 
+    --color-gradient-reversed: linear-gradient(0deg, #103d47 , #236c7e );  
+
 }

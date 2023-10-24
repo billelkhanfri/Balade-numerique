@@ -10,6 +10,7 @@
   color: #fff;
   border-radius: 8px;
   cursor: pointer;
+  
 }
 .thumb::before {
   content: "";
@@ -34,7 +35,7 @@
   z-index: 5;
 }
 .wrapper {
-  height: fit-content;
+  height: 300px;
 }
 .thum-img {
   width: 100%;

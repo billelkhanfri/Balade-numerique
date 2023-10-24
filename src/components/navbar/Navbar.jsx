@@ -7,11 +7,14 @@ import { MdPlace, MdFavorite } from "react-icons/md";
 import { GiThreePointedShuriken } from "react-icons/gi";
 import { PiPathBold } from "react-icons/pi";
 
-import { Link } from "react-router-dom";
+import { Link,NavLink } from "react-router-dom";
 import { useState } from "react";
 
 const Navbar = () => {
   const [menuOpen, setMeuOpen] = useState(false);
+  
+
+  
   const toggleMenu = () => {
     setMeuOpen(!menuOpen);
   };
@@ -20,41 +23,43 @@ const Navbar = () => {
       <div className="break"></div>
       <div className="navbar__bg ">
         <nav className="navbar">
-          <Link className=" link" to="/">
+          <NavLink className=" link" to="/" activeclassname="active">
             <ul className="menu">
               <li className="menu-item">
                 <AiFillHome className="icons" />
                 <p>Home</p>
               </li>
             </ul>
-          </Link>
+          </NavLink>
 
-          <Link className=" link" to="/parcours">
+          <NavLink className=" link" to="/parcours" activeclassname="active">
             <ul className="menu">
               <li className="menu-item">
                 <PiPathBold className="icons" />
                 <p>Parcours</p>
               </li>
             </ul>
-          </Link>
-          <Link className=" link" to="/carte">
+          </NavLink>
+          <NavLink className=" link" to="/carte" activeclassname="active">
             <ul className="menu">
               <li className="menu-item">
                 <FaMapMarkedAlt className="icons" />
                 <p>Carte</p>
               </li>
             </ul>
-          </Link>
+          </NavLink>
 
-          <Link className=" link" to="/lieux">
+          <NavLink className="link" to="/favoris" activeclassname="active">
             <ul className="menu">
-              <li className="menu-item">
-                <MdPlace className="icons" />
-
-                <p>Lieux</p>
+            <li className="menu-item">
+                <MdFavorite className="icons"/>
+                <p>Favoris</p>
               </li>
             </ul>
-          </Link>
+              
+            </NavLink>
+
+       
 
           <ul className={` navbar-menu ${menuOpen ? "open" : ""}`}>
             <Link className="link" to="/circuit">
@@ -67,12 +72,6 @@ const Navbar = () => {
               <li className="navbar-item">Liens utils</li>
             </Link>
 
-            <Link className="link" to="/favoris">
-              <li className="navbar-item fav-item">
-                <MdFavorite className="fav-icons"></MdFavorite>
-                <span>Favoris</span>
-              </li>
-            </Link>
             <Link className="link" to="/about">
               <li className="navbar-item">À propos</li>
             </Link>

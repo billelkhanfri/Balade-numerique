@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 import { data } from "../../data/data.js";
 import Navbar from "../../components/navbar/Navbar";
 import "./lieu.css";
+import {IoIosArrowBack} from "react-icons/io"
+import { Link } from "react-router-dom";
 
 function Lieu() {
   const { lieuId } = useParams();
@@ -39,7 +41,13 @@ function Lieu() {
     <>
       <div className="lieu-item">
         <div className="item-head">
+         <Link to ="/"> 
+        <IoIosArrowBack className="return-icon"/>
+        </Link>
           <h2> {title}</h2>
+          <IoIosArrowBack className="return-icon-transparent"/>
+        
+
         </div>
         <div className="item-wrapper" style={itemWrapperStyle}>
           <div className="img-text">

@@ -12,10 +12,14 @@ object-fit: contain !important;
 
 }
 .img-wrapper{
-  width: 40px !important;
-  height: 40px !important;
+  width: 50px !important;
+  height: 50px !important;
   
   border: 3px solid #b7b7b7;
-  background: var(--color-secondary);
+   background: var(--color-hover);
+   filter: drop-shadow(100%); 
+ 
   padding: 2px;
+
+ 
 }
