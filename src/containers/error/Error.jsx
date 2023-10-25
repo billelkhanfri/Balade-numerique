@@ -1,10 +1,13 @@
 import "./error.css";
 import Vector from "../../assets/images/Vector.svg";
+import Navbar from "../../components/navbar/Navbar";
 function Error() {
   return (
+    <>
+   
     <div className="error-container">
       <div className="error-text">
-        <p> ERREUR 404</p>
+        <p>  404</p>
         <p> Page introuvable</p>
         <span>
           <img src={Vector} alt="" />{" "}
@@ -14,6 +17,8 @@ function Error() {
         
       </div>
     </div>
+    <Navbar></Navbar>
+    </>
   );
 }
 

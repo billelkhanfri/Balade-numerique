@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: var(--color-footer);
+  background-color: #f9F9F9;
   position: relative;
   overflow: hidden;
 }
@@ -13,21 +13,23 @@
   flex-direction: column;
   text-align: center;
   gap: 10px;
-  color: white;
+  color: var(--color-footer);
 }
 .error-text :nth-child(1) {
-  font-size: 40px;
-  font-weight: 600;
+  font-size: 8em;
+  font-weight: 900;
+  letter-spacing: 4px;
 }
 .error-text :nth-child(2) {
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 600;
   margin-bottom: 20px;
 }
 .error-text span img {
   width: 60px;
+  color: var(--color-footer);
 }
-.bottom-circle {
+/* .bottom-circle {
   width: 640px;
   height: 640px;
   border-radius: 50%;
@@ -35,4 +37,4 @@
   bottom: -379px;
   right: -192px;
   background: linear-gradient(239deg, #ffcf0d 0%, rgba(254, 216, 60, 0) 100%);
-}
+} */

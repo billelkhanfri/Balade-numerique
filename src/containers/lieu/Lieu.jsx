@@ -4,6 +4,7 @@ import Navbar from "../../components/navbar/Navbar";
 import "./lieu.css";
 import {IoIosArrowBack} from "react-icons/io"
 import { Link } from "react-router-dom";
+import Slider from "../../components/slider/Slider.jsx";
 
 function Lieu() {
   const { lieuId } = useParams();
@@ -24,6 +25,7 @@ function Lieu() {
     coup_coeur_title4,
     coup_coeur_title5,
     coup_coeur_text5,
+    images,
   } = lieuData;
 
   const itemWrapperStyle = {
@@ -46,46 +48,14 @@ function Lieu() {
         </Link>
           <h2> {title}</h2>
           <IoIosArrowBack className="return-icon-transparent"/>
+        </div>
+        <Slider images={images}/>
+
+
+
+</div>
+
         
-
-        </div>
-        <div className="item-wrapper" style={itemWrapperStyle}>
-          <div className="img-text">
-            <p style={{ opacity: 1 }}>{history_one}</p>
-          </div>
-        </div>
-        <div className="circle "> </div>
-        <div className="coup-coeur">
-          <h3>Découvrir notre sélection coup de coeur</h3>
-        </div>
-        <div></div>
-
-        <div className="underline "></div>
-
-        <div className="triangle"></div>
-
-        <div className="historic-text">
-          <h4>{coup_coeur_title}</h4>
-          <p>{coup_coeur_text}</p>
-        </div>
-        <div className="historic-text">
-          <h4>{coup_coeur_title2}</h4>
-          <p>{coup_coeur_text2}</p>
-        </div>
-        <div className="historic-text">
-          <h4>{coup_coeur_title3}</h4>
-          <p>{coup_coeur_text3}</p>
-        </div>
-        <div className="historic-text">
-          <h4>{coup_coeur_title4}</h4>
-          <p>{coup_coeur_text4}</p>
-        </div>
-        <div className="historic-text">
-          <h4>{coup_coeur_title5}</h4>
-          <p>{coup_coeur_text5}</p>
-        </div>
-        <div className="breaker"></div>
-      </div>
       <Navbar />
     </>
   );

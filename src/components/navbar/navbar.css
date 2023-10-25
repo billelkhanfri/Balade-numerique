@@ -1,5 +1,6 @@
 .navbar__bg {
-  background: var(--color-gradient-reversed);
+  /* background: var(--color-gradient-reversed); */
+  background-color: white;
   position: fixed;
   width: 100%;
   z-index: 1000;
@@ -8,6 +9,8 @@
   max-width: 1024px;
   margin: auto;
   margin-top: 40px;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.6); /* Add box shadow here */
+
 }
 
 .navbar-item a {
@@ -44,12 +47,12 @@
   color: white;
   z-index: 2;
   position: relative;
-  padding: 14px 48px;
+  padding: 14px 32px;
 }
 .closed-icone {
   width: 52px;
   height: 52px;
-  color: var(--color-secondary);
+  color: var(--color-footer);
 }
 .navbar-menu {
   display: none;
@@ -61,6 +64,7 @@
 }
 .toggle-menu {
   display: block;
+  color: var(--color-primary);
 }
 .contact {
   display: none;
@@ -70,11 +74,11 @@
   list-style: none;
 }
 .link.active {
-  color: var(--color-secondary);
+  color: var(--color-primary);
 }
 .icons {
-  width: 30px;
-  height: 30px;
+  width: 38px;
+  height: 38px;
   text-align: center;
 }
 .fav-item {
@@ -89,10 +93,11 @@
   height: 20px;
 }
 .link {
-  color: white;
+  color:rgb(159 159 159);
 }
 .link p {
   font-size: 14px;
+  font-weight: 700;
 }
 .open-button {
   display: block;
@@ -157,3 +162,19 @@
 .break {
   margin-top: 80px;
 }
+  @media screen  and ( max-width : 425px){
+
+    .icons{
+      width: 28px;
+      height: 28px;
+    }
+    .navbar {
+      
+      padding: 14px ;
+    }
+    .link p {
+      font-size: 12px;
+
+    }
+    
+  }
