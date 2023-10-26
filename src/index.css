@@ -14,4 +14,5 @@
   --color-gradient: linear-gradient(180deg, #103d47, #236c7e);
   --color-gradient-reversed: linear-gradient(0deg, #103d47, #236c7e);
   --color-neutral: rgb(151, 151, 151);
+  --color-black : #212121;
 }

@@ -23,9 +23,12 @@
 .logo {
   width: 49px;
   height: auto;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 
-  object-position: center;
+  -o-object-position: center;
+
+     object-position: center;
 }
 .navbar-item:hover a {
   cursor: pointer;
@@ -84,6 +87,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   gap: 10px;
 }
@@ -115,7 +120,8 @@
 }
 .open-button a {
   font-size: 18px;
-  animation: appear 0.3 ease-in-out;
+  -webkit-animation: appear 0.3 ease-in-out;
+          animation: appear 0.3 ease-in-out;
 }
 .open-button:hover {
   color: black;
@@ -145,7 +151,19 @@
 }
 .navbar-menu.open .navbar-item a {
   font-size: 18px;
-  animation: appear 0.3 ease-in-out;
+  -webkit-animation: appear 0.3 ease-in-out;
+          animation: appear 0.3 ease-in-out;
+}
+@-webkit-keyframes colorChange {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 @keyframes colorChange {
   0% {
@@ -173,3 +191,5 @@
     font-size: 12px;
   }
 }
+
+

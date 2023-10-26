@@ -44,16 +44,19 @@ function Slider({ images, favoriteItems }) {
         ))}
       </div>
       <div className="lieu-section-two">
-        <div className="direction">
-          <FaDirections className="itineraire-icon" />
-        </div>
+        
         <div>
           <img src="/src/assets/images/Calque_1.svg" alt="Custom Icon" />
         </div>
-      </div>
-      <div className="itinéraire">
+        <div className="direction">
+          <FaDirections className="itineraire-icon" />
+          <div className="itinéraire">
         <p>Itinéraire</p>
       </div>
+        </div>
+      </div>
+     
+     
     </>
   );
 }

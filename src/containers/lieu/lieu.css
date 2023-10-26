@@ -191,10 +191,33 @@
   margin-bottom: 20px;
 }
 .audio-progress-bar {
-  width: 40%;
+  width: 70%;
+  
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--color-primary);
+  height: 8px;
 }
+ .texts-wrapper{
+  
+  background-color: var(--color-footer);
+  color: white;
+padding: 20px;
+  border-radius: 8px;
+
+  opacity: 0.8;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 95%;
+  margin: auto;
+  margin-top: 30px;
+ }
+ .texts-wrapper p {
+ line-height: 38px;
+ opacity: 1;
+
+
+ }
