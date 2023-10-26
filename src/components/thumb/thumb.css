@@ -10,7 +10,6 @@
   color: #fff;
   border-radius: 8px;
   cursor: pointer;
-  
 }
 .thumb::before {
   content: "";

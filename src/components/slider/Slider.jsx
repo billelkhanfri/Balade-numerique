@@ -1,25 +1,22 @@
-import React from 'react'
-import "./slider.css"
-import { useState, useEffect } from 'react';
+import "./slider.css";
+import { useState, useEffect } from "react";
 import { GoDotFill } from "react-icons/go";
-import {FaDirections}  from "react-icons/fa";
-import {BsPlayFill, BsPauseFill} from "react-icons/bs"
+import { FaDirections } from "react-icons/fa";
+import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
+import { useParams } from "react-router-dom";
 
-function Slider({images}) {
+function Slider({ images, favoriteItems }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const goToPrevious = () => {
+    setCurrentIndex(currentIndex === 0 ? images.length - 1 : currentIndex - 1);
+  };
 
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const goToPrevious = () => {
-        setCurrentIndex(currentIndex === 0 ? images.length - 1 : currentIndex - 1);
-      };
-    
-      const goToNext = () => {
-        setCurrentIndex(currentIndex === images.length - 1 ? 0 : currentIndex + 1);
-      };
-    
-      const goToSlide = (index) => setCurrentIndex(index);
-       useEffect(()=>{
+  const goToNext = () => {
+    setCurrentIndex(currentIndex === images.length - 1 ? 0 : currentIndex + 1);
+  };
 
-       })
+  const goToSlide = (index) => setCurrentIndex(index);
+  useEffect(() => {});
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -30,11 +27,11 @@ function Slider({images}) {
   }, [currentIndex]);
 
   return (
-    <> 
-    <div  className='imgs-wrapper'>
+    <>
+      <div className="imgs-wrapper">
         <img src={images[currentIndex]} alt="" />
-    </div>
-    <div className="dots-wrapper">
+      </div>
+      <div className="dots-wrapper">
         {images.map((slide, index) => (
           <div
             key={index}
@@ -42,36 +39,23 @@ function Slider({images}) {
             onClick={() => goToSlide(index)}
           >
             {" "}
-            <GoDotFill  className='dots-svg'/>{" "}
+            <GoDotFill className="dots-svg" />{" "}
           </div>
         ))}
+      </div>
+      <div className="lieu-section-two">
+        <div className="direction">
+          <FaDirections className="itineraire-icon" />
         </div>
-        <div className='lieu-section-two'>
-        <div className='direction'>
-                <FaDirections className='itineraire-icon'/>
-            </div>
-            
-            <div>
-                <img src="/src/assets/images/Calque_1.svg" alt="Custom Icon"  />
-            </div>
-            <div className='hide'>
-                <FaDirections/>
-            </div>
+        <div>
+          <img src="/src/assets/images/Calque_1.svg" alt="Custom Icon" />
         </div>
-        <div className='itinéraire'>
+      </div>
+      <div className="itinéraire">
         <p>Itinéraire</p>
-        </div>
-
-        <div className='audio'>
-            <BsPlayFill/>
-            <BsPauseFill/>
-            
-
-        </div>
+      </div>
     </>
-  )
-   
-  
+  );
 }
 
-export default Slider
+export default Slider;

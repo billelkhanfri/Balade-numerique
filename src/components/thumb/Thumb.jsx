@@ -19,13 +19,14 @@ function Thumb({
   coup_coeur_text4,
   coup_coeur_title5,
   coup_coeur_text5,
+  isFavorite,
 }) {
   const [toggle, setToggle] = useState(false);
 
   // Load favorites from local storage on component mount
   useEffect(() => {
     const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-    if (favorites.includes(id)) {
+    if (favorites[id]) {
       setToggle(true);
     }
   }, [id]);
@@ -33,21 +34,34 @@ function Thumb({
   const handleToggle = (e) => {
     e.preventDefault(); // Prevent the default Link navigation
     const updatedFavorites =
-      JSON.parse(localStorage.getItem("favorites")) || [];
+      JSON.parse(localStorage.getItem("favorites")) || {};
 
     if (toggle) {
       // Remove the item from favorites
-      const index = updatedFavorites.indexOf(id);
-      if (index !== -1) {
-        updatedFavorites.splice(index, 1);
-        localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
-      }
+      delete updatedFavorites[id];
     } else {
       // Add the item to favorites
-      updatedFavorites.push(id);
-      localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+      updatedFavorites[id] = {
+        imageUrl,
+        title,
+        subtitle,
+        id,
+        history_one,
+        coup_coeur_title,
+        coup_coeur_text,
+        coup_coeur_title2,
+        coup_coeur_text2,
+        coup_coeur_title3,
+        coup_coeur_text3,
+        coup_coeur_title4,
+        coup_coeur_text4,
+        coup_coeur_title5,
+        coup_coeur_text5,
+        isFavorite,
+      };
     }
 
+    localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
     setToggle(!toggle);
   };
 

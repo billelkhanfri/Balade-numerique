@@ -1,7 +1,7 @@
 export const data = [
   {
-    isFavorite: false,
     id: 1,
+    isFavorite: false,
     title: "Place de la Liberté",
     subtitle: "Coup de coeur: Cinéma Le Royal",
     imageUrl: "/thumbs-imgs/place-liberte.jpg",
@@ -10,17 +10,16 @@ export const data = [
     coup_coeur_title: "Cinéma le Royal",
     coup_coeur_text:
       "Situé au  2 rue du Docteur Jean Bertholet et construit dans les années 1930, il était au départ un simple cinéma de quartier doté d'une seule salle. Ouvert pour la première fois en 1935, il finit alors par se transformer en complexe de 3 salles distinctes 40 ans plus tard. En 1993, il se convertit dans le domaine des arts et essais, proposant ainsi divers films d'auteurs en VO (version originale), rencontres et avant-premières. Hébergé dans un bâtiment de style Art Déco, le Royal est le plus ancien cinéma toulonnais encore en activité. Pour la petite anecdote, le cinéma a rencontré quelques moments difficiles entre les années 1970 et 1980, à cause de l’intégration de films pour adultes",
-      images: [
-        "/images-carrousel/Liberté_1.jpg",
-        "/images-carrousel/Liberté_2.png",
-        "/images-carrousel/Liberté_3.jpg",
-       
-      ],
-    },
+    images: [
+      "/images-carrousel/Liberté_1.jpg",
+      "/images-carrousel/Liberté_2.png",
+      "/images-carrousel/Liberté_3.jpg",
+    ],
+  },
 
   {
-    isFavorite: false,
     id: 2,
+    isFavorite: false,
     title: "Bateau sculpture",
     subtitle: "Coup de coeur: Rue des Arts",
     imageUrl: "/thumbs-imgs/bateau-sculpture.jpg",
@@ -29,16 +28,12 @@ export const data = [
     coup_coeur_title: "Rue des Arts",
     coup_coeur_text:
       "L’idée émane alors d’un urbaniste passionné d’art, Jacques Mikaélian. Aidé de l’ancien maire de Toulon, Hubert Falco, et de son adjointe Hélène Audibert ; cette rue vivante donne un second souffle au centre longtemps désuet, afin de le transformer en un carrefour attractif des arts.  On y retrouve de nombreuses galeries d’art, ateliers et boutiques d’artistes, boutiques de mode et de décoration, ainsi que des bars, restaurants et commerces de bouche, tous caractérisés par leur(s) univer(s) singulier(s). Un passage vivement recommandé pour tous les visiteurs !",
-  
-      images: [
-        "/image1.jpg",
-        "/image2.jpg",
-        "/image3.jpg",
-       
-      ],  },
+
+    images: ["/image1.jpg", "/image2.jpg", "/image3.jpg"],
+  },
   {
-    isFavorite: false,
     id: 3,
+    isFavorite: false,
     title: "Rue d'Alger",
     subtitle: "Coup de coeur: Place Raimu",
     imageUrl: "/thumbs-imgs/rue-alger.jpg",
@@ -47,47 +42,35 @@ export const data = [
     coup_coeur_title: "Place Raimu",
     coup_coeur_text:
       " Jules Muraire dit Raimu est né en décembre 1883 à la rue de l’indépendance, actuelle rue Anatole France à Toulon. Il est repéré en 1910 par Félix Mayol qui décida de le produire à Paris dans son théâtre, le « concert Mayol ». Mais c’est avec l’appui de Sacha Guitry aux côtés de Marcel Pagnol qu’il deviendra cette figure incontournable du théâtre et du cinéma français. Il décéda en septembre 1946. La place Raimu rend hommage à ce grand humoriste et acteur natif de la ville. Sur cette petite place pavée se trouve une statue en bronze mettant en scène la célèbre partie de cartes entre César (Raimu) et Panisse (Fernand Chapin), deux des quatre joueurs de cartes du film Marius de Marcel Pagnol. Deux chaises vides vous offrent la possibilité de prendre place à côté des deux sculptures afin d’admirer l’œuvre et ses personnages à l’expression réaliste",
-  
-      images: [
-        "/image1.jpg",
-        "/image2.jpg",
-        "/image3.jpg",
-       
-      ],  },
+
+    images: ["/image1.jpg", "/image2.jpg", "/image3.jpg"],
+  },
   {
-    isFavorite: false,
     id: 4,
+    isFavorite: false,
     title: "Carré du Port",
     subtitle:
       "Coup de coeur: Mairie d'honneur - Atlante, Le Génie de la navigation",
     imageUrl: "/thumbs-imgs/cul-vers-ville.jpg",
     history_one:
       "La promenade le Carré du Port abrite deux œuvres emblématiques de Toulon : la statue du Génie de la Navigation de l’artiste toulonnais Louis-Joseph Daumas, et « Les Atlantes » de Pierre Puget sur la façade de la Mairie d’Honneur. Le Génie de la Navigation a été réalisé en 1845. Le piédestal est en marbre blanc, orné de quatre bas-reliefs représentant la Renommée, les Conquêtes de la Marine, la Marine à vapeur et la Glorification de la Marine. La statue, rebaptisée « Cuverville » du nom de l’amiral Jules de Cuverville, pèse 1 300 kilos et mesure 5,40 mètres. Bombardée en 1943, elle fut restaurée en 1959 et retrouva sa place en 1997. Avec son doigt pointé vers la mer et son postérieur tourné vers la Mairie d’Honneur, la statue est surnommée par les Toulonnais « cul vers ville » ! En 1942, elle a failli être fondue par l’armée allemande mais un ingénieur militaire allemand en voyant les bas-reliefs où figure le nom de « Germanicus », dit Caius Julius Caesar, décide d’épargner la statue. Sur la façade moderne de la Mairie d’Honneur (classée Monument Historique) se trouve la porte rescapée de l’ancien Hôtel de Ville, détruit en 1944. Le balcon est soutenu par Les Atlantes, achevées en 1657, de Pierre Puget. L’artiste marseillais s’est inspiré des forçats  pour figurer la force et la fatigue, ressenties par la population laborieuse du port déchargeant des sacs de céréales.",
-  
-      images: [
-        "/image1.jpg",
-        "/image2.jpg",
-        "/image3.jpg",
-       
-      ],  },
+
+    images: ["/image1.jpg", "/image2.jpg", "/image3.jpg"],
+  },
   {
-    isFavorite: false,
     id: 5,
+    isFavorite: false,
     title: "Stade Mayol",
     subtitle: "Coup de coeur: Felix Mayol, RCT",
     imageUrl: "/thumbs-imgs/stade-mayol.jpg",
     history_one:
       "Le stade Mayol, inauguré en 1920, fut construit grâce au chansonnier Félix Mayol. Né à Toulon en 1872, ce passionné de rugby subventionna l’aménagement de l’ancien Vélodrome du Port Marchand et offrit les droits de ses chansons au Racing Club Toulonnais. C’est en son honneur qu’un brin de muguet orne le blason du club, comme celui que portait Félix Mayol à sa boutonnière, et qu’un buste de celui-ci trône à l’entrée des tribunes présidentielles. Après maintes modifications, le stade compte aujourd’hui 17 000 places et est le seul en France à être si près du centre-ville. Le Racing Club de Toulon, fondé en 1908, est l’un des clubs de rugby les plus prestigieux d’Europe. Sa création résulte de la fusion de l’Étoile sportive toulonnaise, le Racing club et le Sporting club. Fierté de la ville, il a été quatre fois champion de France, a remporté trois coupes d’Europe successives (un exploit unique) et la Challenge cup en 2023. A chaque rencontre jouée à domicile, le stade se colore de rouge et noir et vibre au chant des supporteurs, le célèbre « Pilou-Pilou ». Célèbre chanteur fantaisiste, il commença sa carrière en tant que pâtissier pour aider son oncle à la demande de ce dernier. En 1895, il décide de monter sur Paris pour tenter sa chance en tant qu’artiste. Il connaîtra un grand succès en qualité de chanteur fantaisiste grâce à « La Paimpolaise » sortie en 1900 qui lui assura une renommée nationale et « Viens Poupoule » sortie en 1902 qui lui permit d’asseoir sa notoriété jusqu’à la fin des années 20. De retour dans sa région natale, il fit construire un théâtre appelé « Le Clos Mayol » à son domicile situé au Cap-Brun ou il accueillait des célébrités tels que Mistinguett et Maurice Chevalier. Née en 1872, il s’éteignit le 26 octobre 1941. Pour la petite anecdote on raconte que lorsque Charlie Chaplin est venu en France pour la première fois, il émit le souhait d’entendre chanter Mayol.",
- 
-      images: [
-        "/image1.jpg",
-        "/image2.jpg",
-        "/image3.jpg",
-       
-      ],   },
+
+    images: ["/image1.jpg", "/image2.jpg", "/image3.jpg"],
+  },
   {
-    isFavorite: false,
     id: 6,
+    isFavorite: false,
     title: "Marché de Provence",
     subtitle:
       "Coup de coeur: Office de Tourisme, Eglise Saint-François-de-Paule, Cours Lafayette, Musée vieux Toulon, Le Boulet",
@@ -114,16 +97,12 @@ export const data = [
     coup_coeur_title5: "Le cours Lafayette",
     coup_coeur_text5:
       " Le cours Lafayette, connu et fréquenté pour son marché de Provence fut anciennement appelé le « marché aux comestibles » et se situait sur la Place à l’huile, quelques mètres plus loin. Un arrêté municipal avait d’ailleurs interdit toute vente de fruits et légumes ailleurs que sur cette place, également nommée « la place des quatre coins ».  Il est alors installé sur les vestiges de l’ancien rempart bordant la ville sous Henri IV. Le « cours Lafayette » se fait donc appeler ainsi depuis 1830. Une cure de jouvence y était accessible en 2009 afin de suivre la transformation urbain et commerciale du centre-ville. Aujourd’hui, le cours Lafayette attire de nombreux visiteurs et demeure un point central, relié aux commerces voisins.",
- 
-      images: [
-        "/image1.jpg",
-        "/image2.jpg",
-        "/image3.jpg",
-       
-      ],   },
+
+    images: ["/image1.jpg", "/image2.jpg", "/image3.jpg"],
+  },
   {
-    isFavorite: false,
     id: 7,
+    isFavorite: false,
     title: "La Cathédrale",
     subtitle: "Coup de coeur: Boutique de jouet",
     imageUrl: "/thumbs-imgs/cathedrale-toulon.jpeg",
@@ -132,16 +111,12 @@ export const data = [
     coup_coeur_title: "Boutique de Jouets",
     coup_coeur_text:
       "Les Féeries d'Emilie vous proposent “une pincée d’enchantements … un soupçon de rêves … une pluie de magie ... Entrez dans l’univers magique de cette charmante boutique au décor féerique ! Vous y trouverez une sélection originale d’articles choisie avec soin, de quoi ravir enfants de tous âges et émerveiller les plus grands. Osez pousser la porte de cette boutique enchanteresse. Une immersion garantie dans un univers enfantin ! Les deux fées de la boutique vous présenteront toute une gamme sélectionnée avec soin. Des idées cadeaux du bébé à l'enfant.",
-  
-      images: [
-        "/image1.jpg",
-        "/image2.jpg",
-        "/image3.jpg",
-       
-      ],  },
+
+    images: ["/image1.jpg", "/image2.jpg", "/image3.jpg"],
+  },
   {
-    isFavorite: false,
     id: 8,
+    isFavorite: false,
     title: "Place Saint Vincent",
     subtitle: "Coup de coeur: Les halles, Le lavoir, Portes",
     imageUrl: "/thumbs-imgs/place-saint-vincent.jpg",
@@ -159,16 +134,12 @@ export const data = [
     coup_coeur_title3: "Les vestiges de la porte",
     coup_coeur_text3:
       "Le portail de style gothique, situé derrière le Crédit municipal et les Halles, est le dernier témoignage du Couvent des Dominicains, le plus ancien monument religieux de Toulon, situé sur la place Vincent Raspail. Fondés par Saint Dominique en 1215, les Frères prêcheurs s'installèrent dans ce quartier en 1368 grâce à la reine Jeanne, qui leur attribua l'ancien Palais royal. Le couvent possédait une vaste bibliothèque et exerçait une forte influence culturelle sur la ville. Cependant, pendant la Révolution française, le couvent fut confisqué par la Marine, puis transformé en caserne en 1808, avant d'être finalement acquis par la Ville de Toulon et démoli en 1885. Le portail de style gothique, encore debout, est donc le dernier vestige de cet ancien édifice religieux chargé d'histoire.",
-      images: [
-        "/image1.jpg",
-        "/image2.jpg",
-        "/image3.jpg",
-       
-      ], },
+    images: ["/image1.jpg", "/image2.jpg", "/image3.jpg"],
+  },
 
   {
-    isFavorite: false,
     id: 9,
+    isFavorite: false,
     title: "Place Puget",
     subtitle:
       "Coup de coeur: Fontaine des 3 dauphins, Le petit prince, La savonnerie",
@@ -182,23 +153,15 @@ export const data = [
     coup_coeur_title2: "La Savonnerie",
     coup_coeur_text2:
       "C'est à Toulon que la toute première fabrique de savons a vu le jour, en 1430. Elle fut même créée à Grasse par un industriel nommé M. Palmier. Afin de le convaincre de l’installer à Toulon, la ville varoise le paya ainsi que son loyer. Ces savons, élaborés à partir d'huile d'olive, étaient réputés pour leur qualité exceptionnelle. Entre 1600 et 1650, une vingtaine de savonneries s'étaient établies dans la rue des Savonnières. Cependant, en 1669, Marseille, qui avait également développé des savonneries, mais postérieurement à Toulon, a bénéficié d'un privilège commercial lorsque Louis XIV a déclaré son port exempt de taxes, tandis que toutes les marchandises entrant ou sortant du port de Toulon en étaient soumises. Cette mesure a marqué le déclin de l'âge d'or du savon toulonnais. Vers 1770, il ne restait plus que 4 savonneries à Toulon. Le savon que l’on nomme « de Marseille », est en réalité le « savon de Toulon ». Située au 8, rue Ferdinand Pelloutier, le Petit Toulonnais, vous pourrez trouver une grande variété de savons, tous estampillés de notre emblème varois. (La savonnerie vous accueille du mardi au samedi de 10h30 à 13h30 puis de 14h30 à 18h30.)",
-      images: [
-        "/image1.jpg",
-        "/image2.jpg",
-        "/image3.jpg",
-       
-      ], },
+    images: ["/image1.jpg", "/image2.jpg", "/image3.jpg"],
+  },
   {
-    isFavorite: false,
     id: 10,
+    isFavorite: false,
     title: "L'opéra de Toulon",
     imageUrl: "/thumbs-imgs/opera-de-toulon.jpg",
     history_one:
       "Avant la construction de l’actuel Opéra, Toulon ne disposait que du théâtre de la comédie construit en 1765 et bombardé durant la seconde guerre mondiale. Inauguré en 1862 suite à la désaffectation du théâtre de la comédie car très peu fréquenté, il est l’un des plus beaux et des plus grands théâtres de province. L’opéra de Toulon est un bâtiment spécialement conçu pour la représentation des opéras. Sa construction qui a duré 2 ans est rendue possible grâce à l’agrandissement de la ville et l’arasement de ses remparts en 1853. A son inauguration, l’opéra de Toulon était au sommet du podium en termes de fréquentation. Il est situé dans le centre-ville non loin du boulevard de Strasbourg et est classé monument historique depuis le 2 décembre 1988.",
-      images: [
-        "/image1.jpg",
-        "/image2.jpg",
-        "/image3.jpg",
-       
-      ], },
+    images: ["/image1.jpg", "/image2.jpg", "/image3.jpg"],
+  },
 ];

@@ -10,7 +10,6 @@
   margin: auto;
   margin-top: 40px;
   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.6); /* Add box shadow here */
-
 }
 
 .navbar-item a {
@@ -93,7 +92,7 @@
   height: 20px;
 }
 .link {
-  color:rgb(159 159 159);
+  color: rgb(151 151 151);
 }
 .link p {
   font-size: 14px;
@@ -160,21 +159,17 @@
   }
 }
 .break {
-  margin-top: 80px;
+  margin-top: 200px;
 }
-  @media screen  and ( max-width : 425px){
-
-    .icons{
-      width: 28px;
-      height: 28px;
-    }
-    .navbar {
-      
-      padding: 14px ;
-    }
-    .link p {
-      font-size: 12px;
-
-    }
-    
+@media screen and (max-width: 425px) {
+  .icons {
+    width: 28px;
+    height: 28px;
   }
+  .navbar {
+    padding: 14px;
+  }
+  .link p {
+    font-size: 12px;
+  }
+}

@@ -7,14 +7,12 @@ import { MdPlace, MdFavorite } from "react-icons/md";
 import { GiThreePointedShuriken } from "react-icons/gi";
 import { PiPathBold } from "react-icons/pi";
 
-import { Link,NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 
 const Navbar = () => {
   const [menuOpen, setMeuOpen] = useState(false);
-  
 
-  
   const toggleMenu = () => {
     setMeuOpen(!menuOpen);
   };
@@ -51,15 +49,12 @@ const Navbar = () => {
 
           <NavLink className="link" to="/favoris" activeclassname="active">
             <ul className="menu">
-            <li className="menu-item">
-                <MdFavorite className="icons"/>
+              <li className="menu-item">
+                <MdFavorite className="icons" />
                 <p>Favoris</p>
               </li>
             </ul>
-              
-            </NavLink>
-
-       
+          </NavLink>
 
           <ul className={` navbar-menu ${menuOpen ? "open" : ""}`}>
             <Link className="link" to="/circuit">
