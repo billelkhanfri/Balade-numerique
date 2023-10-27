@@ -8,6 +8,11 @@
   align-items: center;
   padding: 10px;
 }
+
+.item-head  h2{
+ font-size: 32px;
+ font-weight: 400;
+}
 .item-wrapper {
   height: 448px;
   position: relative;

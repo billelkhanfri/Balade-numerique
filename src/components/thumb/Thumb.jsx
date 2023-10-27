@@ -69,6 +69,13 @@ function Thumb({
     <Link to={`/lieu/${id}`} key={`${id}`}>
       <div className="thumb">
         <div className="wrapper">
+          {coup_coeur_title && (
+            <div className="coup-coeur-vignette">
+              {" "}
+              <p> Coup de Coeur</p>
+            </div>
+          )}
+
           <span onClick={handleToggle}>
             {!toggle ? (
               <AiOutlineHeart className="fav-icon" />
