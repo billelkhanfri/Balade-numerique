@@ -1,37 +1,65 @@
-.collapse-wrapper{
-    width: 95%;
-    height: auto;
-    margin: 30px auto;
-    border-radius: 5px;
+.collapse-wrapper {
+  width: 95%;
+  height: auto;
+  margin: 30px auto;
+  border-radius: 5px;
 }
 
-
 .dropDownshowen {
-    background-color: var(--color-footer);
-    color: white;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 5px;
-    height: 30px;
-    padding: 0 12px;
+  background-color: var(--color-footer);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  height: 30px;
+  padding: 0 12px;
 }
 
 .dropDownshowen h2 {
-    font-size: 13px;
-    font-weight: 500;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.contentWrapper {
+  font-size: 13px;
+  font-weight: 500;
+  height: auto;
+  overflow: hidden;
+  background: #fafafa;
+  border-radius: 5px 0px;
+  padding: 14px;
+  line-height: 24px;
+    animation: fadeIn 0.3s ease-in-out;
 
 }
 
-.contentWrapper  {
-    font-size: 13px;
-    font-weight: 500;
-    height: auto;
-    overflow: hidden;
-    background: #fafafa;
-    border-radius: 5px 0px;
-    padding: 14px;
-    line-height: 24px;
 
+.contentWrapper.fadeOut {
+  animation: fadeOut 1s ease-out;
+}
+
+/* Animation for toggling (expanding) content */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation for untoggling (collapsing) content */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
 }

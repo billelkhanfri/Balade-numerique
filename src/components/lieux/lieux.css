@@ -1,0 +1,35 @@
+.lieux-wrapper {
+  position: relative;
+}
+
+.menu-wrapper {
+  position: absolute;
+  left: 50%;
+  top: -450px; /* Initially off-screen, adjust the value as needed */
+  z-index: 1000;
+  transform: translate(-50%, 0);
+  background-color: var(--color-primary);
+  width: 100%;
+  height: 590px;
+  padding: 0 14px;
+  border-radius: 20px;
+  overflow-y: scroll;
+  transition: top 0.3s; /* Use transition for smooth animation */
+}
+
+.menu-wrapper.active {
+  top: -10px; /* Move the menu to the desired position */
+}
+
+.button-scroll {
+  width: 60px;
+  height: 6px;
+  background-color: white;
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 550;
+  position: absolute;
+  border-radius: 20px;
+  border: none;
+}

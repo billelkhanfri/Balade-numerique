@@ -1,6 +1,5 @@
 import "./App.css";
 import Accueil from "./containers/accueil/Accueil";
-import Lieux from "./containers/lieux/Lieux";
 import Carte from "./containers/carte/Carte";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SplashScreen from "./components/splashScreen/splashScreen";
@@ -24,7 +23,6 @@ function App() {
         <Route path="/" element={<Accueil data={data} favorites={favorites} />}>
           {" "}
         </Route>
-        <Route path="/lieux" element={<Lieux />}></Route>
         <Route path="/carte" element={<Carte />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/circuit" element={<Circuit />}></Route>

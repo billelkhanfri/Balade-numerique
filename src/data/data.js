@@ -3,7 +3,6 @@ export const data = [
     id: 1,
     isFavorite: false,
     title: "Place de la Liberté",
-    subtitle: "Cinéma Le Royal",
     imageUrl: "/thumbs-imgs/place-liberte.jpg",
     history_one:
       "C’est en 1858, à l’initiative du ministère de la Guerre, que cette grande place est créée. Elle symbolise à l’époque le ‘’Centre du Toulon Moderne’ . En 1875 sont construits l’hôtel de la subdivision ainsi que le cercle militaire. C’est alors en 1889 qu’elle prend le nom de «place de la Liberté». Au centre de la place se trouve la Fontaine de la Fédération, taillée dans la pierre de Calissanne. Réalisée la même année par les frères sculpteurs Allar, elle représente le départ de la statue de la Liberté vers les États-Unis. Elle est alors inaugurée par le président Carnot en 1890, et rassemble trois figures représentant la France, la Force et la Justice. Situé derrière la statue, l’emblématique immeuble de l’ancien Grand Hôtel héberge désormais le Théâtre Liberté, dirigé par Charles et Philippe Berling depuis son inauguration en septembre 2011.",
@@ -17,7 +16,6 @@ export const data = [
     id: 2,
     isFavorite: false,
     title: "Bateau sculpture",
-    subtitle: "Coup de coeur: Rue des Arts",
     imageUrl: "/thumbs-imgs/bateau-sculpture.jpg",
     history_one:
       "Dans le centre historique du vieux Toulon,  sur la Place Vatel, trône un bateau sculpture de dix mètres de hauteur sur dix mètres de longueur et de largeur. Cette œuvre monumentale est la reproduction fidèle de la proue de la frégate « la Flore », navire royal du XVIIIe siècle. C’est d’ailleurs au Musée National de la Marine que se trouve l’original de la figure de proue, représentant Neptune, le dieu romain de la mer. Ce bateau emblématique fait alors partie intégrante du passé maritime de Toulon. C’est depuis 1995 que ce bateau sculpture trône contre la façade d'un immeuble. Récemment, en octobre 2021, l'artiste Alexandre-Benjamin Navet a colorisé l’œuvre, la rendant alors encore plus originale et unique",
@@ -34,7 +32,6 @@ export const data = [
     id: 3,
     isFavorite: false,
     title: "Rue d'Alger",
-    subtitle: "Coup de coeur: Place Raimu",
     imageUrl: "/thumbs-imgs/rue-alger.jpg",
     history_one:
       "Située dans le vieux Toulon, la rue d’Alger, artère commerçante et populaire, est considérée comme le cœur historique de la ville. C’est aussi une des entrées de la ville par le port et, récemment avec l’arrivée de nouvelles enseignes, une rue dynamisée. Elle s’est d’abord appelée « rue des vieux fossés » puis « rue des chaudronniers », en référence aux chaudronniers qui s’y étaient établis, loin du centre-ville et des habitations, car leur activité était bruyante. Ce n’est qu’à partir de 1871 que la rue est rebaptisée « rue d’Alger », en souvenir de la conquête de l’Algérie par la France en 1830. C’est d’ailleurs après l’indépendance de l’Algérie en juillet 1962 que près de 170 000 rapatriés débarquèrent à Toulon et s’y installèrent.",
@@ -48,8 +45,6 @@ export const data = [
     id: 4,
     isFavorite: false,
     title: "Carré du Port",
-    subtitle:
-      "Coup de coeur: Mairie d'honneur - Atlante, Le Génie de la navigation",
     imageUrl: "/thumbs-imgs/cul-vers-ville.jpg",
 
     history_one:
@@ -67,7 +62,6 @@ export const data = [
     id: 5,
     isFavorite: false,
     title: "Stade Mayol",
-    subtitle: "Coup de coeur: Felix Mayol, RCT",
     imageUrl: "/thumbs-imgs/stade-mayol.jpg",
 
     history_one:
@@ -85,8 +79,6 @@ export const data = [
     id: 6,
     isFavorite: false,
     title: "Marché de Provence",
-    subtitle:
-      "Coup de coeur: Office de Tourisme, Eglise Saint-François-de-Paule, Cours Lafayette, Musée vieux Toulon, Le Boulet",
     imageUrl: "/thumbs-imgs/marche-de-provence.jpg",
     history_one:
       "Le cours Lafayette, connu et fréquenté pour son marché de Provence fut anciennement appelé le « marché aux comestibles » et se situait sur la Place à l’huile, quelques mètres plus loin. Un arrêté municipal avait d’ailleurs interdit toute vente de fruits et légumes ailleurs que sur cette place, également nommée « la place des quatre coins ».  Il est alors installé sur les vestiges de l’ancien rempart bordant la ville sous Henri IV. Le « cours Lafayette » se fait donc appeler ainsi depuis 1830. Une cure de jouvence y était accessible en 2009 afin de suivre la transformation urbain et commerciale du centre-ville. Aujourd’hui, le cours Lafayette attire de nombreux visiteurs et demeure un point central, relié aux commerces voisins.",
@@ -119,7 +111,6 @@ export const data = [
     id: 7,
     isFavorite: false,
     title: "La Cathédrale",
-    subtitle: "Coup de coeur: Boutique de jouet",
     imageUrl: "/thumbs-imgs/cathedrale-toulon.jpeg",
     history_one:
       "Le plus vieux monument de Toulon, la cathédrale Ste-Marie de la SEDS fut construit lors de la première croisade vers 1096 par le compte Gilbert de Provence. Située au cœur de la vieille ville, qui était coincée au Moyen-Âge dans une petite enceinte fortifiée allongée entre la mer et l’actuel collège Peiresc, des fouilles en 2018 ont mis à jour une structure de la fin de l’Antiquité, dont sans doute l’ancien baptistère. Consacré à la Sainte Vierge d’où son nom Sainte-Marie au XIXe siècle ou actuellement Notre-Dame de la Seds a servi de cathédrale pour une diocèse de 25 paroisses jusqu’à la révolution",
@@ -132,7 +123,6 @@ export const data = [
     id: 8,
     isFavorite: false,
     title: "Place Saint Vincent",
-    subtitle: "Coup de coeur: Les halles, Le lavoir, Portes",
     imageUrl: "/thumbs-imgs/place-saint-vincent.jpg",
     history_one:
       "Sur la place Saint Vincent qui tient son nom de la Gleysa Sant Vincens (une église qui fut incendiée et détruite lors d’une razzia sarrazine), fut construit l’un des premiers lavoirs de la ville en 1615. On y trouvait principalement des femmes qui faisaient usage des lavoirs pour faire leurs Bugades (lessives)",
@@ -158,8 +148,6 @@ export const data = [
     id: 9,
     isFavorite: false,
     title: "Place Puget",
-    subtitle:
-      "Coup de coeur: Fontaine des 3 dauphins, Le petit prince, La savonnerie",
     imageUrl: "/thumbs-imgs/place-puget.jpg",
     history_one:
       " En 1649, le sculpteur Gaspard Puget est chargé de construire une première fontaine au centre de la place. Un siècle plus tard, une nouvelle fontaine ornée de dauphins, œuvre du sculpteur Jean Pancrace Chastel, remplace le modèle originel. Ce sont les trois dauphins aux queues entrelacées qui font notamment le charme de cette fontaine ",

@@ -28,10 +28,17 @@
 }
 
 .text-wrapper {
-  position: absolute;
-  bottom: 20px;
   padding: 10px;
   z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  bottom: 70px;
+}
+.text-wrapper h2{
+ font-weight: 400;
+ font-size: 24px;
 }
 .wrapper {
   height: 300px;
@@ -43,29 +50,28 @@
   border-radius: 8px;
 }
 .fav-icon {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
   z-index: 2;
   font-size: 28px;
 }
 .fill {
   color: var(--color-red);
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
   z-index: 2;
   font-size: 28px;
 }
 .coup-coeur-vignette {
   position: absolute;
   background-color: var(--color-secondary);
-  padding: 2px 6px;
+  padding: 3px 8px;
   margin: 10px;
   border-radius: 4px;
   color: black;
+  bottom: 50px;
+  z-index: 2;
 }
 .coup-coeur-vignette p {
   font-size: 13px;
   font-weight: 400;
+}
+.icon-wrapper {
+  padding-top: 5px;
 }

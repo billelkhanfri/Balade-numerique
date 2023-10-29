@@ -6,6 +6,8 @@
   z-index: 1000;
   text-align: center;
   bottom: 0;
+  left: 0;
+  right: 0;
   max-width: 1024px;
   margin: auto;
   margin-top: 40px;
@@ -24,11 +26,11 @@
   width: 49px;
   height: auto;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 
   -o-object-position: center;
 
-     object-position: center;
+  object-position: center;
 }
 .navbar-item:hover a {
   cursor: pointer;
@@ -76,11 +78,11 @@
   list-style: none;
 }
 .link.active {
-  color: var(--color-primary);
+  color: var(--color-footer);
 }
 .icons {
-  width: 38px;
-  height: 38px;
+  width: 36px;
+  height: 36px;
   text-align: center;
 }
 .fav-item {
@@ -101,7 +103,7 @@
 }
 .link p {
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 500;
 }
 .open-button {
   display: block;
@@ -121,7 +123,7 @@
 .open-button a {
   font-size: 18px;
   -webkit-animation: appear 0.3 ease-in-out;
-          animation: appear 0.3 ease-in-out;
+  animation: appear 0.3 ease-in-out;
 }
 .open-button:hover {
   color: black;
@@ -129,30 +131,39 @@
   cursor: pointer;
 }
 .navbar-menu.open {
+  background-color: rgba(38, 129, 158, 0.92);
   display: block;
-  background-color: var(--color-primary);
   position: fixed;
-
   text-align: center;
   left: 0;
-  bottom: 80px;
+  bottom: 90px;
   opacity: 1;
   height: auto;
   transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
-  width: 768px;
-  left: calc(50% - 384px);
+  width: 70%;
+  margin: auto;
+  left: 0;
+
+  right: 0;
+  box-shadow: 0 -2px 5px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
 }
+.navbar-menu.open .link {
+  color: white;
+}
+.navbar-menu.open .link .spesific {
+border-bottom: 1px solid;
+border-top: 1px solid;}
 
 .navbar-item {
   font-size: 18px;
   padding: 25px 16px;
   border: 2px solid transparent;
-  border-bottom-color: var(--color-secondary);
 }
 .navbar-menu.open .navbar-item a {
   font-size: 18px;
   -webkit-animation: appear 0.3 ease-in-out;
-          animation: appear 0.3 ease-in-out;
+  animation: appear 0.3 ease-in-out;
 }
 @-webkit-keyframes colorChange {
   0% {
@@ -177,19 +188,18 @@
   }
 }
 .break {
-  margin-top: 200px;
+  margin-top: 90px;
 }
 @media screen and (max-width: 425px) {
   .icons {
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
   }
   .navbar {
     padding: 14px;
   }
   .link p {
-    font-size: 12px;
+    font-size: 10px;
+    font-weight: 500;
   }
 }
-
-

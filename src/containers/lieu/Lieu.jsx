@@ -66,6 +66,7 @@ function Lieu() {
         coup_coeur_text={coup_coeur_text}
         coup_coeur_text2={coup_coeur_text2}
         coup_coeur_text3={coup_coeur_text3}
+        coup_coeur_text4={coup_coeur_text4}
         coup_coeur_title={coup_coeur_title}
         coup_coeur_text5={coup_coeur_text5}
         coup_coeur_title2={coup_coeur_title2}

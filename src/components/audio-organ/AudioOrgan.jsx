@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import AudioPlayer from "../audioplayer/AudioPlayer";
 import ControlPanel from "../audioplayer/Control-panel";
-import song from "../../assets/audio/X2Download.app - Khaled - Aicha (128 kbps).mp3";
+import song from "../../assets/audio/liberte.aiff";
 import "./audioOrgan.css";
 
 function AudioOrgan() {
@@ -20,7 +20,7 @@ function AudioOrgan() {
 
   const play = () => {
     const audio = audioRef.current;
-    audio.volume = 0.1;
+    audio.volume = 0.2;
 
     if (!isPlaying) {
       setIsPlaying(true);

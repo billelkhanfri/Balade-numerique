@@ -3,6 +3,7 @@ import { divIcon } from "leaflet";
 import "./carte.css";
 import "leaflet/dist/leaflet.css";
 import { useEffect, useState } from "react";
+import Lieux from "../../components/lieux/Lieux.jsx";
 import {
   MapContainer,
   TileLayer,
@@ -19,6 +20,14 @@ function Carte() {
   const retryFetchLocation = () => {
     setLoading(true);
     setHasInternet(true);
+
+
+
+
+ 
+
+  
+
 
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition(
@@ -76,19 +85,18 @@ function Carte() {
   });
 
   const pathCoordinates = [
-    [43.12566961111021, 5.930514335632324], // Marker 2
-    [43.12314987182617, 5.931080341339111], // Marker 1
-
-    [43.1207308, 5.9314906], // Marker 3
+    [43.12566961111021, 5.930514335632324], 
+    [43.12314987182617, 5.931080341339111], 
+    [43.1207308, 5.9314906], 
     [43.11996078491211, 5.932811737060547],
     [43.11900586846106, 5.936736189260646],
-    // Marker 4
-    [43.121326754622004, 5.934564640175547], // Marker 5
-    [43.12165469161616, 5.933974953667892], // Marker 6
-    [43.12239778375607, 5.934633982047172], // Marker 7
-    [43.123485152129774, 5.932922946465119], // Marker 8
-    [43.1244893904978, 5.932467694145099], // Marker 9
-    [43.12566961111021, 5.930514335632324], // Marker 2
+    
+    [43.121326754622004, 5.934564640175547],
+    [43.12165469161616, 5.933974953667892], 
+    [43.12239778375607, 5.934633982047172], 
+    [43.123485152129774, 5.932922946465119],
+    [43.1244893904978, 5.932467694145099],
+    [43.12566961111021, 5.930514335632324],
   ];
   const polylineStyle = {
     color: "#26819e",
@@ -97,10 +105,13 @@ function Carte() {
 
   return (
     <>
+      <div className="item-head" style={{ justifyContent: "center" }}>
+        <h2>Carte</h2>
+      </div>
       {loading ? (
         <Loader />
       ) : hasInternet ? (
-        <MapContainer center={[43.12165469161616, 5.933974953667892]} zoom={16}>
+        <MapContainer center={[43.12172746794208, 5.932803327074734]} zoom={15}>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -191,6 +202,7 @@ function Carte() {
           <button onClick={retryFetchLocation}>Rafraichir</button>
         </div>
       )}
+      <Lieux />
       <Navbar />
     </>
   );

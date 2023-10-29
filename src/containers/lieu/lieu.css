@@ -119,8 +119,8 @@
 
 .return-icon {
   color: var(--color-secondary);
-  width: 36px;
-  height: 36px;
+  width: 42px;
+  height: 42px;
   cursor: pointer;
 }
 .return-icon-transparent {

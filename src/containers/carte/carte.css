@@ -1,25 +1,23 @@
-
-
 .custom-marker {
-width: 100% !important;
-height: 100% !important;
-object-fit: contain !important;
-
- 
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
 }
 .leaflet-container {
-  height: 100vh;
-
+  height: 68vh !important;
+  background-color: white !important;
 }
-.img-wrapper{
-  width: 50px !important;
-  height: 50px !important;
-  
+.img-wrapper {
+  width: 28px !important;
+  height: 28px !important;
+
   border: 3px solid #b7b7b7;
-   background: var(--color-hover);
-   filter: drop-shadow(100%); 
- 
-  padding: 2px;
+  background: var(--color-hover);
+  filter: drop-shadow(100%);
 
- 
+  padding: 2px;
 }
+
+
+
+

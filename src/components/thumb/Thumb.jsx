@@ -31,6 +31,16 @@ function Thumb({
     }
   }, [id]);
 
+  const coupCoeur = [
+    coup_coeur_title,
+    coup_coeur_title2,
+    coup_coeur_title3,
+    coup_coeur_title4,
+    coup_coeur_title5,
+  ];
+  const definedCoup = coupCoeur.filter((x) => x !== undefined);
+  const definedNumber = definedCoup.length;
+
   const handleToggle = (e) => {
     e.preventDefault(); // Prevent the default Link navigation
     const updatedFavorites =
@@ -44,7 +54,6 @@ function Thumb({
       updatedFavorites[id] = {
         imageUrl,
         title,
-        subtitle,
         id,
         history_one,
         coup_coeur_title,
@@ -72,22 +81,24 @@ function Thumb({
           {coup_coeur_title && (
             <div className="coup-coeur-vignette">
               {" "}
-              <p> Coup de Coeur</p>
+              <p> Coup de Coeur ({definedNumber})</p>
             </div>
           )}
 
-          <span onClick={handleToggle}>
-            {!toggle ? (
-              <AiOutlineHeart className="fav-icon" />
-            ) : (
-              <AiFillHeart className="fav-icon fill" />
-            )}
-          </span>
           <img className="thum-img" src={imageUrl} alt={title} />
-        </div>
-        <div className="text-wrapper">
-          <h2>{title}</h2>
-          <p>{subtitle}</p>
+          <div className="text-wrapper">
+            <div>
+              <h2>{title}</h2>
+            </div>
+
+            <div onClick={handleToggle} className="icon-wrapper">
+              {!toggle ? (
+                <AiOutlineHeart className="fav-icon" />
+              ) : (
+                <AiFillHeart className="fav-icon fill" />
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </Link>
