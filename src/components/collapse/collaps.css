@@ -6,7 +6,7 @@
 }
 
 .dropDownshowen {
-  background-color: var(--color-footer);
+  background-color: var(--color-red);
   color: white;
   cursor: pointer;
   display: flex;
@@ -27,20 +27,33 @@
   font-weight: 500;
   height: auto;
   overflow: hidden;
-  background: #fafafa;
+ 
   border-radius: 5px 0px;
   padding: 14px;
   line-height: 24px;
-    animation: fadeIn 0.3s ease-in-out;
+    -webkit-animation: fadeIn 0.3s ease-in-out;
+            animation: fadeIn 0.3s ease-in-out;
+            color: #545454;
 
 }
 
 
 .contentWrapper.fadeOut {
-  animation: fadeOut 1s ease-out;
+  -webkit-animation: fadeOut 1s ease-out;
+          animation: fadeOut 1s ease-out;
 }
 
 /* Animation for toggling (expanding) content */
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -53,6 +66,16 @@
 }
 
 /* Animation for untoggling (collapsing) content */
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+}
 @keyframes fadeOut {
   0% {
     opacity: 1;

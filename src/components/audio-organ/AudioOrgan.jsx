@@ -1,10 +1,9 @@
 import { useState, useRef } from "react";
 import AudioPlayer from "../audioplayer/AudioPlayer";
 import ControlPanel from "../audioplayer/Control-panel";
-import song from "../../assets/audio/liberte.aiff";
 import "./audioOrgan.css";
 
-function AudioOrgan() {
+function AudioOrgan({lecture}) {
   const [percentage, setPercentage] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [duration, setDuration] = useState(0);
@@ -53,7 +52,7 @@ function AudioOrgan() {
         onLoadedData={(e) => {
           setDuration(e.currentTarget.duration.toFixed(2));
         }}
-        src={song}
+         src={lecture}
       ></audio>
       <ControlPanel
         play={play}

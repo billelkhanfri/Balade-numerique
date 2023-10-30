@@ -30,6 +30,7 @@ function Lieu() {
     coup_coeur_title5,
     coup_coeur_text5,
     images,
+    lecture,
   } = lieuData;
   return (
     <>
@@ -45,7 +46,7 @@ function Lieu() {
           <Slider images={images} />
         </div>
 
-        <AudioOrgan />
+        <AudioOrgan  lecture={lecture}/>
 
         <div className="texts-wrapper">
           <p> {history_one}</p>

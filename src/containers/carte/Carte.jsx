@@ -21,14 +21,6 @@ function Carte() {
     setLoading(true);
     setHasInternet(true);
 
-
-
-
- 
-
-  
-
-
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition(
         (geoLocation) => {

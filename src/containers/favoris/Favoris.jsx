@@ -32,7 +32,7 @@ function Favoris() {
           <Link to="/">
             <IoIosArrowBack className="return-icon" />
           </Link>
-          <h2> Favorie</h2>
+          <h2> Favoris</h2>
           <IoIosArrowBack className="return-icon-transparent" />
         </div>
       </div>

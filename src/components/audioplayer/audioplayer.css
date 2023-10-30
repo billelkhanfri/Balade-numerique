@@ -10,7 +10,7 @@
 /* Background */
 .slider-container::before {
   content: "";
-  background-color: var(--color-red);
+  background-color: #e9E9E9;
   width: 99%;
   height: calc(var(--progress-bar-height) - 1px);
   display: block;
@@ -33,7 +33,10 @@
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   pointer-events: none;
 }
 
