@@ -3,12 +3,14 @@ import Thumb from "../../components/thumb/Thumb";
 import { data } from "../../data/data.js";
 import "./accueil.css";
 import Banner from "../../components/banner/Banner";
+import Weathers from "../../components/weather/Weather";
 
 const Accueil = () => {
   return (
     <>
       <Banner />
       <div className="thumbs-wrapping">
+        <Weathers></Weathers>
         <div className=" thumbs-container">
           {data &&
             data.map((item) => (

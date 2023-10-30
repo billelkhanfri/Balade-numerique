@@ -3,7 +3,7 @@ import AudioPlayer from "../audioplayer/AudioPlayer";
 import ControlPanel from "../audioplayer/Control-panel";
 import "./audioOrgan.css";
 
-function AudioOrgan({lecture}) {
+function AudioOrgan({ lecture }) {
   const [percentage, setPercentage] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [duration, setDuration] = useState(0);
@@ -52,7 +52,7 @@ function AudioOrgan({lecture}) {
         onLoadedData={(e) => {
           setDuration(e.currentTarget.duration.toFixed(2));
         }}
-         src={lecture}
+        src={lecture}
       ></audio>
       <ControlPanel
         play={play}
