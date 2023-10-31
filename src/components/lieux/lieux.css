@@ -4,6 +4,7 @@
 
 .menu-wrapper {
   position: absolute;
+  
   left: 50%;
   top: -450px; /* Initially off-screen, adjust the value as needed */
   z-index: 1000;

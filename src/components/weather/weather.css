@@ -1,12 +1,11 @@
 .weather-container {
   display: flex;
-  width: 90%;
-  margin: auto;
-  border-radius: 8px;
+  border-radius: 10px;
   flex-direction: column;
   padding: 15px;
   background-color: white;
-  margin-top: 20px;
+  margin: 20px;
+  margin-bottom: 0;
 }
 
 .data-container {
@@ -33,10 +32,15 @@
   font-size: 14px;
   padding: 10px;
   padding-left: 0;
+color:  #5d5d5d;
 }
 .weather-value {
   font-size: 14px;
   padding: 10px;
   padding-left: 0;
   color: #5d5d5d;
+}
+.weather-widget {
+  width: 95%;
+  margin: auto;
 }

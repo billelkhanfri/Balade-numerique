@@ -36,7 +36,6 @@ const date = new Date(timestamp * 1000);
 
 const formattedDate = date.toLocaleDateString(); 
 
-console.log(formattedDate); 
 
    
   return (
