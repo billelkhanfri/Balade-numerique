@@ -1,0 +1,42 @@
+.custom-marker {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
+.leaflet-container {
+  height: 100vh !important;
+  background-color: white !important;
+}
+.img-wrapper {
+  width: 28px !important;
+  height: 28px !important;
+
+  border: 3px solid #b7b7b7;
+  background: var(--color-hover);
+  filter: drop-shadow(100%);
+
+  padding: 2px;
+}
+
+.map-button {
+  position: absolute;
+  top: 12vh;
+  right: 0vw;
+  z-index: 1000;
+}
+.map-button .button {
+  background-color: var(--color-secondary);
+  color: var(--color-black);
+  padding: 20px 16px;
+  border: none; /* No border */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 2px;
+  cursor: pointer;
+  border-radius: 40px;
+  transition: background-color 0.3s;
+font-weight: 500;}
+ 
+

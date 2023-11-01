@@ -4,7 +4,7 @@
   object-fit: contain !important;
 }
 .leaflet-container {
-  height: 68vh !important;
+  height: 100vh !important;
   background-color: white !important;
 }
 .img-wrapper {
