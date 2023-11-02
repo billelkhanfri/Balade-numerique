@@ -46,54 +46,64 @@ function Parcours() {
 
   const bateauIcon = divIcon({
     html: ' <div  class="img-wrapper"> <img class ="custom-marker" src="/src/assets/icones-pics/Sculpture-bateau.png" alt="Custom Icon" /> <div/>',
+    className: "custom-marker-icon",
   });
 
   const libertyIcon = divIcon({
     html: ' <div  class="img-wrapper"><img class ="custom-marker" src="/src/assets/icones-pics/Liberté.png" alt="Custom Icon" /><div/> ',
+    className: "custom-marker-icon",
   });
 
   const mayolIcon = divIcon({
     html: ' <div  class="img-wrapper"><img class ="custom-marker" src="/src/assets/icones-pics/Stade-Mayole.png" alt="Custom Icon" /> <div/>',
+    className: "custom-marker-icon",
   });
   const pugetIcon = divIcon({
     html: ' <div  class="img-wrapper"><img class ="custom-marker" src="/src/assets/icones-pics/Place-puget.png" alt="Custom Icon" /><div/> ',
+    className: "custom-marker-icon",
+  
   });
   const operaIcon = divIcon({
     html: ' <div  class="img-wrapper"><img class ="custom-marker" src="/src/assets/icones-pics/Opéra.png" alt="Custom Icon" /> <div/>',
-  });
+   className: "custom-marker-icon", });
   const lavoirIcon = divIcon({
     html: ' <div  class="img-wrapper"><img class ="custom-marker" src="/src/assets/icones-pics/Lavoir.png" alt="Custom Icon" /> <div/>',
+    className: "custom-marker-icon",
   });
   const algerIcon = divIcon({
     html: ' <div  class="img-wrapper  alger"><img class ="custom-marker" src="/src/assets/icones-pics/Rue-Alger.png" alt="Custom Icon" /> <div/>',
+    className: "custom-marker-icon",
   });
   const cathIcon = divIcon({
     html: ' <div  class="img-wrapper"><img class ="custom-marker" src="/src/assets/icones-pics/Cathédrale-de-toulon.png" alt="Custom Icon" /><div/> ',
+    className: "custom-marker-icon",
   });
   const fayetteIcon = divIcon({
     html: '<div  class="img-wrapper"> <img class ="custom-marker" src="/src/assets/icones-pics/Court-Lafayette.png" alt="Custom Icon" /><div/> ',
+    className: "custom-marker-icon",
   });
   const portIcon = divIcon({
     html: ' <div  class="img-wrapper"><img class ="custom-marker" src="/src/assets/icones-pics/Carrée-du-port.png" alt="Custom Icon" /> <div/>',
+    className: "custom-marker-icon",
   });
 
   const pathCoordinates = [
-    [43.12566961111021, 5.930514335632324],
-    [43.12314987182617, 5.931080341339111],
-    [43.1207308, 5.9314906],
-    [43.11996078491211, 5.932811737060547],
+    [43.12639961111021, 5.930514335632324],
+    [43.123174010156674, 5.93257506695695],
+    [43.12142095745307, 5.9319978115427565],
+    [43.12007266473213, 5.931721017717504],
     [43.11900586846106, 5.936736189260646],
 
     [43.121326754622004, 5.934564640175547],
     [43.12165469161616, 5.933974953667892],
     [43.12239778375607, 5.934633982047172],
-    [43.123485152129774, 5.932922946465119],
+    [43.123633909824406, 5.9330221864107004],
     [43.1244893904978, 5.932467694145099],
-    [43.12566961111021, 5.930514335632324],
+    [43.12639961111021, 5.930514335632324],
   ];
   const polylineStyle = {
-    color: "#26819e",
-    weight: 6,
+    color: "#103d47ed",
+    weight: 5,
   };
 
   return (
@@ -125,7 +135,7 @@ function Parcours() {
           </Marker>
 
           <Marker
-            position={[43.12566961111021, 5.930514335632324]}
+            position={[43.12639961111021, 5.930514335632324]}
             icon={libertyIcon}
           >
             <Popup>
@@ -135,16 +145,19 @@ function Parcours() {
             </Popup>
           </Marker>
           <Marker
-            position={[43.12314987182617, 5.931080341339111]}
+            position={[43.123174010156674, 5.93257506695695]}
             icon={bateauIcon}
           >
             <Popup> Bateau sculpture + Rue des Arts </Popup>
           </Marker>
-          <Marker position={[43.1207308, 5.9314906]} icon={algerIcon}>
+          <Marker
+            position={[43.12142095745307, 5.9319978115427565]}
+            icon={algerIcon}
+          >
             <Popup>Rue d Alger + Place Raimu</Popup>
           </Marker>
           <Marker
-            position={[43.11996078491211, 5.932811737060547]}
+            position={[43.12007266473213, 5.931721017717504]}
             icon={portIcon}
           >
             <Popup>
@@ -153,7 +166,7 @@ function Parcours() {
             </Popup>
           </Marker>
           <Marker
-            position={[43.11900586846106, 5.936736189260646]}
+            position={[43.119295341078406, 5.936671855722596]}
             icon={mayolIcon}
           >
             <Popup>Stade Mayol + Felix Mayol + RCT </Popup>
@@ -183,7 +196,7 @@ function Parcours() {
             </Popup>
           </Marker>
           <Marker
-            position={[43.123485152129774, 5.932922946465119]}
+            position={[43.123633909824406, 5.9330221864107004]}
             icon={pugetIcon}
           >
             <Popup>

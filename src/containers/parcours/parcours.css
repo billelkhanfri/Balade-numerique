@@ -1,22 +1,37 @@
 .custom-marker {
   width: 100% !important;
   height: 100% !important;
-  object-fit: contain !important;
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
 }
 .leaflet-container {
   height: 100vh !important;
   background-color: white !important;
 }
 .img-wrapper {
-  width: 28px !important;
-  height: 28px !important;
+  position: relative; /* Add relative positioning to the container */
 
-  border: 3px solid #b7b7b7;
-  background: var(--color-hover);
+  width: 30px !important;
+  height: 30px !important;
+  border: 3px solid var(--color-primary);
+  background: var(--color-secondary);
+  -webkit-filter: drop-shadow(100%);
   filter: drop-shadow(100%);
-
   padding: 2px;
+  border-radius: 50%;
 }
+  .img-wrapper::after {
+    content: ''; /* Required content property for pseudo-elements */
+    position: absolute; /* Position the triangle absolutely */
+    top: 100%; /* Position it just below the circular marker */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Center it horizontally */
+    border-width: 8px 6px 0; /* Adjust the size and shape of the triangle */
+    border-style: solid;
+    border-color: var(--color-primary) transparent transparent; /* Adjust the triangle color */
+  }
+
+
 
 .map-button {
   position: absolute;
@@ -37,6 +52,15 @@
   cursor: pointer;
   border-radius: 40px;
   transition: background-color 0.3s;
-font-weight: 500;}
+font-weight: 500;
+}
  
+
+.custom-marker-icon {
+  background: none; 
+  border: none; 
+  padding: 0; 
+  
+
+}
 

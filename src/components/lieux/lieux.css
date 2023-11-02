@@ -5,14 +5,14 @@
 .menu-wrapper {
   position: absolute;
   left: 50%;
-  top: -90vh; 
+  top: -99vh;
   z-index: 1000;
   transform: translate(-50%, 0);
   width: 100%;
   height: 100vh;
   overflow-y: scroll;
-  transition: top 0.3s; 
-   background: white;
+  transition: top 0.3s;
+  background: white;
   border-radius: 36px 36px 0 0;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
   padding: 0px 10px;
@@ -33,21 +33,20 @@
   position: absolute;
   border-radius: 20px;
   border: none;
-} 
-.lieux-content{
-    width: 100%;
+}
+.lieux-content {
+  width: 100%;
   padding: 10px;
   height: 100%;
-
 }
-.lieux-content-info{
+.lieux-content-info {
   padding: 10px;
   display: flex;
   justify-content: space-between;
   gap: 20px;
   align-items: center;
 }
-.lieux-content-time{
+.lieux-content-time {
   display: flex;
   justify-content: center;
   gap: 5px;
@@ -56,13 +55,86 @@
 }
 .lieux-content-time p {
   font-size: 14px;
-  color: var(--color-neutral);
+  color: rgb(151 151 151);
 }
-.lieux-content-title{
+.lieux-content-title {
+  text-align: justify;
+  margin-top: 20px;
 
-text-align: justify ;
 }
-.lieux-content-title h2{
+.lieux-content-title h2 {
+  font-size: 18px;
+   margin-bottom: 20px;
+}
+.lieux-content-title p {
+  font-size: 14px;
+  margin-bottom: 10px;
 
-font-size: 18px;
 }
+
+.lieux-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+.lieux-content-items {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.lieux-content-items span {
+  margin-left: 30px;
+  color: rgb(98 97 97);
+  font-size: 14px;
+}
+.lieux-content-button {
+  background-color: var(--color-secondary);
+  color: var(--color-black);
+  padding: 20px 16px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+  transition: background-color 0.3s;
+  font-weight: 500;
+  width: 200px;
+
+ 
+}
+.button-wrapper{
+  margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+ 
+}
+.lieux-content-title  h5  {
+
+  font-size: 12px;
+  margin-bottom: 30px;
+  
+}
+.lieux-content-title  h5 span {
+
+  font-size: 12px;
+  font-weight: 400;
+}
+
+
+  .img-wrapper::after {
+    content: ''; /* Required content property for pseudo-elements */
+    position: absolute; /* Position the triangle absolutely */
+    top: 100%; /* Position it just below the circular marker */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Center it horizontally */
+    border-width: 8px 6px 0; /* Adjust the size and shape of the triangle */
+    border-style: solid;
+    border-color: var(--color-primary) transparent transparent; /* Adjust the triangle color */
+ 
+  }

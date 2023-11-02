@@ -31,8 +31,8 @@ function Weather() {
   useEffect(() => {
     fetchWeatherData();
   }, []);
-  const timestamp = 1698738641; 
-const date = new Date(timestamp * 1000); 
+ 
+const date = new Date(); 
 
 const formattedDate = date.toLocaleDateString(); 
 

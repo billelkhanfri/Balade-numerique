@@ -1,6 +1,7 @@
 .custom-marker {
   width: 100% !important;
   height: 100% !important;
+  -o-object-fit: contain !important;
   object-fit: contain !important;
 }
 .leaflet-container {
@@ -10,14 +11,10 @@
 .img-wrapper {
   width: 28px !important;
   height: 28px !important;
-
   border: 3px solid #b7b7b7;
   background: var(--color-hover);
+  -webkit-filter: drop-shadow(100%);
   filter: drop-shadow(100%);
-
   padding: 2px;
+  border-radius: 50%;
 }
-
-
-
-
