@@ -10,7 +10,7 @@ export const data = [
     coup_coeur_text:
       "Situé au  2 rue du Docteur Jean Bertholet et construit dans les années 1930, il était au départ un simple cinéma de quartier doté d'une seule salle. Ouvert pour la première fois en 1935, il finit alors par se transformer en complexe de 3 salles distinctes 40 ans plus tard. En 1993, il se convertit dans le domaine des arts et essais, proposant ainsi divers films d'auteurs en VO (version originale), rencontres et avant-premières. Hébergé dans un bâtiment de style Art Déco, le Royal est le plus ancien cinéma toulonnais encore en activité. Pour la petite anecdote, le cinéma a rencontré quelques moments difficiles entre les années 1970 et 1980, à cause de l’intégration de films pour adultes",
     images: ["/carrousel/Liberte_2.png", "/carrousel/Liberte_3.jpg"],
-    lecture : "/data_audio/liberte.mp3",
+    lecture: "/data_audio/liberte.mp3",
   },
 
   {
@@ -28,7 +28,7 @@ export const data = [
       "/carrousel/Bateau_Sculpture_2.png",
       "/carrousel/Bateau_Sculpture_3.png",
     ],
-    lecture : "/data_audio/bateau.mp3",
+    lecture: "/data_audio/bateau.mp3",
   },
   {
     id: 3,
@@ -42,7 +42,7 @@ export const data = [
       " Jules Muraire dit Raimu est né en décembre 1883 à la rue de l’indépendance, actuelle rue Anatole France à Toulon. Il est repéré en 1910 par Félix Mayol qui décida de le produire à Paris dans son théâtre, le « concert Mayol ». Mais c’est avec l’appui de Sacha Guitry aux côtés de Marcel Pagnol qu’il deviendra cette figure incontournable du théâtre et du cinéma français. Il décéda en septembre 1946. La place Raimu rend hommage à ce grand humoriste et acteur natif de la ville. Sur cette petite place pavée se trouve une statue en bronze mettant en scène la célèbre partie de cartes entre César (Raimu) et Panisse (Fernand Chapin), deux des quatre joueurs de cartes du film Marius de Marcel Pagnol. Deux chaises vides vous offrent la possibilité de prendre place à côté des deux sculptures afin d’admirer l’œuvre et ses personnages à l’expression réaliste",
 
     images: ["/carrousel/Rue_Alger_1.jpg", "/carrousel/Rue_Alger_2.jpg"],
-    lecture : "/data_audio/rue_alger.mp3",
+    lecture: "/data_audio/rue_alger.mp3",
   },
   {
     id: 4,
@@ -60,7 +60,7 @@ export const data = [
       "/carrousel/Carre_du_port_1.jpg",
       "/carrousel/Carre_du_port_2.jpg",
     ],
-    lecture : "/data_audio/carre.mp3",
+    lecture: "/data_audio/carre.mp3",
   },
   {
     id: 5,
@@ -77,7 +77,7 @@ export const data = [
       " Il connaîtra un grand succès en qualité de chanteur fantaisiste grâce à « La Paimpolaise » sortie en 1900 qui lui assura une renommée nationale et « Viens Poupoule » sortie en 1902 qui lui permit d’asseoir sa notoriété jusqu’à la fin des années 20. De retour dans sa région natale, il fit construire un théâtre appelé « Le Clos Mayol » à son domicile situé au Cap-Brun ou il accueillait des célébrités tels que Mistinguett et Maurice Chevalier. Née en 1872, il s’éteignit le 26 octobre 1941. Pour la petite anecdote on raconte que lorsque Charlie Chaplin est venu en France pour la première fois, il émit le souhait d’entendre chanter Mayol..",
 
     images: ["/carrousel/Stade_Mayol_1.jpg", "/carrousel/Stade_Mayol_2.jpg"],
-    lecture : "/data_audio/mayol.mp3",
+    lecture: "/data_audio/mayol.mp3",
   },
 
   {
@@ -111,7 +111,7 @@ export const data = [
       "/carrousel/Marche_Cours_Lafayette_1.jpg",
       "/carrousel/Marche_Cours_Lafayette_2.jpg",
     ],
-    lecture : "/data_audio/marche.mp3",
+    lecture: "/data_audio/marche.mp3",
   },
   {
     id: 7,
@@ -124,7 +124,7 @@ export const data = [
     coup_coeur_text:
       "Les Féeries d'Emilie vous proposent “une pincée d’enchantements … un soupçon de rêves … une pluie de magie ... Entrez dans l’univers magique de cette charmante boutique au décor féerique ! Vous y trouverez une sélection originale d’articles choisie avec soin, de quoi ravir enfants de tous âges et émerveiller les plus grands. Osez pousser la porte de cette boutique enchanteresse. Une immersion garantie dans un univers enfantin ! Les deux fées de la boutique vous présenteront toute une gamme sélectionnée avec soin. Des idées cadeaux du bébé à l'enfant.",
     images: ["/carrousel/Cathedrale_1.jpg", "/carrousel/Cathedrale_2.jpg"],
-    lecture : "/data_audio/cathedrale.mp3",
+    lecture: "/data_audio/cathedrale.mp3",
   },
   {
     id: 8,
@@ -149,7 +149,7 @@ export const data = [
       "/carrousel/Place_St_Vincent_1.png",
       "/carrousel/Place_St_Vincent_2.png",
     ],
-    lecture : "/data_audio/vincent.mp3",
+    lecture: "/data_audio/vincent.mp3",
   },
 
   {
@@ -172,7 +172,7 @@ export const data = [
     coup_coeur_text2:
       "C'est à Toulon que la toute première fabrique de savons a vu le jour, en 1430. Elle fut même créée à Grasse par un industriel nommé M. Palmier. Afin de le convaincre de l’installer à Toulon, la ville varoise le paya ainsi que son loyer. Ces savons, élaborés à partir d'huile d'olive, étaient réputés pour leur qualité exceptionnelle. Entre 1600 et 1650, une vingtaine de savonneries s'étaient établies dans la rue des Savonnières. Cependant, en 1669, Marseille, qui avait également développé des savonneries, mais postérieurement à Toulon, a bénéficié d'un privilège commercial lorsque Louis XIV a déclaré son port exempt de taxes, tandis que toutes les marchandises entrant ou sortant du port de Toulon en étaient soumises. Cette mesure a marqué le déclin de l'âge d'or du savon toulonnais. Vers 1770, il ne restait plus que 4 savonneries à Toulon. Le savon que l’on nomme « de Marseille », est en réalité le « savon de Toulon ». Située au 8, rue Ferdinand Pelloutier, le Petit Toulonnais, vous pourrez trouver une grande variété de savons, tous estampillés de notre emblème varois. (La savonnerie vous accueille du mardi au samedi de 10h30 à 13h30 puis de 14h30 à 18h30.)",
     images: ["/carrousel/Place_puget_1.jpg", "/carrousel/Place_puget_2.jpg"],
-    lecture : "/data_audio/puget.mp3",
+    lecture: "/data_audio/puget.mp3",
   },
   {
     id: 10,
@@ -186,6 +186,7 @@ export const data = [
       "/carrousel/Opera_Toulon_2.jpg",
       "/carrousel/Opera_Toulon_3.jpg",
     ],
-    lecture : "/data_audio/opera.mp3",
+    lecture: "/data_audio/opera.mp3",
   },
+  
 ];

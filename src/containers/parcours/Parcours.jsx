@@ -13,6 +13,7 @@ import {
 import { Link } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import Loader from "../../components/loader/Loader";
+import LeafletMachine from "../../components/leafletRoutingMachine/LeafletMachine.jsx";
 
 function Parcours() {
   const [position, setPosition] = useState([43.125, 5.93]);
@@ -61,11 +62,11 @@ function Parcours() {
   const pugetIcon = divIcon({
     html: ' <div  class="img-wrapper"><img class ="custom-marker" src="/src/assets/icones-pics/Place-puget.png" alt="Custom Icon" /><div/> ',
     className: "custom-marker-icon",
-  
   });
   const operaIcon = divIcon({
     html: ' <div  class="img-wrapper"><img class ="custom-marker" src="/src/assets/icones-pics/Opéra.png" alt="Custom Icon" /> <div/>',
-   className: "custom-marker-icon", });
+    className: "custom-marker-icon",
+  });
   const lavoirIcon = divIcon({
     html: ' <div  class="img-wrapper"><img class ="custom-marker" src="/src/assets/icones-pics/Lavoir.png" alt="Custom Icon" /> <div/>',
     className: "custom-marker-icon",
@@ -116,9 +117,9 @@ function Parcours() {
           <h2> Parcours</h2>
           <IoIosArrowBack className="return-icon-transparent" />
         </div>
-      </div>
-      <div className="map-button container">
-        <button className="button">Embarquer</button>
+        <div className="map-button container">
+          <button className="button">Embarquer</button>
+        </div>
       </div>
 
       {loading ? (
@@ -210,7 +211,8 @@ function Parcours() {
           >
             <Popup>Opéra de Toulon </Popup>
           </Marker>
-          <Polyline positions={pathCoordinates} pathOptions={polylineStyle} />
+            <Polyline positions={pathCoordinates} pathOptions={polylineStyle} /> 
+            {/* <LeafletMachine/> */}
         </MapContainer>
       ) : (
         <div className="offLigne-wrapper">

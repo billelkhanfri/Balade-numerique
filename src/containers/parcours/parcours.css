@@ -35,9 +35,10 @@
 
 .map-button {
   position: absolute;
-  top: 12vh;
-  right: 0vw;
+
+
   z-index: 1000;
+  right: 2vw;
 }
 .map-button .button {
   background-color: var(--color-secondary);

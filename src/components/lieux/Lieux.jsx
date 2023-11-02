@@ -44,83 +44,83 @@ function Lieux() {
             </div>
 
             <div className="lieux-content-wrapper">
-              <div class=" lieux-content-items">
+              <div className=" lieux-content-items">
                 <img
-                  class="custom-marker img-wrapper"
+                  className="custom-marker img-wrapper"
                   src="/src/assets/icones-pics/Liberté.png"
                   alt="Custom Icon"
                 />
                 <span> Place de la Liberté</span>
               </div>
 
-              <div class=" lieux-content-items">
+              <div className=" lieux-content-items">
                 <img
-                  class="custom-marker img-wrapper"
+                  className="custom-marker img-wrapper"
                   src="/src/assets/icones-pics/Sculpture-bateau.png"
                   alt="Custom Icon"
                 />
                 <span>Bateau sculpture</span>
               </div>
-              <div class=" lieux-content-items">
+              <div className=" lieux-content-items">
                 <img
-                  class="custom-marker img-wrapper"
+                  className="custom-marker img-wrapper"
                   src="/src/assets/icones-pics/Rue-Alger.png"
                   alt="Custom Icon"
                 />
                 <span> Rue d'Alger</span>
               </div>
-              <div class=" lieux-content-items">
+              <div className=" lieux-content-items">
                 <img
-                  class="custom-marker img-wrapper"
+                  className="custom-marker img-wrapper"
                   src="/src/assets/icones-pics/Carrée-du-port.png"
                   alt="Custom Icon"
                 />
                 <span>Carré du port</span>
               </div>
-              <div class=" lieux-content-items">
+              <div className=" lieux-content-items">
                 <img
-                  class="custom-marker img-wrapper"
+                  className="custom-marker img-wrapper"
                   src="/src/assets/icones-pics/Stade-Mayole.png"
                   alt="Custom Icon"
                 />
                 <span> Stade Mayol</span>
               </div>
-              <div class=" lieux-content-items">
+              <div className=" lieux-content-items">
                 <img
-                  class="custom-marker img-wrapper"
+                  className="custom-marker img-wrapper"
                   src="/src/assets/icones-pics/Court-Lafayette.png"
                   alt="Custom Icon"
                 />
                 <span>Marché de Provence</span>
               </div>
 
-              <div class=" lieux-content-items">
+              <div className=" lieux-content-items">
                 <img
-                  class="custom-marker img-wrapper"
+                  className="custom-marker img-wrapper"
                   src="/src/assets/icones-pics/Cathédrale-de-toulon.png"
                   alt="Custom Icon"
                 />
                 <span> La Cathédrale</span>
               </div>
-              <div class=" lieux-content-items">
+              <div className=" lieux-content-items">
                 <img
-                  class="custom-marker img-wrapper"
+                  className="custom-marker img-wrapper"
                   src="/src/assets/icones-pics/Lavoir.png"
                   alt="Custom Icon"
                 />
                 <span> Place Saint Vincent</span>
               </div>
-              <div class=" lieux-content-items">
+              <div className=" lieux-content-items">
                 <img
-                  class="custom-marker img-wrapper"
+                  className="custom-marker img-wrapper"
                   src="/src/assets/icones-pics/Place-puget.png"
                   alt="Custom Icon"
                 />
                 <span>Place Puget</span>
               </div>
-              <div class=" lieux-content-items">
+              <div className=" lieux-content-items">
                 <img
-                  class="custom-marker img-wrapper"
+                  className="custom-marker img-wrapper"
                   src="/src/assets/icones-pics/Opéra.png"
                   alt="Custom Icon"
                 />
