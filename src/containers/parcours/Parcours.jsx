@@ -3,17 +3,11 @@ import "./parcours.css";
 import "leaflet/dist/leaflet.css";
 import { useEffect, useState } from "react";
 import Lieux from "../../components/lieux/Lieux.jsx";
-import {
-  MapContainer,
-  TileLayer,
-  Marker,
-  Popup,
-  Polyline,
-} from "react-leaflet";
+import LeafletMachine from "../../components/leafletRoutingMachine/LeafletMachine.jsx";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { Link } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import Loader from "../../components/loader/Loader";
-import LeafletMachine from "../../components/leafletRoutingMachine/LeafletMachine.jsx";
 
 function Parcours() {
   const [position, setPosition] = useState([43.125, 5.93]);
@@ -87,7 +81,8 @@ function Parcours() {
     html: ' <div  class="img-wrapper"><img class ="custom-marker" src="/src/assets/icones-pics/Carrée-du-port.png" alt="Custom Icon" /> <div/>',
     className: "custom-marker-icon",
   });
-
+  const startCoordinates = [43.12639961111021, 5.930514335632324]; // Replace with your actual start coordinates
+  const endCoordinates = [43.12639961111021, 5.93257506695695];
   const pathCoordinates = [
     [43.12639961111021, 5.930514335632324],
     [43.123174010156674, 5.93257506695695],
@@ -130,13 +125,11 @@ function Parcours() {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-
           <Marker position={position}>
             <Popup>Ma Position</Popup>
           </Marker>
-
           <Marker
-            position={[43.12639961111021, 5.930514335632324]}
+            position={[43.12560352692708, 5.930395349941594]}
             icon={libertyIcon}
           >
             <Popup>
@@ -146,7 +139,7 @@ function Parcours() {
             </Popup>
           </Marker>
           <Marker
-            position={[43.123174010156674, 5.93257506695695]}
+            position={[43.12315834850046, 5.931185680628862]}
             icon={bateauIcon}
           >
             <Popup> Bateau sculpture + Rue des Arts </Popup>
@@ -167,13 +160,13 @@ function Parcours() {
             </Popup>
           </Marker>
           <Marker
-            position={[43.119295341078406, 5.936671855722596]}
+            position={[43.118230271891335, 5.936264157878827]}
             icon={mayolIcon}
           >
             <Popup>Stade Mayol + Felix Mayol + RCT </Popup>
           </Marker>
           <Marker
-            position={[43.121326754622004, 5.934564640175547]}
+            position={[43.121159377958556, 5.934579922547775]}
             icon={fayetteIcon}
           >
             <Popup>
@@ -183,7 +176,7 @@ function Parcours() {
             </Popup>
           </Marker>
           <Marker
-            position={[43.12165469161616, 5.933974953667892]}
+            position={[43.12149905107196, 5.934013569028611]}
             icon={cathIcon}
           >
             <Popup>Cathédrale + Boutique de jouet (coup de coeur) </Popup>
@@ -206,13 +199,15 @@ function Parcours() {
             </Popup>
           </Marker>
           <Marker
-            position={[43.1244893904978, 5.932467694145099]}
+            position={[43.124818277212775, 5.932617895972691]}
             icon={operaIcon}
           >
             <Popup>Opéra de Toulon </Popup>
           </Marker>
-            <Polyline positions={pathCoordinates} pathOptions={polylineStyle} /> 
-            {/* <LeafletMachine/> */}
+
+          {/* <Polyline positions={pathCoordinates} pathOptions={polylineStyle} /> */}
+          {/* <LeafletMachine/> */}
+          <LeafletMachine />
         </MapContainer>
       ) : (
         <div className="offLigne-wrapper">

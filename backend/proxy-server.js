@@ -11,8 +11,18 @@ app.use((req, res) => {
   const target = targetUrl + req.url;
   const targetProtocol = target.startsWith("https:") ? https : http;
 
+  // Set CORS headers to allow all origins
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+
+  if (req.method === "OPTIONS") {
+    // Pre-flight request, respond with 200 OK
+    res.sendStatus(200);
+    return;
+  }
+
   const proxyReq = targetProtocol.request(target, (proxyRes) => {
-    res.setHeader("Access-Control-Allow-Origin", "*"); // Set appropriate CORS headers
     proxyRes.pipe(res, {
       end: true,
     });

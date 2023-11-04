@@ -1,42 +1,79 @@
-import React, { useEffect } from "react";
-import L from "leaflet";
-import "leaflet-routing-machine";
-import "leaflet-routing-machine/dist/leaflet-routing-machine.css";
-import { useMap } from "react-leaflet";
+import { useState, useEffect } from "react";
+import { Polyline } from "react-leaflet";
+import axios from "axios";
+import PolylineEncoded from "polyline-encoded";
 
 function LeafletMachine() {
-  const map = useMap();
+  const [route, setRoute] = useState(null);
 
   useEffect(() => {
-    const waypoints = [
-      L.latLng(43.12639961111021, 5.930514335632324),
-      L.latLng(43.123174010156674, 5.93257506695695),
-      L.latLng(43.12142095745307, 5.9319978115427565),
-      L.latLng(43.12007266473213, 5.931721017717504),
-      L.latLng(43.11900586846106, 5.936736189260646),
-      L.latLng(43.121326754622004, 5.934564640175547),
-      L.latLng(43.12165469161616, 5.933974953667892),
-      L.latLng(43.12239778375607, 5.934633982047172),
-      L.latLng(43.123633909824406, 5.9330221864107004),
-      L.latLng(43.1244893904978, 5.932467694145099),
-      L.latLng(43.12639961111021, 5.930514335632324),
+    const apiUrl =
+      "https://api.openrouteservice.org/v2/directions/foot-walking";
+    const apiKey = "5b3ce3597851110001cf62481c3d0186f9484b9eab254523d0f9f0dd"; // Replace with your actual API key
+
+    // Define your list of coordinates
+    const coordinates = [
+      [5.930706486183582, 43.125595696411985],
+      [5.931185680628862, 43.12315834850046],
+      [5.9319978115427565, 43.12142095745307],
+      [5.931721017717504, 43.12007266473213],
+      [5.936264157878827, 43.118230271891335],
+      [5.934579922547775, 43.121159377958556],
+      [5.933974953667892, 43.12165469161616],
+      [5.934633982047172, 43.12239778375607],
+      [5.9330221864107004, 43.123633909824406],
+      [5.932617895972691, 43.124818277212775],
+      [5.930395349941594, 43.12560352692708],
     ];
 
-    L.Routing.control({
-      waypoints,
-      profile: "foot", // Specify the profile as "foot" for pedestrians
-      routeWhileDragging: true,
+    // Filter out duplicate coordinates
+    const uniqueCoordinates = [...new Set(coordinates.map(JSON.stringify))].map(
+      JSON.parse
+    );
 
-      routeLine: function (routeData) {
-        return L.Routing.line(routeData, {
-          styles: [{ color: "#00f", opacity: 0.7, weight: 6 }],
-          addWaypoints: false,
-        });
-      },
-    }).addTo(map);
+    axios
+      .post(
+        apiUrl,
+        {
+          coordinates: uniqueCoordinates,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${apiKey}`,
+            "Content-Type": "application/json",
+          },
+        }
+      )
+      .then((response) => {
+        if (
+          response.data &&
+          response.data.routes &&
+          response.data.routes.length > 0 &&
+          response.data.routes[0].geometry
+        ) {
+          const routeData = response.data.routes[0];
+          const encodedPolyline = routeData.geometry;
+          const pathCoordinates = PolylineEncoded.decode(encodedPolyline);
+          setRoute(pathCoordinates);
+        } else {
+          console.error("Route geometry or coordinates are missing.");
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching walking route:", error);
+      });
   }, []);
 
-  return null;
+  if (!route) {
+    return null;
+  }
+
+  const polylineStyle = {
+    color: "#26819e",
+    weight: 6,
+  };
+
+  return <Polyline positions={route} pathOptions={polylineStyle} />;
 }
 
 export default LeafletMachine;
