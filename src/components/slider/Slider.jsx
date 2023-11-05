@@ -45,9 +45,7 @@ function Slider({ images }) {
         ))}
       </div>
       <div className="lieu-section-two">
-        <div>
-          <img src="/src/assets/images/Calque_1.svg" alt="Custom Icon" />
-        </div>
+      
         <div className="direction">
           <FaDirections className="itineraire-icon" />
           <div className="itinéraire">

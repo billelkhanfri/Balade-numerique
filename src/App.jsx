@@ -12,29 +12,48 @@ import Lieu from "./containers/lieu/Lieu";
 import Error from "./containers/error/Error";
 import { data } from "./data/data";
 import { useState } from "react";
+import Nointernet from "./containers/nointernet/Nointernet"
 
 function App() {
   const [favorites, setFavorites] = useState([]); // Initialize favorites state
+  const [isOnline, setIsOnline] = useState(navigator.onLine);
 
+  const handleRefresh = () => {
+    window.location.reload(); // Reload the page
+  };
+
+  window.addEventListener("online", () => {
+    setIsOnline(true);
+  });
+
+  window.addEventListener("offline", () => {
+    setIsOnline(false);
+  });
   return (
     <BrowserRouter>
       <SplashScreen />
-      <Routes>
-        <Route path="/" element={<Accueil data={data} favorites={favorites} />}>
-          {" "}
-        </Route>
-        <Route path="/carte" element={<Carte />}></Route>
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/circuit" element={<Circuit />}></Route>
-        <Route
-          path="/favoris"
-          element={<Favoris data={data} favorites={favorites} />}
-        ></Route>
-        <Route path="/liens" element={<Liens />}></Route>
-        <Route path="/parcours" element={<Parcours />}></Route>
-        <Route path="/lieu/:lieuId" element={<Lieu />}></Route>
-        <Route path="*" element={<Error />}></Route>
-      </Routes>
+      {isOnline ? (
+        <Routes>
+          <Route
+            path="/"
+            element={<Accueil data={data} favorites={favorites} />}
+          >
+            {" "}
+          </Route>
+          <Route path="/carte" element={<Carte />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/circuit" element={<Circuit />}></Route>
+          <Route
+            path="/favoris"
+            element={<Favoris data={data} favorites={favorites} />}
+          ></Route>
+          <Route path="/liens" element={<Liens />}></Route>
+          <Route path="/parcours" element={<Parcours />}></Route>
+          <Route path="/lieu/:lieuId" element={<Lieu />}></Route>
+          <Route path="*" element={<Error />}></Route>
+        </Routes>
+      ) : (
+       <Nointernet onRefresh = {handleRefresh}/>   )}
     </BrowserRouter>
   );
 }

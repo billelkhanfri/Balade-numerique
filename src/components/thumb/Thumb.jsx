@@ -6,19 +6,9 @@ import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 function Thumb({
   imageUrl,
   title,
-  subtitle,
   id,
   history_one,
-  coup_coeur_title,
-  coup_coeur_text,
-  coup_coeur_title2,
-  coup_coeur_text2,
-  coup_coeur_title3,
-  coup_coeur_text3,
-  coup_coeur_title4,
-  coup_coeur_text4,
-  coup_coeur_title5,
-  coup_coeur_text5,
+  coup_coeurs,
   isFavorite,
 }) {
   const [toggle, setToggle] = useState(false);
@@ -31,15 +21,6 @@ function Thumb({
     }
   }, [id]);
 
-  const coupCoeur = [
-    coup_coeur_title,
-    coup_coeur_title2,
-    coup_coeur_title3,
-    coup_coeur_title4,
-    coup_coeur_title5,
-  ];
-  const definedCoup = coupCoeur.filter((x) => x !== undefined);
-  const definedNumber = definedCoup.length;
 
   const handleToggle = (e) => {
     e.preventDefault(); // Prevent the default Link navigation
@@ -56,16 +37,8 @@ function Thumb({
         title,
         id,
         history_one,
-        coup_coeur_title,
-        coup_coeur_text,
-        coup_coeur_title2,
-        coup_coeur_text2,
-        coup_coeur_title3,
-        coup_coeur_text3,
-        coup_coeur_title4,
-        coup_coeur_text4,
-        coup_coeur_title5,
-        coup_coeur_text5,
+        coup_coeurs,
+       
         isFavorite,
       };
     }
@@ -78,10 +51,10 @@ function Thumb({
     <Link to={`/lieu/${id}`} key={`${id}`}>
       <div className="thumb">
         <div className="wrapper">
-          {coup_coeur_title && (
+          {coup_coeurs && (
             <div className="coup-coeur-vignette">
               {" "}
-              <p> Coup de Coeur ({definedNumber})</p>
+              <p> Coup de Coeur ({coup_coeurs.length})</p>
             </div>
           )}
 

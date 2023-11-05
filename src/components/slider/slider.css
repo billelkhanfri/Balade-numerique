@@ -84,14 +84,3 @@ height: 100%;
 }
 
 
-.coup-wrapper{
-  display: flex;
-  justify-content: center;
-align-items: center;
-margin-top: 30px;}
-
-.coup-wrapper h2{
-  text-transform: uppercase;
-  text-align: center;
-  color: var(--color-black) ;
-}

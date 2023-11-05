@@ -13,22 +13,11 @@ function Lieu() {
   const lieuData = data.find((lieu) => lieu.id == lieuId);
   const {
     title,
-    imageUrl,
-    subtitle,
     id,
     history_one,
     history_two,
     history_three,
-    coup_coeur_title,
-    coup_coeur_text,
-    coup_coeur_title2,
-    coup_coeur_text2,
-    coup_coeur_title3,
-    coup_coeur_text3,
-    coup_coeur_text4,
-    coup_coeur_title4,
-    coup_coeur_title5,
-    coup_coeur_text5,
+    coup_coeurs,
     images,
     lecture,
   } = lieuData;
@@ -46,7 +35,7 @@ function Lieu() {
           <Slider images={images} />
         </div>
 
-        <AudioOrgan  lecture={lecture}/>
+        <AudioOrgan lecture={lecture} />
 
         <div className="texts-wrapper">
           <p> {history_one}</p>
@@ -55,7 +44,7 @@ function Lieu() {
         </div>
       </div>
       <div className="coup-wrapper">
-        {coup_coeur_text && (
+        {coup_coeurs && (
           <h2>
             {" "}
             Découvrire notre séléction <br />
@@ -63,18 +52,7 @@ function Lieu() {
           </h2>
         )}
       </div>
-      <Collapse
-        coup_coeur_text={coup_coeur_text}
-        coup_coeur_text2={coup_coeur_text2}
-        coup_coeur_text3={coup_coeur_text3}
-        coup_coeur_text4={coup_coeur_text4}
-        coup_coeur_title={coup_coeur_title}
-        coup_coeur_text5={coup_coeur_text5}
-        coup_coeur_title2={coup_coeur_title2}
-        coup_coeur_title3={coup_coeur_title3}
-        coup_coeur_title4={coup_coeur_title4}
-        coup_coeur_title5={coup_coeur_title5}
-      />
+      <Collapse coup_coeurs={coup_coeurs} id={id} />
       <Navbar />
     </>
   );

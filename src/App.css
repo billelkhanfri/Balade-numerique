@@ -7,8 +7,6 @@
 body {
   background-color: var(--color-crimson);
   font-family: var(--font-alt);
-  max-width: 1024px;
-  margin: auto;
   height: fit-content;
 }
 a {

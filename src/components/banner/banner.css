@@ -1,5 +1,5 @@
 .banner-wrapper {
-  height: 310px;
+  height: 55vh;
   position: relative;
   width: 100%;
   background-image: url("../../assets/images-cards/banner.jpg");
@@ -44,7 +44,7 @@
 }
 .banner-slogan {
   position: absolute;
-  bottom: -16%;
+  top: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: var(--color-gradient-slogan);
@@ -54,6 +54,7 @@
   padding: 12px;
   text-align: center;
   border-radius: 12px;
+  max-width: 1024px;
 }
 .banner-wrapper .banner-slogan p {
   font-weight: 500;

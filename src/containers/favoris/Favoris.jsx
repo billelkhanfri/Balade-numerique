@@ -24,7 +24,8 @@ function Favoris() {
     // Set the filtered favorite items in state
     setFavoriteItems(filteredFavoriteItems);
   }, []);
-
+ 
+ 
   return (
     <>
       <div className="lieu-item">
@@ -41,6 +42,13 @@ function Favoris() {
           <Link to={`/lieu/${item.id}`} key={`${item.id}`}>
             <div className="thumb">
               <div className="wrapper">
+                {item.coup_coeurs && (
+                  <div className="coup-coeur-vignette">
+                    {" "}
+                    <p> Coup de Coeur ({item.coup_coeurs.length})</p>
+                  </div>
+                )}
+
                 <img
                   src={item.imageUrl}
                   alt={item.title}

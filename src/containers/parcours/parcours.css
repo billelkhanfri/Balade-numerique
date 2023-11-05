@@ -9,8 +9,7 @@
   background-color: white !important;
 }
 .img-wrapper {
-  position: relative; /* Add relative positioning to the container */
-
+  position: relative; 
   width: 30px !important;
   height: 30px !important;
   border: 3px solid var(--color-primary);
@@ -20,26 +19,27 @@
   padding: 2px;
   border-radius: 50%;
 }
-  .img-wrapper::after {
-    content: ''; /* Required content property for pseudo-elements */
-    position: absolute; /* Position the triangle absolutely */
-    top: 100%; /* Position it just below the circular marker */
-    left: 50%; /* Center it horizontally */
-    transform: translateX(-50%); /* Center it horizontally */
-    border-width: 8px 6px 0; /* Adjust the size and shape of the triangle */
-    border-style: solid;
-    border-color: var(--color-primary) transparent transparent; /* Adjust the triangle color */
-  }
 
+
+  .img-wrapper::after {
+    content: ''; 
+    position: absolute; 
+    top: 100%; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    border-width: 8px 6px 0; 
+    border-style: solid;
+    border-color: var(--color-primary) transparent transparent; 
+  }
 
 
 .map-button {
   position: absolute;
-
-
-  z-index: 1000;
+ top: 12vh;
   right: 2vw;
+  z-index: 1000;
 }
+
 .map-button .button {
   background-color: var(--color-secondary);
   color: var(--color-black);
@@ -54,6 +54,7 @@
   border-radius: 40px;
   transition: background-color 0.3s;
 font-weight: 500;
+position: relative;
 }
  
 

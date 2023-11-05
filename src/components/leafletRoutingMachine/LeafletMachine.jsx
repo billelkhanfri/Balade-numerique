@@ -69,8 +69,16 @@ function LeafletMachine() {
   }
 
   const polylineStyle = {
-    color: "#26819e",
-    weight: 6,
+    color: "green",
+    weight: 6, // Border weight (thickness)
+    opacity: 1, // Border opacity (0 to 1)
+    smoothFactor: 0.5, // Smoothing factor for curved lines (0 to 1)
+    // dashArray: "9, 8", // Dashed line pattern (optional)
+    lineJoin: "round", // Line join style ("miter," "round," "bevel")
+    lineCap: "but", // Line cap style ("butt," "round," "square")
+    fill: false, // Fill the area under the polyline
+    fillOpacity: 0.2, // Fill opacity (0 to 1)
+    bubblingMouseEvents: false, // Disable bubbling of mouse events
   };
 
   return <Polyline positions={route} pathOptions={polylineStyle} />;
