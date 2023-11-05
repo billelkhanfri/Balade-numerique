@@ -10,16 +10,15 @@
   transform: translate(-50%, 0);
   width: 100%;
   height: 100vh;
-  
   transition: top 0.3s;
   background: white;
   border-radius: 36px 36px 0 0;
-  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.6); /* Add box shadow here */
+  box-shadow: inset 0px 6px 12px -6px rgba(0, 0, 0, 0.5);
   padding: 0px 10px;
 }
 
 .menu-wrapper.active {
-  top: -25vh;
+  top: -23vh;
 }
 
 .button-scroll {
@@ -36,7 +35,7 @@
 }
 .lieux-content {
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   height: 100%;
 }
 .lieux-content-info {
@@ -60,16 +59,14 @@
 .lieux-content-title {
   text-align: justify;
   margin-top: 20px;
-
 }
 .lieux-content-title h2 {
   font-size: 18px;
-   margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .lieux-content-title p {
   font-size: 14px;
   margin-bottom: 10px;
-
 }
 
 .lieux-content-wrapper {
@@ -103,38 +100,30 @@
   transition: background-color 0.3s;
   font-weight: 500;
   width: 200px;
-
- 
 }
-.button-wrapper{
+.button-wrapper {
   margin: auto;
   position: relative;
   display: flex;
   justify-content: center;
   margin-top: 25px;
- 
 }
-.lieux-content-title  h5  {
-
+.lieux-content-title h5 {
   font-size: 12px;
   margin-bottom: 30px;
-  
 }
-.lieux-content-title  h5 span {
-
+.lieux-content-title h5 span {
   font-size: 12px;
   font-weight: 400;
 }
 
-
-  .img-wrapper::after {
-    content: ''; /* Required content property for pseudo-elements */
-    position: absolute; /* Position the triangle absolutely */
-    top: 100%; /* Position it just below the circular marker */
-    left: 50%; /* Center it horizontally */
-    transform: translateX(-50%); /* Center it horizontally */
-    border-width: 8px 6px 0; /* Adjust the size and shape of the triangle */
-    border-style: solid;
-    border-color: var(--color-primary) transparent transparent; /* Adjust the triangle color */
- 
-  }
+.img-wrapper::after {
+  content: ""; /* Required content property for pseudo-elements */
+  position: absolute; /* Position the triangle absolutely */
+  top: 100%; /* Position it just below the circular marker */
+  left: 50%; /* Center it horizontally */
+  transform: translateX(-50%); /* Center it horizontally */
+  border-width: 8px 6px 0; /* Adjust the size and shape of the triangle */
+  border-style: solid;
+  border-color: var(--color-primary) transparent transparent; /* Adjust the triangle color */
+}

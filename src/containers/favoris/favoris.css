@@ -1,0 +1,17 @@
+.empty-fav{
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+ 
+.empty-fav p {
+     font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color:var(--color-footer);
+  width: 60%;
+  text-align: center;
+}

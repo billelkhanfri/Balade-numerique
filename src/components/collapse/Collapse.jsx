@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
 import "./collaps.css";
 
-function Collapse({ coup_coeurs, id }) {
+function Collapse({ coup_coeurs }) {
   const [toggles, setToggles] = useState(coup_coeurs.map(() => true));
 
   const handleToggle = (index) => {
