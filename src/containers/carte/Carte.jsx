@@ -5,24 +5,26 @@ import "leaflet/dist/leaflet.css";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { Link } from "react-router-dom";
 import { data } from "../../data/data.js";
+import { useState } from "react";
+import "./carte.css";
+import MarkerCard from "../../components/markerCard/MarkerCard.jsx";
+
 
 function Carte() {
-const markers = data
-  .map((item) => {
+  const [selectedMarker, setSelectedMarker] = useState(null);
+  const filtredata = data.flatMap((item) => {
     if (item.coup_coeurs) {
-      return item.coup_coeurs.map((x)=> x.position)
+      return item.coup_coeurs;
     }
     return [];
-  })
+  });
 
-
-console.log(markers);
-
-
-
+  const handleMarkerClick = (marker) => {
+    setSelectedMarker(marker);
+  };
 
   const logo = divIcon({
-    html: ' <div  class="img-wrapper"> <img class ="custom-marker" src="/src/assets/icones-pics/apple-touch-icon.png" alt="Custom Icon" /> <div/>',
+    html: ' <div class="img-wrapper"> <img class="custom-marker" src="/src/assets/icones-pics/apple-touch-icon.png" alt="Custom Icon" /> <div/>',
     className: "custom-marker-icon",
   });
 
@@ -38,14 +40,26 @@ console.log(markers);
         </div>
       </div>
 
-      {/* <MapContainer center={[43.1204778356, 5.933236982047172]} zoom={16}>
+      <MapContainer center={[43.1204778356, 5.933236982047172]} zoom={16}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        
-      </MapContainer> */}
-      
+
+        {filtredata.map((marker, index) => (
+          <Marker
+            key={index}
+            position={marker.position}
+            icon={logo}
+            eventHandlers={{
+              click: () => handleMarkerClick(marker),
+            }}
+          >
+            <Popup>{marker.title}</Popup>
+          </Marker>
+        ))}
+      </MapContainer>
+      {selectedMarker && <MarkerCard selectedMarker={selectedMarker}  setSelectedMarker={setSelectedMarker}/>}
 
       <Navbar />
     </>
