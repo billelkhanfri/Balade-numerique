@@ -2,8 +2,8 @@ import "./navbar.css";
 import { RiMenu3Line, RiCloseFill } from "react-icons/ri";
 
 import { AiFillHome } from "react-icons/ai";
-import { FaMapMarkedAlt } from "react-icons/fa";
-import { MdPlace, MdFavorite } from "react-icons/md";
+import { BsEmojiHeartEyesFill } from "react-icons/bs";
+import { MdFavorite } from "react-icons/md";
 import { GiThreePointedShuriken } from "react-icons/gi";
 import { PiPathBold } from "react-icons/pi";
 
@@ -41,8 +41,8 @@ const Navbar = () => {
           <NavLink className=" link" to="/carte" activeclassname="active">
             <ul className="menu">
               <li className="menu-item">
-                <FaMapMarkedAlt className="icons" />
-                <p>Carte</p>
+                <BsEmojiHeartEyesFill className="icons" />
+                <p>Coup de coeur</p>
               </li>
             </ul>
           </NavLink>
