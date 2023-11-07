@@ -8,6 +8,7 @@ import { data } from "../../data/data.js";
 import { useState } from "react";
 import "./carte.css";
 import MarkerCard from "../../components/markerCard/MarkerCard.jsx";
+import MarkerClusterGroup from "react-leaflet-cluster";
 
 
 function Carte() {
@@ -45,21 +46,30 @@ function Carte() {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-
-        {filtredata.map((marker, index) => (
-          <Marker
-            key={index}
-            position={marker.position}
-            icon={logo}
-            eventHandlers={{
-              click: () => handleMarkerClick(marker),
-            }}
-          >
-            <Popup>{marker.title}</Popup>
-          </Marker>
-        ))}
+        <MarkerClusterGroup chunkedLoading style={{
+          height: "500px",
+          backgroundColo:'red',
+        }}>
+          {filtredata.map((marker, index) => (
+            <Marker
+              key={index}
+              position={marker.position}
+              icon={logo}
+              eventHandlers={{
+                click: () => handleMarkerClick(marker),
+              }}
+            >
+              <Popup>{marker.title}</Popup>
+            </Marker>
+          ))}
+        </MarkerClusterGroup>
       </MapContainer>
-      {selectedMarker && <MarkerCard selectedMarker={selectedMarker}  setSelectedMarker={setSelectedMarker}/>}
+      {selectedMarker && (
+        <MarkerCard
+          selectedMarker={selectedMarker}
+          setSelectedMarker={setSelectedMarker}
+        />
+      )}
 
       <Navbar />
     </>

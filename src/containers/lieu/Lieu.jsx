@@ -21,6 +21,7 @@ function Lieu() {
     images,
     lecture,
   } = lieuData;
+console.log(coup_coeurs)
   return (
     <>
       <div className="container ">

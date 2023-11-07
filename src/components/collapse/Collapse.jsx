@@ -3,7 +3,7 @@ import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
 import "./collaps.css";
 
 function Collapse({ coup_coeurs }) {
-  const [toggles, setToggles] = useState(coup_coeurs.map(() => true));
+  const [toggles, setToggles] = useState(coup_coeurs?.map(() => true) || []);
 
   const handleToggle = (index) => {
     const newToggles = [...toggles];
@@ -13,24 +13,28 @@ function Collapse({ coup_coeurs }) {
 
   return (
     <>
-      {coup_coeurs &&
-        coup_coeurs.map((item, index) => (
-          <div key={index} className="collapse-wrapper">
-            <div className="dropDownshowen" onClick={() => handleToggle(index)}>
-              <h2>{item.title}</h2>
-              <div>
-                {!toggles[index] ? <AiFillCaretDown /> : <AiFillCaretUp />}
+      {coup_coeurs && Array.isArray(coup_coeurs)
+        ? coup_coeurs.map((item, index) => (
+            <div key={index} className="collapse-wrapper">
+              <div
+                className="dropDownshowen"
+                onClick={() => handleToggle(index)}
+              >
+                <h2>{item.title}</h2>
+                <div>
+                  {!toggles[index] ? <AiFillCaretDown /> : <AiFillCaretUp />}
+                </div>
+              </div>
+              <div
+                className={`contentWrapper ${
+                  !toggles[index] ? "fadeOut" : "fadeIn"
+                }`}
+              >
+                {toggles[index] && item.text && <p>{item.text}</p>}
               </div>
             </div>
-            <div
-              className={`contentWrapper ${
-                !toggles[index] ? "fadeOut" : "fadeIn"
-              }`}
-            >
-              {toggles[index] && <p>{item.text}</p>}
-            </div>
-          </div>
-        ))}
+          ))
+        : null}
     </>
   );
 }

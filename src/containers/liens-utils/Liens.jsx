@@ -10,7 +10,7 @@ function Liens() {
           <Link to="/">
             <IoIosArrowBack className="return-icon" />
           </Link>
-          <h2>Lien Utils</h2>
+          <h2>Lien Utiles</h2>
           <IoIosArrowBack className="return-icon-transparent" />
         </div>
       </div>

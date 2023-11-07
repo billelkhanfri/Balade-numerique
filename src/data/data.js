@@ -13,10 +13,15 @@ export const data = [
         position: [43.125036313807215, 5.930078784475154],
         title: "Cinéma le Royal",
         text: "Situé au  2 rue du Docteur Jean Bertholet et construit dans les années 1930, il était au départ un simple cinéma de quartier doté d'une seule salle. Ouvert pour la première fois en 1935, il finit alors par se transformer en complexe de 3 salles distinctes 40 ans plus tard. En 1993, il se convertit dans le domaine des arts et essais, proposant ainsi divers films d'auteurs en VO (version originale), rencontres et avant-premières. Hébergé dans un bâtiment de style Art Déco, le Royal est le plus ancien cinéma toulonnais encore en activité. Pour la petite anecdote, le cinéma a rencontré quelques moments difficiles entre les années 1970 et 1980, à cause de l’intégration de films pour adultes",
+        image: "/carrousel/Carre_du_port_1.jpg",
       },
     ],
 
-    images: ["/carrousel/Liberte_2.png", "/carrousel/Liberte_3.jpg"],
+    images: [
+      "/carrousel/Liberte_2.png",
+      "/carrousel/Liberte_3.jpg",
+    
+    ],
     lecture: "/data_audio/liberte.mp3",
     position: [43.12560352692708, 5.930395349941594],
     icon: divIcon({
@@ -39,6 +44,7 @@ export const data = [
         position: [43.1231544656904, 5.929926842146254],
         title: "Rue des Arts",
         text: "L’idée émane alors d’un urbaniste passionné d’art, Jacques Mikaélian. Aidé de l’ancien maire de Toulon, Hubert Falco, et de son adjointe Hélène Audibert ; cette rue vivante donne un second souffle au centre longtemps désuet, afin de le transformer en un carrefour attractif des arts.  On y retrouve de nombreuses galeries d’art, ateliers et boutiques d’artistes, boutiques de mode et de décoration, ainsi que des bars, restaurants et commerces de bouche, tous caractérisés par leur(s) univer(s) singulier(s). Un passage vivement recommandé pour tous les visiteurs !",
+        image: "/carrousel/Carre_du_port_1.jpg",
       },
     ],
 
@@ -66,6 +72,8 @@ export const data = [
         position: [43.121551561068024, 5.93151362495464],
         title: "Place Raimu",
         text: " Jules Muraire dit Raimu est né en décembre 1883 à la rue de l’indépendance, actuelle rue Anatole France à Toulon. Il est repéré en 1910 par Félix Mayol qui décida de le produire à Paris dans son théâtre, le « concert Mayol ». Mais c’est avec l’appui de Sacha Guitry aux côtés de Marcel Pagnol qu’il deviendra cette figure incontournable du théâtre et du cinéma français. Il décéda en septembre 1946. La place Raimu rend hommage à ce grand humoriste et acteur natif de la ville. Sur cette petite place pavée se trouve une statue en bronze mettant en scène la célèbre partie de cartes entre César (Raimu) et Panisse (Fernand Chapin), deux des quatre joueurs de cartes du film Marius de Marcel Pagnol. Deux chaises vides vous offrent la possibilité de prendre place à côté des deux sculptures afin d’admirer l’œuvre et ses personnages à l’expression réaliste",
+
+        image: "/carrousel/Carre_du_port_1.jpg",
       },
     ],
 
@@ -139,27 +147,37 @@ export const data = [
       {
         position: [43.11992342755061, 5.933487853790163],
         title: "Eglise St-Francois-de-Paule",
+
+        image: "/carrousel/Carre_du_port_1.jpg",
         text: "Cette église catholique, classée aux Monuments Historiques depuis 1942, fut édifiée en 1744 sur le site de l'ancien château royal 'Casteou de la Mar', dans le but de servir de chapelle au couvent des Récollets qui y était alors attenant. Après les troubles de la Révolution, en 1803, elle fut restaurée au culte et transformée en paroisse, prenant le nom de Saint-François-de-Paule, en hommage au fondateur des Minimes. Le style de cette église est caractéristique des églises baroques de la Provence Orientale de cette époque, avec sa façade présentant des courbes et des contre-courbes. À l'intérieur, on peut admirer un magnifique maître-autel en marbre polychrome datant du XVIIIe siècle, ainsi qu'un chœur, une boiserie et une chaire en noyer de Sénéquier. Ces éléments ajoutent à la beauté et à la richesse artistique de l'église Saint-François-de-Paule.  L’église, ainsi que celle de Saint-Louis, collée à la Place de l’Équerre, ont toutes deux été très touchées par les bombardements de la Seconde Guerre Mondiale.",
       },
       {
         position: [43.12100416903632, 5.934201626803752],
         title: "Le Boulet",
         text: "Ce boulet encastré dans la façade d’une maison, évoque le souvenir du siège établi par les Anglais en 1793 avant que la ville ne soit libérée par Bonaparte.",
+
+        image: "/carrousel/Carre_du_port_1.jpg",
       },
       {
         position: [43.12111009992583, 5.933882284475029],
         title: " Le Musée du Vieux Toulon",
         text: "Notre Clin d’œil vous propose de découvrir le musée du vieux Toulon, aujourd’hui renommé le musée «d’histoire de Toulon et de sa région ». Crée en 1949 par l’association « la société des amis du vieux Toulon », son but est de rassembler et conserver les œuvres d’arts et documents relatifs à l’histoire de Toulon et de sa région. Une vocation restée intacte et un fond enrichi au fil du temps qui méritait bien le nouvel écrin offert par la Ville à l’association. La salle d’exposition permet de découvrir divers collections de plan-relief, carnets de croquis, documents, bustes, peintures..). Une bibliothèque se trouve également dans le bâtiment, composée de milliers de titres elle est fréquentée par beaucoup d’étudiants et de chercheurs. Le bagne est également évoqué dans la collection du musée et vous permet d’en découvrir davantage sur le sujet, inhérent à l’histoire de Toulon. Si vous le souhaitez, vous pouvez visiter le musée du lundi au samedi de 14 heures à 18 heures et bénéficier d’une agréable visite guidée par l’un des bénévoles de l’association.",
+
+        image: "/carrousel/Carre_du_port_1.jpg",
       },
       {
         position: [43.119748665452406, 5.9340182556393355],
         title: "L'Office du Tourisme",
         text: "L’office de tourisme de Toulon vous accueil au 12, place Louis Blanc Si vous avez pour projet de visiter le sud lors de vos prochaines vacances ou que vous habitez Toulon et souhaitez simplement découvrir ou redécouvrir des endroits sympathiques et/ou remplis d’histoire, n’hésitez pas à contacter l’office du tourisme de Toulon soit par téléphone au 04 94 18 53 00, via leur site internet ou en vous rendant sur place. Ils sauront vous conseillés tout au long de l’année sur l’hébergement, la restauration, les visites guidés etc.",
+
+        image: "/carrousel/Carre_du_port_1.jpg",
       },
       {
         position: [43.121456668109836, 5.934705997968225],
         title: "Le cours Lafayette",
         text: " Le cours Lafayette, connu et fréquenté pour son marché de Provence fut anciennement appelé le « marché aux comestibles » et se situait sur la Place à l’huile, quelques mètres plus loin. Un arrêté municipal avait d’ailleurs interdit toute vente de fruits et légumes ailleurs que sur cette place, également nommée « la place des quatre coins ».  Il est alors installé sur les vestiges de l’ancien rempart bordant la ville sous Henri IV. Le « cours Lafayette » se fait donc appeler ainsi depuis 1830. Une cure de jouvence y était accessible en 2009 afin de suivre la transformation urbain et commerciale du centre-ville. Aujourd’hui, le cours Lafayette attire de nombreux visiteurs et demeure un point central, relié aux commerces voisins.",
+
+        image: "/carrousel/Carre_du_port_1.jpg",
       },
     ],
 
@@ -188,6 +206,8 @@ export const data = [
         position: [43.12240054888938, 5.9331662772026865],
         title: "Boutique de Jouets",
         text: "Les Féeries d'Emilie vous proposent “une pincée d’enchantements … un soupçon de rêves … une pluie de magie ... Entrez dans l’univers magique de cette charmante boutique au décor féerique ! Vous y trouverez une sélection originale d’articles choisie avec soin, de quoi ravir enfants de tous âges et émerveiller les plus grands. Osez pousser la porte de cette boutique enchanteresse. Une immersion garantie dans un univers enfantin ! Les deux fées de la boutique vous présenteront toute une gamme sélectionnée avec soin. Des idées cadeaux du bébé à l'enfant.",
+
+        image: "/carrousel/Carre_du_port_1.jpg",
       },
     ],
 
@@ -211,12 +231,16 @@ export const data = [
       {
         position: [43.12230063811453, 5.933767489715823],
         title: "Les Halles",
+
+        image: "/carrousel/Carre_du_port_1.jpg",
         text: "Les Halles Raspail, appelées aussi anciennes Halles municipales, sont situées en plein cœur du centre ancien de Toulon. Inaugurées en 1929 pour accueillir le marché couvert, le bâtiment est un modèle de construction en béton armé de style Art-déco. Les halles ont connu leur âge d'or dans les années 1930 et font partie de la mémoire collective des toulonnais. En sommeil depuis 2002, elles ont réouvert leurs portes, reconverties en halles gourmandes. Après 20 ans de fermeture, les Halles de Toulon ont repris vie et avec elles, ce quartier emblématique du cœur de ville. Les Halles sont un lieu de convivialité, de proximité et un élément remarquable du patrimoine architectural.",
       },
       {
         position: [43.122681298365244, 5.933926596119036],
         title: "Le Lavoir",
         text: "Le lavoir que l'on peut observer aujourd'hui date de 1832 et fut construit par le marbrier Jouve. À l'origine, il comportait probablement une statue sur son socle. Ce lavoir était composé de trois bassins, dont le plus grand était destiné à recevoir l'eau savonneuse. C'est autour de ce bassin que les 'bugadières', ces femmes d'autrefois qui effectuaient la lessive, se rassemblaient pour laver le linge. La fontaine-lavoir Saint-Vincent était bien plus qu'un simple endroit pour laver le linge ; c'était un lieu de rencontres et d'échanges d'informations. Pendant longtemps, cet espace était considéré comme étant le territoire des femmes, où les rumeurs, les commérages et les nouvelles, bonnes ou mauvaises, étaient colportés. Le bruit des battoirs, qui rythmait la lessive, a cessé de résonner au cours de l'année 1975.",
+
+        image: "/carrousel/Carre_du_port_1.jpg",
       },
     ],
 
@@ -250,11 +274,15 @@ export const data = [
         position: [43.12347391758453, 5.933118140297046],
         title: "Le Petit Prince",
         text: "En face de la fontaine se trouve Le Petit Prince de Toulon, un restaurant d’insertion créé grâce à l'initiative de l'association Femmes de la cité, dont la mission est de favoriser la réinsertion professionnelle. Dans un cadre agréable, avec une décoration à la thématique du Petit Prince d’Antoine de Saint-Exupéry, vous pourrez y déguster en amoureux, en famille ou tout simplement seul, des spécialités orientales, salées ou sucrées. La terrasse permet de profiter du soleil et de la vue sur la place Puget autour d’un apéro, d’un goûter, ou d’un dîner… Laissez-vous tenter par cette petite pause plaisir ! (Notre coup de cœur est ouvert du lundi au samedi de 7h00 à 20h00 et le dimanche de 9h30 à 18h00)",
+
+        image: "/carrousel/Carre_du_port_1.jpg",
       },
       {
         position: [43.12345475619854, 5.9336023690599085],
         title: "La Savonnerie",
         text: "C'est à Toulon que la toute première fabrique de savons a vu le jour, en 1430. Elle fut même créée à Grasse par un industriel nommé M. Palmier. Afin de le convaincre de l’installer à Toulon, la ville varoise le paya ainsi que son loyer. Ces savons, élaborés à partir d'huile d'olive, étaient réputés pour leur qualité exceptionnelle. Entre 1600 et 1650, une vingtaine de savonneries s'étaient établies dans la rue des Savonnières. Cependant, en 1669, Marseille, qui avait également développé des savonneries, mais postérieurement à Toulon, a bénéficié d'un privilège commercial lorsque Louis XIV a déclaré son port exempt de taxes, tandis que toutes les marchandises entrant ou sortant du port de Toulon en étaient soumises. Cette mesure a marqué le déclin de l'âge d'or du savon toulonnais. Vers 1770, il ne restait plus que 4 savonneries à Toulon. Le savon que l’on nomme « de Marseille », est en réalité le « savon de Toulon ». Située au 8, rue Ferdinand Pelloutier, le Petit Toulonnais, vous pourrez trouver une grande variété de savons, tous estampillés de notre emblème varois. (La savonnerie vous accueille du mardi au samedi de 10h30 à 13h30 puis de 14h30 à 18h30.)",
+
+        image: "/carrousel/Carre_du_port_1.jpg",
       },
     ],
 
