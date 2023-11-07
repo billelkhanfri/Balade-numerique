@@ -308,7 +308,7 @@ export const data = [
     id: 10,
     isFavorite: false,
     title: "L'opéra de Toulon",
-    imageUrl: "./thumbs-imgs/opera-de-toulon.jpg",
+    imageUrl: "../../src/assets/thumbs-imgs/opera-de-toulon.jpg",
     history_one:
       "Avant la construction de l’actuel Opéra, Toulon ne disposait que du théâtre de la comédie construit en 1765 et bombardé durant la seconde guerre mondiale. Inauguré en 1862 suite à la désaffectation du théâtre de la comédie car très peu fréquenté, il est l’un des plus beaux et des plus grands théâtres de province. L’opéra de Toulon est un bâtiment spécialement conçu pour la représentation des opéras. Sa construction qui a duré 2 ans est rendue possible grâce à l’agrandissement de la ville et l’arasement de ses remparts en 1853. A son inauguration, l’opéra de Toulon était au sommet du podium en termes de fréquentation. Il est situé dans le centre-ville non loin du boulevard de Strasbourg et est classé monument historique depuis le 2 décembre 1988.",
 
