@@ -24,7 +24,7 @@ function Lieu() {
 console.log(coup_coeurs)
   return (
     <>
-      <div className="container ">
+      
         <div className="lieu-item">
           <div className="item-head">
             <Link to="/">
@@ -43,7 +43,7 @@ console.log(coup_coeurs)
           <p>{history_two}</p>
           <p>{history_three}</p>
         </div>
-      </div>
+     
       <div className="coup-wrapper">
         {coup_coeurs && (
           <h2>
