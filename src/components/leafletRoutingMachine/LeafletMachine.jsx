@@ -9,7 +9,7 @@ function LeafletMachine() {
   useEffect(() => {
     const apiUrl =
       "https://api.openrouteservice.org/v2/directions/foot-walking";
-    const apiKey = "5b3ce3597851110001cf62481c3d0186f9484b9eab254523d0f9f0dd"; // Replace with your actual API key
+    const apiKey = import.meta.env.VITE_REACT_APP_ROUTING_KEY;
 
     // Define your list of coordinates
     const coordinates = [
