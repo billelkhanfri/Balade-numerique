@@ -1,11 +1,32 @@
 import Navbar from "../../components/navbar/Navbar";
 import Thumb from "../../components/thumb/Thumb";
-import { data } from "../../data/data.js";
 import "./accueil.css";
 import Banner from "../../components/banner/Banner";
 import Weathers from "../../components/weather/Weather";
+import { useEffect, useState } from "react";
+
+
 
 const Accueil = () => {
+    const [data, setData] = useState([]);
+      const fetchData = async () => {
+        try {
+          const response = await fetch(
+            "/DB/data.json"
+          );
+          if (!response) {
+            throw new Error("il y'a un problem de connexion");
+          }
+          const data = await response.json();
+          setData(data);
+        } catch (error) {
+          console.error(" erreur du fetch ", error);
+        }
+      };
+      useEffect(() => {
+        fetchData();
+      }, []);
+
   return (
     <>
       <Banner />
