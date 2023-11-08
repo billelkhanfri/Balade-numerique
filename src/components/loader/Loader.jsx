@@ -1,4 +1,4 @@
-import "./Loader.css"; // Create a separate CSS file for styling
+import "./loader.css";
 
 function Loader() {
   return (
