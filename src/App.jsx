@@ -1,7 +1,7 @@
 import "./App.css";
 import Carte from "./containers/carte/Carte";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import SplashScreen from "./components/splashScreen/splashScreen";
+import SplashScreen from "./components/splashScreen/SplashScreen";
 import About from "./containers/about/About";
 import Circuit from "./containers/circuit/Circuit";
 import Favoris from "./containers/favoris/Favoris";
