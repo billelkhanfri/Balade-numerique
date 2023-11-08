@@ -4,10 +4,7 @@
   -o-object-fit: contain !important;
   object-fit: contain !important;
 }
-.leaflet-container {
-  height: 100vh !important;
-  background-color: white !important;
-}
+
 .img-wrapper {
   width: 28px !important;
   height: 28px !important;
@@ -18,4 +15,3 @@
   padding: 2px;
   border-radius: 50%;
 }
-

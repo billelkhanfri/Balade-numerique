@@ -46,10 +46,13 @@ function Carte() {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <MarkerClusterGroup chunkedLoading style={{
-          height: "500px",
-          backgroundColo:'red',
-        }}>
+        <MarkerClusterGroup
+          chunkedLoading
+          style={{
+            height: "500px",
+            backgroundColo: "red",
+          }}
+        >
           {filtredata.map((marker, index) => (
             <Marker
               key={index}

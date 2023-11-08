@@ -4,5 +4,5 @@ import { VitePWA } from "vite-plugin-pwa";
 
 export default defineConfig({
   plugins: [react(), VitePWA({ register: "autoUpdate" })],
-  base: "/Balade-numerique/",
+
 });

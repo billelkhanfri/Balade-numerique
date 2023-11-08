@@ -53,7 +53,8 @@ function App() {
           <Route path="*" element={<Error />}></Route>
         </Routes>
       ) : (
-       <Nointernet onRefresh = {handleRefresh}/>   )}
+        <Nointernet onRefresh={handleRefresh} />
+      )}
     </BrowserRouter>
   );
 }

@@ -68,11 +68,12 @@ function Parcours() {
           <Marker position={position}>
             <Popup>Ma Position</Popup>
           </Marker>
-          {data && data.map((marker, index) => (
-            <Marker key={index} position={marker.position} icon={marker.icon}>
-              <Popup>{marker.popupContent}</Popup>
-            </Marker>
-          ))}
+          {data &&
+            data.map((marker, index) => (
+              <Marker key={index} position={marker.position} icon={marker.icon}>
+                <Popup>{marker.popupContent}</Popup>
+              </Marker>
+            ))}
           <LeafletMachine />
         </MapContainer>
       ) : (

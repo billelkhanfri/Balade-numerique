@@ -5,8 +5,14 @@
      object-fit: contain !important;
 }
 .leaflet-container {
+
+  height: -webkit-fit-content !important;
+
+  height: -moz-fit-content !important;
+
   height: 100vh !important;
   background-color: white !important;
+
 }
 .img-wrapper {
   position: relative; 
