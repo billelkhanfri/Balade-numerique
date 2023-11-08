@@ -1,5 +1,4 @@
 import "./App.css";
-import Accueil from "./containers/accueil/Accueil";
 import Carte from "./containers/carte/Carte";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SplashScreen from "./components/splashScreen/splashScreen";
@@ -13,6 +12,7 @@ import Error from "./containers/error/Error";
 // import { data } from "./data/data";
 import { useState } from "react";
 import Nointernet from "./containers/nointernet/Nointernet";
+import Home from "./containers/home/Home";
 
 function App() {
   const [isOnline, setIsOnline] = useState(navigator.onLine);
@@ -33,7 +33,7 @@ function App() {
       <SplashScreen />
       {isOnline ? (
         <Routes>
-          <Route path="/" element={<Accueil />}>
+          <Route path="/" element={<Home />}>
             {" "}
           </Route>
           <Route path="/carte" element={<Carte />}></Route>

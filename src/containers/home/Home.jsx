@@ -1,6 +1,6 @@
 import Navbar from "../../components/navbar/Navbar";
 import Thumb from "../../components/thumb/Thumb";
-import "./accueil.css";
+import "./home.css";
 import Banner from "../../components/banner/Banner";
 import Weathers from "../../components/weather/Weather";
 import { useEffect, useState } from "react";
