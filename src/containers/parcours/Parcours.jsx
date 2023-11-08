@@ -9,8 +9,25 @@ import { IoIosArrowBack } from "react-icons/io";
 import Loader from "../../components/loader/Loader";
 // import { data } from "../../data/data.js";
 import { divIcon } from "leaflet";
+import { FaArrowUp, FaArrowDown } from "react-icons/fa";
+
 
 function Parcours() {
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: "smooth",
+    });
+  };
   const [data, setData] = useState([]);
   const fetchData = async () => {
     try {
@@ -103,6 +120,15 @@ function Parcours() {
 
   return (
     <>
+      <div className="scrolling">
+        <div className="scroll-to-top-icon" onClick={scrollToTop}>
+          <FaArrowUp />
+        </div>
+        <div className="scroll-to-bottom-icon" onClick={scrollToBottom}>
+          <FaArrowDown />
+        </div>
+      </div>
+
       <div className="lieu-item">
         <div className="item-head">
           <Link to="/">

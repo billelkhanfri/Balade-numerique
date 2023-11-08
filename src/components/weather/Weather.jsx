@@ -113,7 +113,7 @@ function Weather() {
           </div>
         </div>
       ) : (
-        <p>Loading weather data...</p>
+        <p></p>
       )}
     </div>
   );

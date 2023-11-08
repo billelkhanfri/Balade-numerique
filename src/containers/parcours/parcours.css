@@ -2,20 +2,18 @@
   width: 100% !important;
   height: 100% !important;
   -o-object-fit: contain !important;
-     object-fit: contain !important;
+  object-fit: contain !important;
 }
 .leaflet-container {
-
   height: -webkit-fit-content !important;
 
   height: -moz-fit-content !important;
 
   height: 100vh !important;
   background-color: white !important;
-
 }
 .img-wrapper {
-  position: relative; 
+  position: relative;
   width: 30px !important;
   height: 30px !important;
   border: 3px solid var(--color-primary);
@@ -26,22 +24,20 @@
   border-radius: 50%;
 }
 
-
-  .img-wrapper::after {
-    content: ''; 
-    position: absolute; 
-    top: 100%; 
-    left: 50%; 
-    transform: translateX(-50%); 
-    border-width: 8px 6px 0; 
-    border-style: solid;
-    border-color: var(--color-primary) transparent transparent; 
-  }
-
+.img-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 8px 6px 0;
+  border-style: solid;
+  border-color: var(--color-primary) transparent transparent;
+}
 
 .map-button {
   position: absolute;
- top: 12vh;
+  top: 12vh;
   right: 2vw;
   z-index: 1000;
 }
@@ -59,16 +55,54 @@
   cursor: pointer;
   border-radius: 40px;
   transition: background-color 0.3s;
-font-weight: 500;
-position: relative;
+  font-weight: 500;
+  position: relative;
 }
- 
 
 .custom-marker-icon {
-  background: none; 
-  border: none; 
-  padding: 0; 
-  
-
+  background: none;
+  border: none;
+  padding: 0;
 }
 
+/* Styling for the scroll-to-top and scroll-to-bottom icons */
+.scroll-to-top-icon,
+.scroll-to-bottom-icon {
+  /* Adjust this value to control the horizontal position */
+  background-color: #007bff; /* Background color of the icon container */
+  color: #fff; /* Color of the icon */
+  border: 1px solid #007bff; /* Border color */
+  border-radius: 50%; /* Make it a circle */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid;
+}
+
+.scroll-to-top-icon:hover,
+.scroll-to-bottom-icon:hover {
+  background-color: #0056b3; /* Change background color on hover */
+}
+
+/* You can add transitions for a smoother effect */
+.scroll-to-top-icon,
+.scroll-to-bottom-icon {
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.scroll-to-bottom-icon {
+  transform: translateY(-100px); /* Initially move it out of the viewport */
+}
+.scrolling {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 40vh; /* Adjust this value to control the vertical position */
+  right: 20px;
+  z-index: 1001; /* Ensures the icons are on top of other elements */
+  flex-direction: column;
+}
