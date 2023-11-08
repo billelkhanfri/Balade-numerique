@@ -51,13 +51,13 @@
   z-index: 2;
   position: relative;
   padding: 14px 32px;
-    max-width: 1024px;
+  max-width: 1024px;
   margin: auto;
-    width: 100%;
+  width: 100%;
 }
 .closed-icone {
-  width: 52px;
-  height: 52px;
+  width: 38px;
+  height: 38px;
   color: var(--color-footer);
 }
 .navbar-menu {
@@ -154,8 +154,9 @@
   color: white;
 }
 .navbar-menu.open .link .spesific {
-border-bottom: 1px solid;
-border-top: 1px solid;}
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+}
 
 .navbar-item {
   font-size: 18px;
