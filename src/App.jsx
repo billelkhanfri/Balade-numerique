@@ -11,27 +11,10 @@ import Parcours from "./containers/parcours/Parcours";
 import Lieu from "./containers/lieu/Lieu";
 import Error from "./containers/error/Error";
 // import { data } from "./data/data";
-import { useState, useEffect } from "react";
-import Nointernet from "./containers/nointernet/Nointernet"
+import { useState } from "react";
+import Nointernet from "./containers/nointernet/Nointernet";
 
 function App() {
-   const [data, setData] = useState([]);
-   const fetchData = async () => {
-     try {
-       const response = await fetch("/DB/data.json");
-       if (!response) {
-         throw new Error("il y'a un problem de connexion");
-       }
-       const data = await response.json();
-       setData(data);
-     } catch (error) {
-       console.error(" erreur du fetch ", error);
-     }
-   };
-   useEffect(() => {
-     fetchData();
-   }, []);
-  const [favorites, setFavorites] = useState([]); // Initialize favorites state
   const [isOnline, setIsOnline] = useState(navigator.onLine);
 
   const handleRefresh = () => {
@@ -50,19 +33,13 @@ function App() {
       <SplashScreen />
       {isOnline ? (
         <Routes>
-          <Route
-            path="/"
-            element={<Accueil data={data} favorites={favorites} />}
-          >
+          <Route path="/" element={<Accueil />}>
             {" "}
           </Route>
           <Route path="/carte" element={<Carte />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/circuit" element={<Circuit />}></Route>
-          <Route
-            path="/favoris"
-            element={<Favoris data={data} favorites={favorites} />}
-          ></Route>
+          <Route path="/favoris" element={<Favoris />}></Route>
           <Route path="/liens" element={<Liens />}></Route>
           <Route path="/parcours" element={<Parcours />}></Route>
           <Route path="/lieu/:lieuId" element={<Lieu />}></Route>
