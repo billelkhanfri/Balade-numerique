@@ -14,6 +14,8 @@ function LeafletMachine() {
     // Define your list of coordinates
     const coordinates = [
       [5.930706486183582, 43.125595696411985],
+      [5.929556393526933, 43.12505521509481],
+      [5.930814142153191,43.1246858881293],
       [5.931185680628862, 43.12315834850046],
       [5.9319978115427565, 43.12142095745307],
       [5.931721017717504, 43.12007266473213],
@@ -69,9 +71,9 @@ function LeafletMachine() {
   }
 
   const polylineStyle = {
-    color: "green",
-    weight: 6, // Border weight (thickness)
-    opacity: 1, // Border opacity (0 to 1)
+    color: "#3a3a3a",
+    weight: 8, // Border weight (thickness)
+    opacity: 0.75, // Border opacity (0 to 1)
     smoothFactor: 0.5, // Smoothing factor for curved lines (0 to 1)
     // dashArray: "9, 8", // Dashed line pattern (optional)
     lineJoin: "round", // Line join style ("miter," "round," "bevel")

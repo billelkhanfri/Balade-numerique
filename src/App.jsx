@@ -10,11 +10,27 @@ import Liens from "./containers/liens-utils/Liens";
 import Parcours from "./containers/parcours/Parcours";
 import Lieu from "./containers/lieu/Lieu";
 import Error from "./containers/error/Error";
-import { data } from "./data/data";
-import { useState } from "react";
+// import { data } from "./data/data";
+import { useState, useEffect } from "react";
 import Nointernet from "./containers/nointernet/Nointernet"
 
 function App() {
+   const [data, setData] = useState([]);
+   const fetchData = async () => {
+     try {
+       const response = await fetch("/DB/data.json");
+       if (!response) {
+         throw new Error("il y'a un problem de connexion");
+       }
+       const data = await response.json();
+       setData(data);
+     } catch (error) {
+       console.error(" erreur du fetch ", error);
+     }
+   };
+   useEffect(() => {
+     fetchData();
+   }, []);
   const [favorites, setFavorites] = useState([]); // Initialize favorites state
   const [isOnline, setIsOnline] = useState(navigator.onLine);
 

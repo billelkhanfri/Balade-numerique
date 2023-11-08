@@ -7,14 +7,29 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { Link } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import Loader from "../../components/loader/Loader";
-import { data } from "../../data/data.js";
-
+// import { data } from "../../data/data.js";
+import { divIcon } from "leaflet";
 
 function Parcours() {
+  const [data, setData] = useState([]);
+  const fetchData = async () => {
+    try {
+      const response = await fetch("/DB/data.json");
+      if (!response) {
+        throw new Error("il y'a un problem de connexion");
+      }
+      const data = await response.json();
+      setData(data);
+    } catch (error) {
+      console.error(" erreur du fetch ", error);
+    }
+  };
+  useEffect(() => {
+    fetchData();
+  }, []);
   const [position, setPosition] = useState([43.125, 5.93]);
   const [loading, setLoading] = useState(true);
   const [hasInternet, setHasInternet] = useState(true);
-
 
   const retryFetchLocation = () => {
     setLoading(true);
@@ -39,8 +54,52 @@ function Parcours() {
   };
 
   useEffect(() => {
-    retryFetchLocation(); 
+    retryFetchLocation();
   }, []);
+  const customIcons = [
+    divIcon({
+      html: '<div class="img-wrapper"><img class="custom-marker" src="/src/assets/icones-pics/Liberté.png" alt="Custom Icon" /></div>',
+      className: "custom-marker-icon",
+    }),
+    divIcon({
+      html: '<div class="img-wrapper"><img class="custom-marker" src="/src/assets/icones-pics/Sculpture-bateau.png" alt="Custom Icon" /></div>',
+      className: "custom-marker-icon",
+    }),
+
+    divIcon({
+      html: '<div class="img-wrapper"><img class="custom-marker" src="/src/assets/icones-pics/Rue-Alger.png" alt="Custom Icon" /></div>',
+      className: "custom-marker-icon",
+    }),
+    divIcon({
+      html: '<div class="img-wrapper"><img class="custom-marker" src="/src/assets/icones-pics/Carrée-du-port.png" alt="Custom Icon" /></div>',
+      className: "custom-marker-icon",
+    }),
+    divIcon({
+      html: '<div class="img-wrapper"><img class="custom-marker" src="src/assets/icones-pics/Stade-Mayole.png" alt="Custom Icon" /></div>',
+      className: "custom-marker-icon",
+    }),
+    divIcon({
+      html: '<div class="img-wrapper alger"><img class="custom-marker" src="/src/assets/icones-pics/Court-Lafayette.png" alt="Custom Icon" /></div>',
+      className: "custom-marker-icon",
+    }),
+    divIcon({
+      html: '<div class="img-wrapper"><img class="custom-marker" src="/src/assets/icones-pics/Cathédrale-de-toulon.png" alt="Custom Icon" /></div>',
+      className: "custom-marker-icon",
+    }),
+    divIcon({
+      html: '<div class="img-wrapper alger"><img class="custom-marker" src="/src/assets/icones-pics/Lavoir.png" alt="Custom Icon" /></div>',
+      className: "custom-marker-icon",
+    }),
+
+    divIcon({
+      html: '<div class="img-wrapper alger"><img class="custom-marker" src="/src/assets/icones-pics/Place-puget.png" alt="Custom Icon" /></div>',
+      className: "custom-marker-icon",
+    }),
+    divIcon({
+      html: '<div class="img-wrapper"><img class="custom-marker" src="/src/assets/icones-pics/Opéra.png" alt="Custom Icon" /></div>',
+      className: "custom-marker-icon",
+    }),
+  ];
 
   return (
     <>
@@ -70,7 +129,11 @@ function Parcours() {
           </Marker>
           {data &&
             data.map((marker, index) => (
-              <Marker key={index} position={marker.position} icon={marker.icon}>
+              <Marker
+                key={index}
+                position={marker.position}
+                icon={customIcons[index]}
+              >
                 <Popup>{marker.popupContent}</Popup>
               </Marker>
             ))}
