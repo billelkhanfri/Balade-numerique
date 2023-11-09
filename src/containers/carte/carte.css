@@ -3,6 +3,7 @@
   height: 100% !important;
   -o-object-fit: contain !important;
   object-fit: contain !important;
+  -webkit-object-fit: contain !important; /* WebKit/Blink browsers */
 }
 
 .img-wrapper {

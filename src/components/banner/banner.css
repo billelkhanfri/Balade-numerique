@@ -1,5 +1,5 @@
 .banner-wrapper {
-  height: 55vh;
+  height: 45vh;
   position: relative;
   width: 100%;
   background-image: url("../../assets/images-cards/banner.jpg");
@@ -7,6 +7,7 @@
   background-repeat: repeat;
   background-size: cover;
 }
+
 .banner-wrapper::before {
   content: "";
   position: absolute;
@@ -14,27 +15,26 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.4) 0%,
-    rgba(0, 0, 0, 0.3) 100%
-  );
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.3) 100%);
 }
+
 .banner-head {
   width: 100%;
-  height: 85px;
-  background:var(--color-gradient);
+  height: 60px;
+  background: var(--color-gradient);
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .banner-head h1 {
   font-size: 24px;
   align-items: center;
   font-weight: 600;
   color: white;
 }
+
 .banner-wrapper img {
   position: absolute;
   top: 50%;
@@ -42,20 +42,21 @@
   transform: translate(-50%, -50%);
   width: 150px;
 }
+
 .banner-slogan {
   position: absolute;
   top: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: var(--color-gradient-slogan);
-  width: 200px;
+  width: 70%; /* Fixed the duplicate property */
   z-index: 5;
-  width: 70%;
   padding: 12px;
   text-align: center;
   border-radius: 12px;
   max-width: 1024px;
 }
+
 .banner-wrapper .banner-slogan p {
   font-weight: 500;
   font-size: 22px;
@@ -64,10 +65,10 @@
   text-transform: uppercase;
   letter-spacing: 5px;
 }
+
 @media (max-width: 425px) {
   .banner-wrapper .banner-slogan p {
     font-size: 16px;
   }
-  .banner-wrapper::before {
-  }
+  /* You can add specific styles for smaller screens if needed */
 }

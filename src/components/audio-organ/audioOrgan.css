@@ -2,16 +2,17 @@ h3 {
   text-align: center;
   font-weight: 400;
   margin-bottom: 35px;
-   color: white;
+  color: white;
   font-size: 32px;
 }
 
 .app-container {
   width: 95%;
   margin: auto;
-  padding: 0 10px;
-   background-color:var(--color-footer);
   padding: 30px 50px;
+  background-color: var(--color-footer);
   border-radius: 10px;
-   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 10px; /* WebKit */
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* WebKit */
 }

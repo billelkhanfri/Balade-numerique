@@ -18,7 +18,7 @@ function Weather() {
   const fetchWeatherData = async () => {
     const apiKey = import.meta.env.VITE_REACT_APP_WEATHER_KEY;
 
-    const apiUrl = `http://localhost:3001/data/2.5/weather?q=Toulon,fr&units=metric&appid=${apiKey}`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Toulon,fr&units=metric&appid=${apiKey}`;
 
     try {
       const response = await fetch(apiUrl);

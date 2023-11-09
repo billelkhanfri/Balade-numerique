@@ -1,7 +1,9 @@
 .navbar__bg {
-  /* background: var(--color-gradient-reversed); */
   background-color: white;
-  position: fixed;
+  
+  position: -webkit-sticky;
+  
+  position: sticky;
 
   z-index: 1000;
   text-align: center;

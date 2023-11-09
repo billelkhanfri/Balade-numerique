@@ -15,6 +15,12 @@ import { FaArrowUp, FaArrowDown } from "react-icons/fa";
 function Parcours() {
   const [scrollPosition, setScrollPosition] = useState(0);
 
+    const openGoogleMaps = () => {
+      const destination = "43.12566961111021,5.930514335632324";
+      const url = `https://www.google.com/maps/dir/?api=1&destination=${destination}`;
+      window.open(url, "_blank");
+    };
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -44,35 +50,8 @@ function Parcours() {
   useEffect(() => {
     fetchData();
   }, []);
-  const [position, setPosition] = useState([43.125, 5.93]);
-  const [loading, setLoading] = useState(true);
-  const [hasInternet, setHasInternet] = useState(true);
 
-  const retryFetchLocation = () => {
-    setLoading(true);
-    setHasInternet(true);
 
-    if ("geolocation" in navigator) {
-      navigator.geolocation.getCurrentPosition(
-        (geoLocation) => {
-          const { latitude, longitude } = geoLocation.coords;
-          setPosition([latitude, longitude]);
-          setLoading(false);
-        },
-        (error) => {
-          setLoading(false);
-          setHasInternet(false);
-        }
-      );
-    } else {
-      setLoading(false);
-      setHasInternet(false);
-    }
-  };
-
-  useEffect(() => {
-    retryFetchLocation();
-  }, []);
   const customIcons = [
     divIcon({
       html: '<div class="img-wrapper"><img class="custom-marker" src="/src/assets/icones-pics/Liberté.png" alt="Custom Icon" /></div>',
@@ -137,22 +116,18 @@ function Parcours() {
           <h2> Parcours</h2>
           <IoIosArrowBack className="return-icon-transparent" />
         </div>
-        <div className="map-button container">
+        <div className="map-button container" onClick={openGoogleMaps}>
           <button className="button">Embarquer</button>
         </div>
       </div>
 
-      {loading ? (
-        <Loader />
-      ) : hasInternet ? (
+ 
         <MapContainer center={[43.1204778356, 5.933236982047172]} zoom={16}>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <Marker position={position}>
-            <Popup>Ma Position</Popup>
-          </Marker>
+          
           {data &&
             data.map((marker, index) => (
               <Marker
@@ -165,12 +140,8 @@ function Parcours() {
             ))}
           <LeafletMachine />
         </MapContainer>
-      ) : (
-        <div className="offLigne-wrapper">
-          <p>Vérifiez votre connexion internet, elle semble être coupée :) </p>
-          <button onClick={retryFetchLocation}>Rafraichir</button>
-        </div>
-      )}
+    
+       
       <Lieux />
     </>
   );

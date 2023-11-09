@@ -4,6 +4,7 @@
     "isFavorite": false,
     "title": "Place de la Liberté",
     "imageUrl": "https://rm83.fr/balade/wp-content/uploads/2023/08/place-liberte.jpg",
+    "history_one": "C’est en 1858, à l’initiative du ministère de la Guerre, que cette grande place est créée. Elle symbolise à l’époque le ‘’Centre du Toulon Moderne’ . En 1875 sont construits l’hôtel de la subdivision ainsi que le cercle militaire. C’est alors en 1889 qu’elle prend le nom de «place de la Liberté». Au centre de la place se trouve la Fontaine de la Fédération, taillée dans la pierre de Calissanne. Réalisée la même année par les frères sculpteurs Allar, elle représente le départ de la statue de la Liberté vers les États-Unis. Elle est alors inaugurée par le président Carnot en 1890, et rassemble trois figures représentant la France, la Force et la Justice. Situé derrière la statue, l’emblématique immeuble de l’ancien Grand Hôtel héberge désormais le Théâtre Liberté, dirigé par Charles et Philippe Berling depuis son inauguration en septembre 2011.",
     "coup_coeurs": [
       {
         "position": [43.125036313807215, 5.930078784475154],
@@ -19,7 +20,6 @@
     ],
     "lecture": "/src/assets/data_audio/liberte.mp3",
     "position": [43.12560352692708, 5.930395349941594],
-    
 
     "popupContent": "Place de la Liberté (+ Diagonale + Boulevard de Strasbourg) + Cinéma Le Royal (coup de coeur)"
   },
@@ -43,7 +43,7 @@
       "https://www.google.com/url?sa=i&url=https%3A%2F%2Fescalecroisiere.com%2F2019%2F01%2F13%2Fescale-a-toulon-la-seyne-sur-mer%2Fbateau-sculpture-toulon%2F&psig=AOvVaw1STNgdzNIo9lP_NAYBV5ZN&ust=1699478125663000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLjgx8HnsoIDFQAAAAAdAAAAABAP",
       "https://c8.alamy.com/compfr/f25j3p/la-france-var-toulon-bateau-sculpture-avec-neptune-comme-figure-de-proue-sur-la-place-vatel-vezzani-et-traverse-la-rue-des-capucins-f25j3p.jpg"
     ],
-    "lecture": "/src/assets/data_audio/liberte.mp3",
+    "lecture": "/src/assets/data_audio/bateau.mp3",
     "position": [43.12315834850046, 5.931185680628862],
 
     "popupContent": "Bateau sculpture + Rue des Arts"
