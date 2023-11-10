@@ -17,8 +17,8 @@ const Navbar = () => {
     setMeuOpen(!menuOpen);
   };
   return (
-   
-     
+    <>
+      <div className="break"></div>
       <div className="navbar__bg ">
         <nav className="navbar">
           <NavLink className=" link" to="/" activeclassname="active">
@@ -81,7 +81,7 @@ const Navbar = () => {
           </div>
         </nav>
       </div>
-    
+    </>
   );
 };
 
