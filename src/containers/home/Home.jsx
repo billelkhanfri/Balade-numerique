@@ -4,33 +4,36 @@ import "./home.css";
 import Banner from "../../components/banner/Banner";
 import Weathers from "../../components/weather/Weather";
 import { useEffect, useState } from "react";
-//  import { data } from "../../data/data.js";
+import { getDocs, collection } from "firebase/firestore";
+import { firestore } from "../../firebase"; // Adjust the path accordingly
 
 const Accueil = () => {
   const [data, setData] = useState([]);
-  const fetchData = async () => {
-    try {
-      const response = await fetch("/DB/data.json");
-      if (!response) {
-        throw new Error("il y'a un problem de connexion");
-      }
-      const data = await response.json();
-      setData(data);
-    } catch (error) {
-      console.error(" erreur du fetch ", error);
-    }
-  };
+
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(firestore, "places"));
+        const newData = querySnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setData(newData);
+      } catch (error) {
+        console.error("Error fetching data from Firebase:", error);
+      }
+    };
+
     fetchData();
-  }, []);
+  }, []); // Empty dependency array ensures that this effect runs once after the initial render
 
   return (
     <>
       <Banner />
       <div className="container ">
         <div className="thumbs-wrapping">
-          <Weathers></Weathers>
-          <div className=" thumbs-container">
+          <Weathers />
+          <div className="thumbs-container">
             {data &&
               data.map((item) => (
                 <Thumb
@@ -49,4 +52,5 @@ const Accueil = () => {
     </>
   );
 };
+
 export default Accueil;

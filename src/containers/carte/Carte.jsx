@@ -9,26 +9,27 @@ import "./carte.css";
 import MarkerCard from "../../components/markerCard/MarkerCard.jsx";
 import MarkerClusterGroup from "react-leaflet-cluster";
 import { useEffect, useState } from "react";
-
-
+import { getDocs, collection } from "firebase/firestore";
+import { firestore } from "../../firebase"; // Adjust the path accordingly
 
 function Carte() {
   const [data, setData] = useState([]);
-  const fetchData = async () => {
-    try {
-      const response = await fetch("/DB/data.json");
-      if (!response) {
-        throw new Error("il y'a un problem de connexion");
-      }
-      const data = await response.json();
-      setData(data);
-    } catch (error) {
-      console.error(" erreur du fetch ", error);
-    }
-  };
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(firestore, "places"));
+        const newData = querySnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setData(newData);
+      } catch (error) {
+        console.error("Error fetching data from Firebase:", error);
+      }
+    };
+
     fetchData();
-  }, []);
+  }, []); // Empty dependency array ensures that this effect runs once after the initial render
 
   const [selectedMarker, setSelectedMarker] = useState(null);
   const filtredata = data.flatMap((item) => {

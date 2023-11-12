@@ -7,12 +7,10 @@ function Slider({ images }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const goToPrevious = () => {
-
     setCurrentIndex(currentIndex === 0 ? images.length - 1 : currentIndex - 1);
   };
 
   const goToNext = () => {
-    
     setCurrentIndex(currentIndex === images.length - 1 ? 0 : currentIndex + 1);
   };
 
@@ -45,7 +43,6 @@ function Slider({ images }) {
         ))}
       </div>
       <div className="lieu-section-two">
-      
         <div className="direction">
           <FaDirections className="itineraire-icon" />
           <div className="itinéraire">

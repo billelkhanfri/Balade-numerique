@@ -10,16 +10,17 @@ import Loader from "../../components/loader/Loader";
 // import { data } from "../../data/data.js";
 import { divIcon } from "leaflet";
 import { FaArrowUp, FaArrowDown } from "react-icons/fa";
-
+import { getDocs, collection } from "firebase/firestore";
+import { firestore } from "../../firebase"; // Adjust the path accordingly
 
 function Parcours() {
   const [scrollPosition, setScrollPosition] = useState(0);
 
-    const openGoogleMaps = () => {
-      const destination = "43.12566961111021,5.930514335632324";
-      const url = `https://www.google.com/maps/dir/?api=1&destination=${destination}`;
-      window.open(url, "_blank");
-    };
+  const openGoogleMaps = () => {
+    const destination = "43.12566961111021,5.930514335632324";
+    const url = `https://www.google.com/maps/dir/?api=1&destination=${destination}`;
+    window.open(url, "_blank");
+  };
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -35,22 +36,23 @@ function Parcours() {
     });
   };
   const [data, setData] = useState([]);
-  const fetchData = async () => {
-    try {
-      const response = await fetch("/DB/data.json");
-      if (!response) {
-        throw new Error("il y'a un problem de connexion");
-      }
-      const data = await response.json();
-      setData(data);
-    } catch (error) {
-      console.error(" erreur du fetch ", error);
-    }
-  };
   useEffect(() => {
-    fetchData();
-  }, []);
+    const fetchData = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(firestore, "places"));
+        const newData = querySnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setData(newData);
+      } catch (error) {
+        console.error("Error fetching data from Firebase:", error);
+      }
+    };
 
+    fetchData();
+  }, []); // Empty dependency array ensures that this effect runs once after the initial render
+  console.log(data);
 
   const customIcons = [
     divIcon({
@@ -121,27 +123,25 @@ function Parcours() {
         </div>
       </div>
 
- 
-        <MapContainer center={[43.1204778356, 5.933236982047172]} zoom={16}>
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          
-          {data &&
-            data.map((marker, index) => (
-              <Marker
-                key={index}
-                position={marker.position}
-                icon={customIcons[index]}
-              >
-                <Popup>{marker.popupContent}</Popup>
-              </Marker>
-            ))}
-          <LeafletMachine />
-        </MapContainer>
-    
-       
+      <MapContainer center={[43.1204778356, 5.933236982047172]} zoom={16}>
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+
+        {data &&
+          data.map((marker, index) => (
+            <Marker
+              key={index}
+              position={[marker.position[0], marker.position[1]]}
+              icon={customIcons[index]}
+            >
+              <Popup>{marker.popupContent}</Popup>
+            </Marker>
+          ))}
+        <LeafletMachine />
+      </MapContainer>
+
       <Lieux />
     </>
   );
