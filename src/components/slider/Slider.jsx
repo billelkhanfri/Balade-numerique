@@ -25,6 +25,12 @@ function Slider({ images }) {
     return () => clearInterval(interval);
   }, [currentIndex]);
 
+   const openGoogleMaps = () => {
+     const destination = "43.12566961111021,5.930514335632324";
+     const url = `https://www.google.com/maps/dir/?api=1&destination=${destination}`;
+     window.open(url, "_blank");
+   };
+
   return (
     <>
       <div className="imgs-wrapper">
@@ -42,13 +48,13 @@ function Slider({ images }) {
           </div>
         ))}
       </div>
-      <div className="lieu-section-two">
         <div className="direction">
-          <FaDirections className="itineraire-icon" />
-          <div className="itinéraire">
-            <p>Itinéraire</p>
-          </div>
-        </div>
+          <button
+                  className="lieux-content-button"
+                  onClick={openGoogleMaps}
+                >
+                  Embarquer
+                </button>
       </div>
     </>
   );
