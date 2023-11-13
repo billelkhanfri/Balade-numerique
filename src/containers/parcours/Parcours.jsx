@@ -52,9 +52,12 @@ function Parcours() {
 
     fetchData();
   }, []); // Empty dependency array ensures that this effect runs once after the initial render
-  console.log(data);
 
   const customIcons = [
+    divIcon({
+      html: '<div class="img-wrapper"><img class="custom-marker" src="/src/assets/icones-pics/Opéra.png" alt="Custom Icon" /></div>',
+      className: "custom-marker-icon",
+    }),
     divIcon({
       html: '<div class="img-wrapper"><img class="custom-marker" src="/src/assets/icones-pics/Liberté.png" alt="Custom Icon" /></div>',
       className: "custom-marker-icon",
@@ -91,10 +94,6 @@ function Parcours() {
 
     divIcon({
       html: '<div class="img-wrapper alger"><img class="custom-marker" src="/src/assets/icones-pics/Place-puget.png" alt="Custom Icon" /></div>',
-      className: "custom-marker-icon",
-    }),
-    divIcon({
-      html: '<div class="img-wrapper"><img class="custom-marker" src="/src/assets/icones-pics/Opéra.png" alt="Custom Icon" /></div>',
       className: "custom-marker-icon",
     }),
   ];
