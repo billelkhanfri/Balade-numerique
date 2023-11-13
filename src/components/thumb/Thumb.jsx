@@ -3,24 +3,16 @@ import { Link } from "react-router-dom";
 import "./thumb.css";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 
-function Thumb({
-  imageUrl,
-  title,
-  id,
-  history_one,
-  coup_coeurs,
-  isFavorite,
-}) {
+function Thumb({ imageUrl, title, id, history_one, coup_coeurs }) {
   const [toggle, setToggle] = useState(false);
 
   // Load favorites from local storage on component mount
   useEffect(() => {
-    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || {};
     if (favorites[id]) {
       setToggle(true);
     }
   }, [id]);
-
 
   const handleToggle = (e) => {
     e.preventDefault(); // Prevent the default Link navigation
@@ -38,8 +30,6 @@ function Thumb({
         id,
         history_one,
         coup_coeurs,
-       
-        isFavorite,
       };
     }
 

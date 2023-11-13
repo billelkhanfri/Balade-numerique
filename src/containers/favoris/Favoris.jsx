@@ -13,7 +13,7 @@ function Favoris() {
   useEffect(() => {
     // Retrieve favorite IDs from local storage
     const favoriteData = JSON.parse(localStorage.getItem("favorites")) || {};
-
+    console.log(favoriteData);
     // Convert the object's values into an array of objects
     const favoriteIds = Object.values(favoriteData);
 
