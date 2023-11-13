@@ -30,7 +30,7 @@ function Lieu() {
 
     fetchData();
   }, []); // Empty dependency array ensures that this effect runs once after the initial render
-        console.log(data);
+ 
 
   const { lieuId } = useParams();
 
