@@ -1,10 +1,10 @@
 import "./slider.css";
 import { useState, useEffect } from "react";
 import { GoDotFill } from "react-icons/go";
-import { FaDirections } from "react-icons/fa";
 
 function Slider({ images }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [touchStartX, setTouchStartX] = useState(null);
 
   const goToPrevious = () => {
     setCurrentIndex(currentIndex === 0 ? images.length - 1 : currentIndex - 1);
@@ -15,25 +15,44 @@ function Slider({ images }) {
   };
 
   const goToSlide = (index) => setCurrentIndex(index);
-  useEffect(() => {});
+
+  const handleTouchStart = (e) => {
+    setTouchStartX(e.touches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    if (touchStartX !== null) {
+      const touchEndX = e.touches[0].clientX;
+      const deltaX = touchEndX - touchStartX;
+
+      // Adjust the sensitivity by changing the threshold value (e.g., 50)
+      if (deltaX > 50) {
+        goToPrevious();
+        setTouchStartX(null);
+      } else if (deltaX < -50) {
+        goToNext();
+        setTouchStartX(null);
+      }
+    }
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 3000);
 
-    // Clear the interval when the component unmounts
     return () => clearInterval(interval);
   }, [currentIndex]);
 
-   const openGoogleMaps = () => {
-     const destination = "43.12566961111021,5.930514335632324";
-     const url = `https://www.google.com/maps/dir/?api=1&destination=${destination}`;
-     window.open(url, "_blank");
-   };
+  
 
   return (
     <>
-      <div className="imgs-wrapper">
+      <div
+        className="imgs-wrapper"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+      >
         <img src={images[currentIndex]} alt="" />
       </div>
       <div className="dots-wrapper">
@@ -48,14 +67,7 @@ function Slider({ images }) {
           </div>
         ))}
       </div>
-        <div className="direction">
-          <button
-                  className="lieux-content-button"
-                  onClick={openGoogleMaps}
-                >
-                  Embarquer
-                </button>
-      </div>
+      
     </>
   );
 }

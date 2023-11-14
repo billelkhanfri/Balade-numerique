@@ -1,5 +1,4 @@
 import { useParams } from "react-router-dom";
-// import { data } from "../../data/data.js";
 import Navbar from "../../components/navbar/Navbar";
 import "./lieu.css";
 import { IoIosArrowBack } from "react-icons/io";
@@ -7,7 +6,7 @@ import { Link } from "react-router-dom";
 import Slider from "../../components/slider/Slider.jsx";
 import Collapse from "../../components/collapse/Collapse.jsx";
 import AudioOrgan from "../../components/audio-organ/AudioOrgan.jsx";
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 import { getDocs, collection } from "firebase/firestore";
 import { firestore } from "../../firebase"; // Adjust the path accordingly
 
@@ -30,12 +29,20 @@ function Lieu() {
 
     fetchData();
   }, []); // Empty dependency array ensures that this effect runs once after the initial render
- 
 
   const { lieuId } = useParams();
 
   const lieuData = data && data.find((lieu) => lieu.id == lieuId);
-  
+  const openGoogleMaps = () => {
+    if (lieuData && lieuData.position) {
+      console.log(lieuData.position);
+      const destination = lieuData.position;
+      const url = `https://www.google.com/maps/dir/?api=1&destination=${destination}`;
+      window.open(url, "_blank");
+    } else {
+      console.error("Destination information not available for this location");
+    }
+  };
 
   return (
     <>
@@ -50,6 +57,11 @@ function Lieu() {
               <IoIosArrowBack className="return-icon-transparent" />
             </div>
             <Slider images={lieuData.images} />
+            <div className="direction">
+              <button className="lieux-content-button" onClick={openGoogleMaps}>
+                Embarquer
+              </button>
+            </div>
           </div>
           <AudioOrgan lecture={lieuData.lecture} />
           <div className="texts-wrapper">

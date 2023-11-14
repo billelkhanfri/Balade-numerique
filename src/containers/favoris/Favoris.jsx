@@ -61,7 +61,6 @@ function Favoris() {
       </div>
 
       {favoriteItems.length > 0 ? (
-<<<<<<< HEAD
         <div className="favContainer">
           <div className=" thumbs-container">
             {favoriteItems.map((item) => (
@@ -74,18 +73,6 @@ function Favoris() {
                         <p> Coup de Coeur ({item.coup_coeurs.length})</p>
                       </div>
                     )}
-=======
-        <div className="thumbs-container">
-          {favoriteItems.map((item) => (
-            <Link to={`/lieu/${item.id}`} key={`${item.id}`}>
-              <div className="thumb">
-                <div className="wrapper">
-                  {item.coup_coeurs && (
-                    <div className="coup-coeur-vignette">
-                      <p> Coup de Coeur ({item.coup_coeurs.length})</p>
-                    </div>
-                  )}
->>>>>>> 358608c3fb2d261c3caed2d9acb56b934af793f1
 
                     <img
                       src={item.imageUrl}
