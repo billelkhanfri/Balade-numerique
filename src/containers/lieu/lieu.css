@@ -10,6 +10,9 @@
   position: fixed;
   z-index: 1002;
 }
+.item-head.scrolled {
+  top: -60px;
+}
 
 .coup-wrapper {
   display: flex;
@@ -23,6 +26,8 @@
   text-transform: uppercase;
   text-align: center;
   color: var(--color-black);
+  font-size: 22px;
+  font-weight: 400;
 }
 
 .item-head h2 {
@@ -93,8 +98,6 @@
   ); /* WebKit/Blink browsers */
   border-radius: 0px;
 }
-
-
 
 .historic-text {
   display: flex;
@@ -232,4 +235,8 @@
 .texts-wrapper p {
   line-height: 38px;
   opacity: 1;
+}
+.collapseWrapper{
+  background-color: #f0f0f0;
+padding-top: 20px;
 }

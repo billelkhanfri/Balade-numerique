@@ -15,7 +15,8 @@ import { firestore } from "../../firebase"; // Adjust the path accordingly
 
 function Parcours() {
   const [scrollPosition, setScrollPosition] = useState(0);
-
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [prevScrollY, setPrevScrollY] = useState(0);
   const openGoogleMaps = () => {
     const destination = "43.12566961111021,5.930514335632324";
     const url = `https://www.google.com/maps/dir/?api=1&destination=${destination}`;
@@ -98,6 +99,22 @@ function Parcours() {
     }),
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const threshold = 8; // Adjust the threshold as needed
+
+      setIsScrolled(scrollY > threshold && scrollY > prevScrollY);
+      setPrevScrollY(scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollY]);
+
   return (
     <>
       <div className="scrolling">
@@ -110,7 +127,7 @@ function Parcours() {
       </div>
 
       <div className="lieu-item">
-        <div className="item-head">
+        <div className={`item-head ${isScrolled ? "scrolled" : ""}`}>
           <Link to="/">
             <IoIosArrowBack className="return-icon" />
           </Link>

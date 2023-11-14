@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import Logo from "../../assets/images/android-chrome-192x192.png";
 import "./banner.css";
 

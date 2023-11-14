@@ -15,7 +15,6 @@
   border-radius: 5px;
   height: 30px;
   padding: 0 12px;
-
 }
 
 .dropDownshowen h2 {
@@ -28,20 +27,18 @@
   font-weight: 500;
   height: auto;
   overflow: hidden;
- 
+
   border-radius: 5px 0px;
   padding: 14px;
   line-height: 24px;
-    -webkit-animation: fadeIn 0.3s ease-in-out;
-            animation: fadeIn 0.3s ease-in-out;
-            color: #545454;
-
+  -webkit-animation: fadeIn 0.3s ease-in-out;
+  animation: fadeIn 0.3s ease-in-out;
+  color: #545454;
 }
-
 
 .contentWrapper.fadeOut {
   -webkit-animation: fadeOut 1s ease-out;
-          animation: fadeOut 1s ease-out;
+  animation: fadeOut 1s ease-out;
 }
 
 /* Animation for toggling (expanding) content */
@@ -68,4 +65,12 @@
     opacity: 0;
     transform: translateY(-5px);
   }
+}
+.customTypography {
+  font-weight: 400;
+  font-family: var(--font-alt);
+}
+.customBody{
+    font-family: var(--font-alt);
+
 }
