@@ -6,8 +6,6 @@ import LeafletMachine from "../../components/leafletRoutingMachine/LeafletMachin
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { Link } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
-import Loader from "../../components/loader/Loader";
-// import { data } from "../../data/data.js";
 import { divIcon } from "leaflet";
 import { FaArrowUp, FaArrowDown } from "react-icons/fa";
 import { getDocs, collection } from "firebase/firestore";

@@ -12,6 +12,9 @@ import { firestore } from "../../firebase"; // Adjust the path accordingly
 
 function Lieu() {
   const [data, setData] = useState([]);
+  const [isScrolled, setIsScrolled] = useState(false);
+    const [prevScrollY, setPrevScrollY] = useState(0);
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -44,12 +47,28 @@ function Lieu() {
     }
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const threshold = 8; // Adjust the threshold as needed
+
+      setIsScrolled(scrollY > threshold && scrollY > prevScrollY);
+      setPrevScrollY(scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollY]);
+
   return (
     <>
       {lieuData && (
         <>
           <div className="lieu-item">
-            <div className="item-head">
+            <div className={`item-head ${isScrolled ? "scrolled" : ""}`}>
               <Link to="/">
                 <IoIosArrowBack className="return-icon" />
               </Link>
