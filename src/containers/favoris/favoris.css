@@ -16,3 +16,6 @@
   text-align: center;
   -webkit-font-smoothing: antialiased; /* For smoother font rendering on WebKit/Blink browsers */
 }
+.favContainer{
+padding-top: 60px;
+}
