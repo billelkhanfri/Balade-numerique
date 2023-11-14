@@ -81,6 +81,8 @@ height: 100%;
   align-items: center;
   gap: 10px;
   cursor: pointer;
+  margin-top: 20px;
+  padding-bottom: 20px;
 }
 
 

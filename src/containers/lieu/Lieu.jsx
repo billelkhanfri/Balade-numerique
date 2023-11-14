@@ -35,16 +35,7 @@ function Lieu() {
   const { lieuId } = useParams();
 
   const lieuData = data && data.find((lieu) => lieu.id == lieuId);
-  // const {
-  //   title,
-  //   id,
-  //   history_one,
-  //   history_two,
-  //   history_three,
-  //   coup_coeurs,
-  //   images,
-  //   lecture,
-  // } = lieuData;
+  
 
   return (
     <>

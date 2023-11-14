@@ -1,30 +1,52 @@
 import Navbar from "../../components/navbar/Navbar";
-import { data } from "../../data/data.js";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./favoris.css";
 import { IoIosArrowBack } from "react-icons/io";
 import Heart from "../../assets/images/1534109_220099-P1C6M7-980 1.png";
+import { getDocs, collection } from "firebase/firestore";
+import { firestore } from "../../firebase"; // Adjust the path accordingly
 
 function Favoris() {
-  // State to hold the favorite items
   const [favoriteItems, setFavoriteItems] = useState([]);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    // Retrieve favorite IDs from local storage
-    const favoriteData = JSON.parse(localStorage.getItem("favorites")) || {};
+    const fetchData = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(firestore, "places"));
+        const newData = querySnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setData(newData);
+      } catch (error) {
+        console.error("Error fetching data from Firebase:", error);
+      }
+    };
 
-    // Convert the object's values into an array of objects
-    const favoriteIds = Object.values(favoriteData);
+    fetchData();
+  }, []); // Empty dependency array ensures that this effect runs once after the initial render
 
-    // Filter data to get favorite items based on the retrieved IDs
-    const filteredFavoriteItems = data.filter((item) =>
-      favoriteIds.some((favoriteId) => favoriteId.id === item.id)
-    );
+  useEffect(() => {
+    const fetchFavorites = () => {
+      // Retrieve favorite IDs from local storage
+      const favoriteData = JSON.parse(localStorage.getItem("favorites")) || {};
 
-    // Set the filtered favorite items in state
-    setFavoriteItems(filteredFavoriteItems);
-  }, []);
+      // Convert the object's values into an array of objects
+      const favoriteIds = Object.values(favoriteData);
+
+      // Filter data to get favorite items based on the retrieved IDs
+      const filteredFavoriteItems = data.filter((item) =>
+        favoriteIds.some((favoriteId) => favoriteId.id === item.id)
+      );
+
+      // Set the filtered favorite items in state
+      setFavoriteItems(filteredFavoriteItems);
+    };
+
+    fetchFavorites();
+  }, [data]);
 
   return (
     <>
@@ -39,6 +61,7 @@ function Favoris() {
       </div>
 
       {favoriteItems.length > 0 ? (
+<<<<<<< HEAD
         <div className="favContainer">
           <div className=" thumbs-container">
             {favoriteItems.map((item) => (
@@ -51,6 +74,18 @@ function Favoris() {
                         <p> Coup de Coeur ({item.coup_coeurs.length})</p>
                       </div>
                     )}
+=======
+        <div className="thumbs-container">
+          {favoriteItems.map((item) => (
+            <Link to={`/lieu/${item.id}`} key={`${item.id}`}>
+              <div className="thumb">
+                <div className="wrapper">
+                  {item.coup_coeurs && (
+                    <div className="coup-coeur-vignette">
+                      <p> Coup de Coeur ({item.coup_coeurs.length})</p>
+                    </div>
+                  )}
+>>>>>>> 358608c3fb2d261c3caed2d9acb56b934af793f1
 
                     <img
                       src={item.imageUrl}

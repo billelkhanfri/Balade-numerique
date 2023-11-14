@@ -25,7 +25,11 @@
   justify-content: center;
   align-items: center;
   max-width: 1024px;
+<<<<<<< HEAD
   margin: auto;
+=======
+  margin:auto;
+>>>>>>> 358608c3fb2d261c3caed2d9acb56b934af793f1
 }
 
 @media screen and (max-width: 425px) {
