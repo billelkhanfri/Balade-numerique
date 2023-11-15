@@ -103,5 +103,16 @@
   right: 10px;
   z-index: 1001; /* Ensures the icons are on top of other elements */
   flex-direction: column;
-  gap: 20px;
+  gap: 20px;}
+
+.item-head {
+  width: 100%;
+  height: 60px;
+  background: var(--color-gradient);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: relative; /* WebKit/Blink browsers */
 }

@@ -35,3 +35,14 @@
   width: 60px;
   color: var(--color-footer);
 }
+.item-head {
+  width: 100%;
+  height: 60px;
+  background: var(--color-gradient);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: relative; /* WebKit/Blink browsers */
+}
