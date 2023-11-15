@@ -82,6 +82,7 @@ function Lieu() {
               </button>
             </div>
           </div>
+           <div className="container ">
           <AudioOrgan lecture={lieuData.lecture} />
           <div className="texts-wrapper">
             <p> {lieuData.history_one}</p>
@@ -99,7 +100,8 @@ function Lieu() {
           </div>
           <div className="collapseWrapper">
             <Collapse coup_coeurs={lieuData.coup_coeurs} id={lieuData.id} />{" "}
-          </div>
+            </div>
+            </div>
         </>
       )}
 

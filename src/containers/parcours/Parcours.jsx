@@ -54,45 +54,45 @@ function Parcours() {
 
   const customIcons = [
     divIcon({
-      html: '<div class="img-wrapper"><img class="custom-marker" src="/src/assets/icones-pics/Opéra.png" alt="Custom Icon" /></div>',
+      html: '<div class="img-wrapper"><img class="custom-marker" src="https://firebasestorage.googleapis.com/v0/b/react-balade.appspot.com/o/parcours-icons%2FOpe%CC%81ra.png?alt=media&token=cd494a14-6251-4453-9da8-c645331b2dc6" alt="Custom Icon" /></div>',
       className: "custom-marker-icon",
     }),
     divIcon({
-      html: '<div class="img-wrapper"><img class="custom-marker" src="/src/assets/icones-pics/Liberté.png" alt="Custom Icon" /></div>',
+      html: '<div class="img-wrapper"><img class="custom-marker" src="https://firebasestorage.googleapis.com/v0/b/react-balade.appspot.com/o/parcours-icons%2FLiberte%CC%81.png?alt=media&token=1bcddf7b-7226-44b1-b09b-64b5a1d3ac37" alt="Custom Icon" /></div>',
       className: "custom-marker-icon",
     }),
     divIcon({
-      html: '<div class="img-wrapper"><img class="custom-marker" src="/src/assets/icones-pics/Sculpture-bateau.png" alt="Custom Icon" /></div>',
-      className: "custom-marker-icon",
-    }),
-
-    divIcon({
-      html: '<div class="img-wrapper"><img class="custom-marker" src="/src/assets/icones-pics/Rue-Alger.png" alt="Custom Icon" /></div>',
-      className: "custom-marker-icon",
-    }),
-    divIcon({
-      html: '<div class="img-wrapper"><img class="custom-marker" src="/src/assets/icones-pics/Carrée-du-port.png" alt="Custom Icon" /></div>',
-      className: "custom-marker-icon",
-    }),
-    divIcon({
-      html: '<div class="img-wrapper"><img class="custom-marker" src="src/assets/icones-pics/Stade-Mayole.png" alt="Custom Icon" /></div>',
-      className: "custom-marker-icon",
-    }),
-    divIcon({
-      html: '<div class="img-wrapper alger"><img class="custom-marker" src="/src/assets/icones-pics/Court-Lafayette.png" alt="Custom Icon" /></div>',
-      className: "custom-marker-icon",
-    }),
-    divIcon({
-      html: '<div class="img-wrapper"><img class="custom-marker" src="/src/assets/icones-pics/Cathédrale-de-toulon.png" alt="Custom Icon" /></div>',
-      className: "custom-marker-icon",
-    }),
-    divIcon({
-      html: '<div class="img-wrapper alger"><img class="custom-marker" src="/src/assets/icones-pics/Lavoir.png" alt="Custom Icon" /></div>',
+      html: '<div class="img-wrapper"><img class="custom-marker" src="https://firebasestorage.googleapis.com/v0/b/react-balade.appspot.com/o/parcours-icons%2FSculpture-bateau.png?alt=media&token=38139be6-b14f-4ee4-b5dc-3513773eba9e" alt="Custom Icon" /></div>',
       className: "custom-marker-icon",
     }),
 
     divIcon({
-      html: '<div class="img-wrapper alger"><img class="custom-marker" src="/src/assets/icones-pics/Place-puget.png" alt="Custom Icon" /></div>',
+      html: '<div class="img-wrapper"><img class="custom-marker" src="https://firebasestorage.googleapis.com/v0/b/react-balade.appspot.com/o/parcours-icons%2FRue-alger.png?alt=media&token=76766c12-4089-41cb-8aca-6808fad3dfe5" alt="Custom Icon" /></div>',
+      className: "custom-marker-icon",
+    }),
+    divIcon({
+      html: '<div class="img-wrapper"><img class="custom-marker" src="https://firebasestorage.googleapis.com/v0/b/react-balade.appspot.com/o/parcours-icons%2FCarre%CC%81e-du-port.png?alt=media&token=0d5ec8e8-1913-438a-b5dc-bd6568af8754" alt="Custom Icon" /></div>',
+      className: "custom-marker-icon",
+    }),
+    divIcon({
+      html: '<div class="img-wrapper"><img class="custom-marker" src="https://firebasestorage.googleapis.com/v0/b/react-balade.appspot.com/o/parcours-icons%2FStade-Mayole.png?alt=media&token=87194f6a-98e5-45ab-9c01-98581b32eef9" alt="Custom Icon" /></div>',
+      className: "custom-marker-icon",
+    }),
+    divIcon({
+      html: '<div class="img-wrapper alger"><img class="custom-marker" src="https://firebasestorage.googleapis.com/v0/b/react-balade.appspot.com/o/parcours-icons%2FCourt-Lafayette.png?alt=media&token=591bcb68-28d6-4f1c-8b9c-d82cd2388bff" alt="Custom Icon" /></div>',
+      className: "custom-marker-icon",
+    }),
+    divIcon({
+      html: '<div class="img-wrapper"><img class="custom-marker" src="https://firebasestorage.googleapis.com/v0/b/react-balade.appspot.com/o/parcours-icons%2FCathe%CC%81drale-de-toulon.png?alt=media&token=c94eb9e0-e88c-4448-b0d5-e239d8275d2a" alt="Custom Icon" /></div>',
+      className: "custom-marker-icon",
+    }),
+    divIcon({
+      html: '<div class="img-wrapper alger"><img class="custom-marker" src="https://firebasestorage.googleapis.com/v0/b/react-balade.appspot.com/o/parcours-icons%2FLavoir.png?alt=media&token=e46fb87e-bd9e-4cba-b02e-e2f6e0a37200" alt="Custom Icon" /></div>',
+      className: "custom-marker-icon",
+    }),
+
+    divIcon({
+      html: '<div class="img-wrapper alger"><img class="custom-marker" src="https://firebasestorage.googleapis.com/v0/b/react-balade.appspot.com/o/parcours-icons%2FPlace-puget.png?alt=media&token=22e38f9f-53fe-4639-a125-6066b6296df6" alt="Custom Icon" /></div>',
       className: "custom-marker-icon",
     }),
   ];

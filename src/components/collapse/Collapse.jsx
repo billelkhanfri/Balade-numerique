@@ -28,11 +28,11 @@ function Collapse({ coup_coeurs }) {
       <Grid
         container
         justifyContent="center"
-        spacing={2}
+        spacing={4}
       >
         {coup_coeurs && Array.isArray(coup_coeurs)
           ? coup_coeurs.map((item, index) => (
-              <Grid item xs={12} sm={12} md={6} lg={4} key={index}>
+              <Grid item xs={12} sm={12} md={6} lg={6} key={index}>
                 <Card sx={{ minWidth: 355, margin: "auto" }}>
                   <CardHeader
                     avatar={
@@ -53,7 +53,7 @@ function Collapse({ coup_coeurs }) {
 
                   <CardMedia
                     component="img"
-                    height="200"
+                    height="240"
                     image={item.image}
                     alt={item.title}
                   />

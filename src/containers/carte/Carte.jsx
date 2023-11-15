@@ -44,7 +44,7 @@ function Carte() {
   };
 
   const logo = divIcon({
-    html: ' <div class="img-wrapper"> <img class="custom-marker" src="/src/assets/icones-pics/apple-touch-icon.png" alt="Custom Icon" /> <div/>',
+    html: ' <div class="img-wrapper"> <img class="custom-marker" src="https://firebasestorage.googleapis.com/v0/b/react-balade.appspot.com/o/parcours-icons%2Fapple-touch-icon.png?alt=media&token=c0ac08b2-79e8-4b0d-a704-5762bfd9ab6c" alt="Custom Icon" /> <div/>',
     className: "custom-marker-icon",
   });
 
