@@ -4,7 +4,6 @@ import { RiMenu3Line, RiCloseFill } from "react-icons/ri";
 import { AiFillHome } from "react-icons/ai";
 import { BsEmojiHeartEyesFill } from "react-icons/bs";
 import { MdFavorite } from "react-icons/md";
-import { GiThreePointedShuriken } from "react-icons/gi";
 import { PiPathBold } from "react-icons/pi";
 
 import { Link, NavLink } from "react-router-dom";
@@ -57,12 +56,7 @@ const Navbar = () => {
           </NavLink>
 
           <ul className={` navbar-menu ${menuOpen ? "open" : ""}`}>
-            <Link className="link" to="/circuit">
-              <li className="navbar-item fav-item">
-                <GiThreePointedShuriken className="fav-icons" />
-                <span>Circuit</span>
-              </li>
-            </Link>
+           
             <Link to="/liens" className="link">
               <li className="navbar-item spesific">Liens utiles</li>
             </Link>

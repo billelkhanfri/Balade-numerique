@@ -137,18 +137,16 @@
   display: block;
   position: fixed;
   text-align: center;
-  left: 0;
-  bottom: 90px;
   opacity: 1;
   height: auto;
   transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
   width: 70%;
   margin: auto;
   left: 0;
-
   right: 0;
   box-shadow: 0 -2px 5px 1px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+   bottom: 110px;
 }
 .navbar-menu.open .link {
   color: white;
