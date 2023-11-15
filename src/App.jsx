@@ -37,7 +37,7 @@ function App() {
           </Route>
           <Route path="/carte" element={<Carte />}></Route>
           <Route path="/about" element={<About />}></Route>
-          
+
           <Route path="/favoris" element={<Favoris />}></Route>
           <Route path="/liens" element={<Liens />}></Route>
           <Route path="/parcours" element={<Parcours />}></Route>

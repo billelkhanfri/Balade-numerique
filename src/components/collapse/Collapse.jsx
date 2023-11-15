@@ -10,6 +10,8 @@ import Avatar from "@mui/material/Avatar";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import "./collaps.css";
+import { FaLocationDot } from "react-icons/fa6";
+import IconButton from "@mui/material/IconButton";
 
 function Collapse({ coup_coeurs }) {
   const [showFullText, setShowFullText] = useState(
@@ -21,24 +23,46 @@ function Collapse({ coup_coeurs }) {
     newShowFullText[index] = !newShowFullText[index];
     setShowFullText(newShowFullText);
   };
+     
+  
 
   return (
-    <div style={{ margin: "auto", maxWidth: "95%" 
-}}>
+    <div style={{ margin: "auto", maxWidth: "95%" }}>
       <Grid
-        container
-        justifyContent="center"
-        spacing={4}
+        sx={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
+          padding: "16px" /* Changed to padding for consistent spacing */,
+          borderRadius: " 20px",
+          rowGap: "20px",
+          columnGap: "20px",
+        }}
       >
         {coup_coeurs && Array.isArray(coup_coeurs)
           ? coup_coeurs.map((item, index) => (
               <Grid item xs={12} sm={12} md={6} lg={6} key={index}>
-                <Card sx={{ minWidth: 355, margin: "auto" }}>
+                <Card
+                  sx={{ minWidth: 355, margin: "auto", borderRadius: "10px" }}
+                >
                   <CardHeader
                     avatar={
-                      <Avatar sx={{ backgroundColor: "#9e0e40 "}} aria-label="recipe">
-                        <IoIosHeartEmpty />
+                      <Avatar
+                        sx={{ backgroundColor: "#9e0e40 " }}
+                        aria-label="recipe"
+                      >
+                        <IoIosHeartEmpty className="fav-icon" />
                       </Avatar>
+                    }
+                    action={
+                      <IconButton
+                        aria-label="Open in Google Maps"
+                        onClick={() => {
+                          const url = `https://www.google.com/maps/dir/?api=1&destination=${item.position[0]},${item.position[1]}`;
+                          window.open(url, "_blank");
+                        }}
+                      >
+                        <FaLocationDot />
+                      </IconButton>
                     }
                     title={
                       <Typography
@@ -48,7 +72,6 @@ function Collapse({ coup_coeurs }) {
                         {item.title}
                       </Typography>
                     }
-                    subheader=""
                   />
 
                   <CardMedia
@@ -78,9 +101,9 @@ function Collapse({ coup_coeurs }) {
                       sx={{ color: "var(--color-footer)" }} // Change the color as needed
                     >
                       {showFullText[index] ? (
-                        <FaChevronUp className="fav-icon" />
+                        <FaChevronUp className="arr-icon" />
                       ) : (
-                        <FaChevronDown className="fav-icon" />
+                        <FaChevronDown className="arr-icon" />
                       )}
                     </Button>
                   </CardActions>
