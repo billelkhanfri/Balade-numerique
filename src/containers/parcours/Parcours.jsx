@@ -9,17 +9,32 @@ import { IoIosArrowBack } from "react-icons/io";
 import { divIcon } from "leaflet";
 import { FaArrowUp, FaArrowDown } from "react-icons/fa";
 import { getDocs, collection } from "firebase/firestore";
-import { firestore } from "../../firebase"; // Adjust the path accordingly
+import { firestore } from "../../firebase"; 
+import { FaDirections } from "react-icons/fa";
+import { useMemo } from "react";
+
 
 function Parcours() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
   const [prevScrollY, setPrevScrollY] = useState(0);
+
+const [selectedMarkerId, setSelectedMarkerId] = useState(null);
+
+const handleMarkerClick = (marker) => {
+  setSelectedMarkerId(marker);
+
+};
   const openGoogleMaps = () => {
-    const destination = "43.12566961111021,5.930514335632324";
-    const url = `https://www.google.com/maps/dir/?api=1&destination=${destination}`;
-    window.open(url, "_blank");
+    if (selectedMarkerId) {
+      const { position } = selectedMarkerId;
+      console.log(selectedMarkerId)
+      const destination = `${position[0]},${position[1]}`;
+      const url = `https://www.google.com/maps/dir/?api=1&destination=${destination}`;
+      window.open(url, "_blank");
+    }
   };
+
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -132,9 +147,15 @@ function Parcours() {
           <h2> Parcours</h2>
           <IoIosArrowBack className="return-icon-transparent" />
         </div>
-        <div className="map-button container" onClick={openGoogleMaps}>
-          <button className="button">Embarquer</button>
-        </div>
+
+        {selectedMarkerId && (
+          <div className="map-button container" onClick={openGoogleMaps}>
+            <button className="button">
+              {selectedMarkerId.title}
+              <FaDirections className="bt-icon" />
+            </button>
+          </div>
+        )}
       </div>
 
       <MapContainer center={[43.1204778356, 5.933236982047172]} zoom={16}>
@@ -144,15 +165,19 @@ function Parcours() {
         />
 
         {data &&
-          data.map((marker, index) => (
+          data.map((marker) => (
             <Marker
-              key={index}
+              key={marker.id}
               position={[marker.position[0], marker.position[1]]}
-              icon={customIcons[index]}
-            >
-              <Popup>{marker.popupContent}</Popup>
-            </Marker>
+              icon={customIcons[marker.id]}
+              eventHandlers={{
+                click: (e) => {
+                  handleMarkerClick(marker);
+                },
+              }}
+            ></Marker>
           ))}
+
         <LeafletMachine />
       </MapContainer>
 
