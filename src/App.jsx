@@ -9,7 +9,7 @@ import Liens from "./containers/liens-utils/Liens";
 import Parcours from "./containers/parcours/Parcours";
 import Lieu from "./containers/lieu/Lieu";
 import Error from "./containers/error/Error";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Nointernet from "./containers/nointernet/Nointernet";
 import Home from "./containers/home/Home";
 
@@ -27,6 +27,29 @@ function App() {
   window.addEventListener("offline", () => {
     setIsOnline(false);
   });
+   useEffect(() => {
+     const handleOrientationChange = () => {
+       const isLandscape = window.matchMedia(
+         "(orientation: landscape)"
+       ).matches;
+       if (isLandscape) {
+         document.body.classList.add("landscape-mode");
+       } else {
+         document.body.classList.remove("landscape-mode");
+       }
+     };
+
+     // Initial check
+     handleOrientationChange();
+
+     // Event listener for orientation change
+     window.addEventListener("orientationchange", handleOrientationChange);
+
+     // Clean up the event listener on component unmount
+     return () => {
+       window.removeEventListener("orientationchange", handleOrientationChange);
+     };
+   }, []);
   return (
     <BrowserRouter>
       <SplashScreen />

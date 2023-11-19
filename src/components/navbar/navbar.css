@@ -153,7 +153,6 @@
 }
 .navbar-menu.open .link .spesific {
   border-bottom: 1px solid;
-  border-top: 1px solid;
 }
 
 .navbar-item {
@@ -203,4 +202,33 @@
     font-size: 10px;
     font-weight: 500;
   }
+}
+ @media screen and (orientation: landscape) {
+  .navbar{
+    max-width: 425px;
+  margin: auto;
+
+    
+  }
+  .navbar__bg {
+        max-width: 425px;
+  margin: auto;
+    padding: 0px  ;
+
+ 
+    .icons {
+    width: 24px;
+    height: 24px;
+  }
+  .navbar {
+    padding: 14px;
+  }
+  .link p {
+    font-size: 10px;
+    font-weight: 500;
+  }
+}
+.navbar-menu.open {
+ max-width: 425px;
+}
 }
