@@ -83,3 +83,13 @@ top: -60px;
   }
   /* You can add specific styles for smaller screens if needed */
 }
+ @media screen and (orientation: landscape) {
+  .banner-head {
+ max-width:  425px;
+
+}
+.banner-wrapper {
+  height: 70vh;
+  
+}
+}
