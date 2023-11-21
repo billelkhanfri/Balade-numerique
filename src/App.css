@@ -7,6 +7,8 @@
 body {
   background-color: var(--color-crimson);
   font-family: var(--font-alt);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
 }
 a {
@@ -23,22 +25,12 @@ a {
   }
 }
 /* Apply styles when the device is in portrait mode */
-@media screen and (orientation: portrait) {
-  body {
-    /* Your portrait mode styles */
-  }
-}
+
 
 /* Apply styles when the device is in landscape mode */
-@media screen and (orientation: landscape) {
-  body {
+@media screen and (orientation: landscape) and (max-height: 425px) {
+   body {
     max-width: 425px;
-  margin: auto;
-    
-  }
-}
-
-/* Apply additional styles for the entire app when in landscape mode */
-body.landscape-mode {
-  /* Add any common styles you want to apply in landscape mode */
+    margin: auto;
+  } 
 }

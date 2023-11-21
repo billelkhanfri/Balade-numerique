@@ -7,10 +7,9 @@
   bottom: 0;
   left: 0;
   right: 0;
-
   margin-top: 40px;
   box-shadow: inset 0px 6px 12px -6px rgba(0, 0, 0, 0.5);
-  padding: 5px 10px 18px 10px ;
+  padding: 5px 10px 18px 10px;
 }
 
 .navbar-item a {
@@ -146,7 +145,7 @@
   right: 0;
   box-shadow: 0 -2px 5px 1px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-   bottom: 110px;
+  bottom: 110px;
 }
 .navbar-menu.open .link {
   color: white;
@@ -192,45 +191,36 @@
 }
 @media screen and (max-width: 425px) {
   .icons {
+    width: 22px;
+    height: 22px;
+  }
+  .navbar {
+    padding: 12px;
+  }
+  .link p {
+    font-size: 8px;
+    font-weight: 500;
+  }
+}
+@media screen and (orientation: landscape) and (max-height: 425px)  {
+   .icons {
     width: 24px;
     height: 24px;
+   
   }
   .navbar {
     padding: 14px;
+    max-width: 425px;
   }
   .link p {
     font-size: 10px;
     font-weight: 500;
-  }
-}
-@media screen and (min-width: 768px) and (orientation: landscape) {
-  .navbar{
-    max-width: 425px;
-  margin: auto;
-
-    
   }
   .navbar__bg {
-        max-width: 425px;
-  margin: auto;
-    padding: 0px  ;
+    max-width: 425px;
+    margin: auto;
+  } 
+  
+}
+  
 
- 
-    .icons {
-    width: 24px;
-    height: 24px;
-  }
-  .navbar {
-    padding: 14px;
-  }
-  .link p {
-    font-size: 10px;
-    font-weight: 500;
-  }
-}
-.navbar-menu.open {
- max-width: 425px;
-    bottom: 70px;
-
-}
-}

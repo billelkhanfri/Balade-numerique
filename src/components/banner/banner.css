@@ -1,3 +1,6 @@
+
+
+
 .banner-wrapper {
   height: 45vh;
   position: relative;
@@ -32,11 +35,10 @@
   align-items: center;
   position: fixed;
   z-index: 1002;
-    transition: top 0.3s; /* Add a transition effect on the 'top' property */
-
+  transition: top 0.3s; /* Add a transition effect on the 'top' property */
 }
 .banner-head.scrolled {
-top: -60px;
+  top: -60px;
 }
 
 .banner-head h1 {
@@ -83,13 +85,13 @@ top: -60px;
   }
   /* You can add specific styles for smaller screens if needed */
 }
- @media screen and (orientation: landscape) {
-  .banner-head {
- max-width:  425px;
-
-}
-.banner-wrapper {
-  height: 70vh;
+@media screen and (orientation: landscape) and (max-height: 425px)  {
+   .banner-head {
+ max-width: 425px;
   
 }
+.banner-wrapper {
+  height: 60vh;
+ 
+} 
 }
