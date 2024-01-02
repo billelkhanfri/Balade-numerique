@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "@firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBWX8uxo8sQ3ndcqY9tdTJoKlqIOE7ud9U",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: "react-balade.firebaseapp.com",
   projectId: "react-balade",
   storageBucket: "react-balade.appspot.com",
   messagingSenderId: "972449492334",
-  appId: "1:972449492334:web:e49846e39abf6d0b7b657f",
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
   measurementId: "G-ZW6DWXY0J3",
 };
 
