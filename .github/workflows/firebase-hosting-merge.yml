@@ -11,10 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: ' npm run build'
+      - name: Install Dependencies
+        run: npm install
+      - run: npm install vite --save-dev  # Install Vite
+      - run: npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_REACT_BALADE }}'
           channelId: live
           projectId: react-balade
+
