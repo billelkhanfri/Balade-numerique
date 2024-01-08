@@ -11,26 +11,30 @@ import { FaArrowUp, FaArrowDown } from "react-icons/fa";
 import { getDocs, collection } from "firebase/firestore";
 import { firestore } from "../../firebase"; 
 import { FaDirections } from "react-icons/fa";
-import { useMemo } from "react";
+import L from "leaflet";
+
 
 
 function Parcours() {
-   const [position, setPosition] = useState([43.1204778356, 5.933236982047172]); 
-   const [error, setError] = useState(null);
+     const [position, setPosition] = useState([0,0]);
+     const [error, setError] = useState(null);
 
-   useEffect(() => {
-     if ("geolocation" in navigator) {
-       navigator.geolocation.getCurrentPosition(
-         (position) => {
-           const { latitude, longitude } = position.coords;
-           setPosition([latitude, longitude]);
-         },
-         (error) => setError(error.message)
-       );
-     } else {
-       setError("Geolocation is not supported by your browser.");
-     }
-   }, []);
+     useEffect(() => {
+       if ("geolocation" in navigator) {
+         navigator.geolocation.getCurrentPosition(
+           (position) => {
+             const { latitude, longitude } = position.coords;
+             setPosition([latitude, longitude]);
+           },
+           (error) => {
+             setError("Failed to get your location.");
+           }
+         );
+       } else {
+         setError("Geolocation is not supported by your browser.");
+       }
+     }, []);
+
   const [isScrolled, setIsScrolled] = useState(false);
   const [prevScrollY, setPrevScrollY] = useState(0);
 
@@ -149,6 +153,8 @@ const customIcon = L.divIcon({
 });
   return (
     <>
+     
+
       <div className="scrolling">
         <div className="scroll-to-top-icon" onClick={scrollToTop}>
           <FaArrowUp />
@@ -177,15 +183,18 @@ const customIcon = L.divIcon({
         )}
       </div>
 
-      <MapContainer center={[43.1204778356, 5.933236982047172]} zoom={16}>
+      <MapContainer center={[43.1204778356, 5.933236982047172]} zoom={13}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
+        {error ? (
+        <p>{error}</p>
+      ) : (
         <Marker position={position} icon={customIcon}>
           <Popup>Ma position</Popup>
         </Marker>
-
+      )}
         {data &&
           data.map((marker) => (
             <Marker
