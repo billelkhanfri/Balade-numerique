@@ -15,7 +15,22 @@ import { useMemo } from "react";
 
 
 function Parcours() {
-  const [scrollPosition, setScrollPosition] = useState(0);
+   const [position, setPosition] = useState([43.1204778356, 5.933236982047172]); 
+   const [error, setError] = useState(null);
+
+   useEffect(() => {
+     if ("geolocation" in navigator) {
+       navigator.geolocation.getCurrentPosition(
+         (position) => {
+           const { latitude, longitude } = position.coords;
+           setPosition([latitude, longitude]);
+         },
+         (error) => setError(error.message)
+       );
+     } else {
+       setError("Geolocation is not supported by your browser.");
+     }
+   }, []);
   const [isScrolled, setIsScrolled] = useState(false);
   const [prevScrollY, setPrevScrollY] = useState(0);
 
@@ -127,7 +142,11 @@ const handleMarkerClick = (marker) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [prevScrollY]);
-
+const customIcon = L.divIcon({
+  className: "custom-icon",
+  iconSize: [32, 32],
+  iconAnchor: [16, 32],
+});
   return (
     <>
       <div className="scrolling">
@@ -163,6 +182,9 @@ const handleMarkerClick = (marker) => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
+        <Marker position={position} icon={customIcon}>
+          <Popup>Ma position</Popup>
+        </Marker>
 
         {data &&
           data.map((marker) => (
