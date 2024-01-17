@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from "react";
-import CountUp from "react-countup";
+import React, { useState, useEffect, useRef } from "react";
 import "./footMap.css";
 import parcours from "../../assets/V2-Plan-Balade-Numerique-1.png";
 
 function FootMap() {
   const [isVisible, setIsVisible] = useState(false);
+  const [counts, setCounts] = useState({ kilometers: 0, steps: 0 });
+
+  const countRef1 = useRef(null);
+  const countRef2 = useRef(null);
+  const intervalRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,6 +29,43 @@ function FootMap() {
     };
   }, []);
 
+  useEffect(() => {
+    if (isVisible) {
+      const options = {
+        start1: 0,
+        end1: 269,
+        start2: 0,
+        end2: 5186,
+        duration: 2,
+        delay: 0.5,
+        ratio: 8, // Adjust the ratio to control the speed difference
+      };
+
+      intervalRef.current = setInterval(() => {
+        setCounts((prev) => ({
+          kilometers: Math.min(prev.kilometers + 1, options.end1),
+          steps: Math.min(prev.steps + options.ratio, options.end2),
+        }));
+
+        if (countRef1.current) {
+          countRef1.current.innerText = Math.floor(counts.kilometers);
+        }
+
+        if (countRef2.current) {
+          countRef2.current.innerText = Math.floor(counts.steps);
+        }
+
+        if (counts.kilometers >= options.end1 && counts.steps >= options.end2) {
+          clearInterval(intervalRef.current);
+        }
+      }, (options.duration * 1000) / Math.max(options.end1 - options.start1, options.end2 - options.start2));
+
+      return () => {
+        clearInterval(intervalRef.current);
+      };
+    }
+  }, [isVisible, counts]);
+
   return (
     <div className="footWrapper">
       <div className="footmap">
@@ -43,19 +84,11 @@ function FootMap() {
         {isVisible && (
           <div className="counter">
             <div className="counter-text">
-              <CountUp start={0} end={269} duration={2} delay={0.5}>
-                {({ countUpRef }) => (
-                  <p className="count-up-text" ref={countUpRef} />
-                )}
-              </CountUp>
+              <p className="count-up-text" ref={countRef1} />
               <p>Kilomètres</p>
             </div>
             <div className="counter-text">
-              <CountUp start={0} end={5186} duration={2} delay={0.5}>
-                {({ countUpRef }) => (
-                  <p className="count-up-text"  ref={countUpRef} />
-                )}
-              </CountUp>
+              <p className="count-up-text" ref={countRef2} />
               <p>Petits pas</p>
             </div>
           </div>
