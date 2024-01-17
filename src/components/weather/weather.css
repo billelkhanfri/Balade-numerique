@@ -3,7 +3,7 @@
   border-radius: 10px;
   flex-direction: column;
   padding: 15px;
-  background-color: white;
+  background:var(--color-gradient-slogan);
   margin:  10px auto;
   max-width: 1024px;
   margin-top: 40px;
@@ -23,23 +23,24 @@
 .weather-icon {
   width: 60px;
   height: 60px;
-  color: var(--color-primary);
+  color: white;
 }
 
 .weather-location h4 {
   font-size: 20px;
+  color: white;
 }
 .weather-location p {
   font-size: 14px;
   padding: 10px;
   padding-left: 0;
-color:  #5d5d5d;
+color: white;
 }
 .weather-value {
   font-size: 14px;
   padding: 10px;
   padding-left: 0;
-  color: #5d5d5d;
+  color: white;
 }
 .weather-widget {
   width: 95%;

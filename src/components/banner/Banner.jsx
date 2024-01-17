@@ -24,13 +24,15 @@ function Banner() {
 
   return (
     <>
-      <div className={`banner-head ${isScrolled ? "scrolled" : ""}`}>
+      <div className={`bannerHead ${isScrolled ? "scrolled" : ""}`}>
         <h1>BALADE NUMÉRIQUE</h1>
       </div>
       <div className="banner-wrapper">
         <img src={Logo} alt="image de Toulon" />
         <div className="banner-slogan">
-          <p>Elle S'appelait Telo</p>
+          <p>
+            Elle S'appelait <span className="telo">Telo</span>
+          </p>
         </div>
       </div>
     </>

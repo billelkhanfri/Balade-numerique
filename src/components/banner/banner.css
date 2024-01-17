@@ -25,10 +25,10 @@
   );
 }
 
-.banner-head {
+.bannerHead {
   width: 100%;
   height: 60px;
-  background: var(--color-gradient);
+  background: var(--color-gradient-slogan);
   color: white;
   display: flex;
   justify-content: center;
@@ -37,11 +37,11 @@
   z-index: 1002;
   transition: top 0.3s; /* Add a transition effect on the 'top' property */
 }
-.banner-head.scrolled {
+.bannerhead.scrolled {
   top: -60px;
 }
 
-.banner-head h1 {
+.bannerHead h1 {
   font-size: 24px;
   align-items: center;
   font-weight: 600;
@@ -61,7 +61,7 @@
   top: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: var(--color-gradient-slogan);
+  background: white;
   width: 70%; /* Fixed the duplicate property */
   z-index: 5;
   padding: 12px;
@@ -70,14 +70,20 @@
   max-width: 1024px;
 }
 
-.banner-wrapper .banner-slogan p {
-  font-weight: 500;
+
+
+.banner-wrapper .banner-slogan p,span {
+  background: var(--color-gradient-slogan); /* Use your gradient values or variable */
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
   font-size: 22px;
-  color: white;
   z-index: 5;
   text-transform: uppercase;
   letter-spacing: 5px;
 }
+
+
 
 @media (max-width: 425px) {
   .banner-wrapper .banner-slogan p {
@@ -86,7 +92,7 @@
   /* You can add specific styles for smaller screens if needed */
 }
 @media screen and (orientation: landscape) and (max-height: 425px)  {
-   .banner-head {
+   .bannerHead {
  max-width: 425px;
   
 }
@@ -95,3 +101,22 @@
  
 } 
 }
+.banner-slogan p span {
+  position: relative;
+}
+.telo:after{
+  content: "";
+width: 100%;
+height: 16px;
+background: rgb(255,223,51);
+background: linear-gradient(180deg, rgba(255,223,51,1) 24%, rgba(238,180,17,1) 72%);
+position: absolute;
+right:0;
+bottom: 2px;
+z-index: -1;
+}
+
+
+
+
+

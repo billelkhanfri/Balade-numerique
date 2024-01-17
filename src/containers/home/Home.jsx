@@ -1,5 +1,6 @@
 import Navbar from "../../components/navbar/Navbar";
 import Thumb from "../../components/thumb/Thumb";
+import FootMap from "../../components/footMap/FootMap";
 import "./home.css";
 import Banner from "../../components/banner/Banner";
 import Weathers from "../../components/weather/Weather";
@@ -33,6 +34,7 @@ const Accueil = () => {
       <div className="container ">
         <div className="thumbs-wrapping">
           <Weathers />
+          <FootMap/>
           <div className="thumbs-container">
             {data &&
               data.map((item) => (
