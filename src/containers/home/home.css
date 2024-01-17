@@ -62,3 +62,12 @@
   transform: translate(-50%, -50%);
   z-index: 1000;
 }
+.parcours-points{
+  text-align: left;
+  background: var(--color-gradient-slogan);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 21px;
+  font-weight: 600;
+}

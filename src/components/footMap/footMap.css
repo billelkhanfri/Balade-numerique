@@ -16,11 +16,10 @@
 }
 .footWrapper .foottext h2 {
   text-align: center;
-  background: var(
-    --color-gradient-slogan
-  ); /* Use your gradient values or variable */
+  background: var(--color-gradient-slogan);
   color: transparent;
   background-clip: text;
+  -webkit-background-clip: text;
   font-size: 21px;
   margin-bottom: 20px;
 }

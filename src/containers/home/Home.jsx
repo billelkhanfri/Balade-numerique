@@ -36,6 +36,7 @@ const Accueil = () => {
           <Weathers />
           <FootMap/>
           <div className="thumbs-container">
+            <p className="parcours-points">Les points du parcours</p>
             {data &&
               data.map((item) => (
                 <Thumb
