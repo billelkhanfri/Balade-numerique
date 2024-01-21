@@ -139,7 +139,7 @@
   opacity: 1;
   height: auto;
   transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
-  width: 70%;
+  width: 50%;
   margin: auto;
   left: 0;
   right: 0;
@@ -147,6 +147,7 @@
   border-radius: 10px;
   bottom: 110px;
 }
+
 .navbar-menu.open .link {
   color: white;
 }
@@ -201,6 +202,9 @@
     font-size: 8px;
     font-weight: 500;
   }
+  .navbar-menu.open {
+ width: 70%;
+}
 }
 @media screen and (orientation: landscape) and (max-height: 425px)  {
    .icons {

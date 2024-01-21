@@ -88,10 +88,6 @@ const handleMarkerClick = (marker) => {
 
   const customIcons = [
     divIcon({
-      html: '<div class="img-wrapper"><img class="custom-marker" src="https://firebasestorage.googleapis.com/v0/b/react-balade.appspot.com/o/parcours-icons%2FOpe%CC%81ra.png?alt=media&token=cd494a14-6251-4453-9da8-c645331b2dc6" alt="Custom Icon" /></div>',
-      className: "custom-marker-icon",
-    }),
-    divIcon({
       html: '<div class="img-wrapper"><img class="custom-marker" src="https://firebasestorage.googleapis.com/v0/b/react-balade.appspot.com/o/parcours-icons%2FLiberte%CC%81.png?alt=media&token=1bcddf7b-7226-44b1-b09b-64b5a1d3ac37" alt="Custom Icon" /></div>',
       className: "custom-marker-icon",
     }),
@@ -129,6 +125,10 @@ const handleMarkerClick = (marker) => {
       html: '<div class="img-wrapper alger"><img class="custom-marker" src="https://firebasestorage.googleapis.com/v0/b/react-balade.appspot.com/o/parcours-icons%2FPlace-puget.png?alt=media&token=22e38f9f-53fe-4639-a125-6066b6296df6" alt="Custom Icon" /></div>',
       className: "custom-marker-icon",
     }),
+    divIcon({
+      html: '<div class="img-wrapper"><img class="custom-marker" src="https://firebasestorage.googleapis.com/v0/b/react-balade.appspot.com/o/parcours-icons%2FOpe%CC%81ra.png?alt=media&token=cd494a14-6251-4453-9da8-c645331b2dc6" alt="Custom Icon" /></div>',
+      className: "custom-marker-icon",
+    }),
   ];
 
   useEffect(() => {
@@ -153,8 +153,6 @@ const customIcon = L.divIcon({
 });
   return (
     <>
-     
-
       <div className="scrolling">
         <div className="scroll-to-top-icon" onClick={scrollToTop}>
           <FaArrowUp />
@@ -182,37 +180,36 @@ const customIcon = L.divIcon({
           </div>
         )}
       </div>
+        <MapContainer center={[43.1204778356, 5.933236982047172]} zoom={13}>
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          {error ? (
+            <p>{error}</p>
+          ) : (
+            <Marker position={position} icon={customIcon}>
+              <Popup>Ma position</Popup>
+            </Marker>
+          )}
+          {data &&
+            data.map((marker) => (
+              <Marker
+                key={marker.id}
+                position={[marker.position[0], marker.position[1]]}
+                icon={customIcons[marker.id]}
+                eventHandlers={{
+                  click: (e) => {
+                    handleMarkerClick(marker);
+                  },
+                }}
+              ></Marker>
+            ))}
 
-      <MapContainer center={[43.1204778356, 5.933236982047172]} zoom={13}>
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        {error ? (
-        <p>{error}</p>
-      ) : (
-        <Marker position={position} icon={customIcon}>
-          <Popup>Ma position</Popup>
-        </Marker>
-      )}
-        {data &&
-          data.map((marker) => (
-            <Marker
-              key={marker.id}
-              position={[marker.position[0], marker.position[1]]}
-              icon={customIcons[marker.id]}
-              eventHandlers={{
-                click: (e) => {
-                  handleMarkerClick(marker);
-                },
-              }}
-            ></Marker>
-          ))}
+          <LeafletMachine />
+        </MapContainer>
 
-        <LeafletMachine />
-      </MapContainer>
-
-      <Lieux />
+        <Lieux />
     </>
   );
 }

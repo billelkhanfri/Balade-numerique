@@ -34,9 +34,10 @@ const Accueil = () => {
       <div className="container ">
         <div className="thumbs-wrapping">
           <Weathers />
-          <FootMap/>
+          <FootMap />
+          <p className="parcours-points">Les points du parcours</p>
+
           <div className="thumbs-container">
-            <p className="parcours-points">Les points du parcours</p>
             {data &&
               data.map((item) => (
                 <Thumb
