@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./footMap.css";
 import parcours from "../../assets/V2-Plan-Balade-Numerique-1.png";
+import halftone from "../../assets/halftone.png";
+
 
 function FootMap() {
   const [isVisible, setIsVisible] = useState(false);
@@ -72,7 +74,8 @@ function FootMap() {
   return (
     <div className="footWrapper">
       <div className="footmap">
-        <img src={parcours} alt="parcours" />
+        <img src={parcours} alt="parcours" id ="parcours" />
+        <img src={halftone}  id ="halftone" alt="" />
       </div>
       <div className="foottext">
         <h2>1 ITINÉRAIRE 2 EMBARQUEMENTS</h2>
