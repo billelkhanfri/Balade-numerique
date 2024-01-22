@@ -98,10 +98,9 @@ function Lieu() {
               </h2>
             )}
           </div>
-          <div className="collapseWrapper">
             <Collapse coup_coeurs={lieuData.coup_coeurs} id={lieuData.id} />{" "}
             </div>
-            </div>
+            
         </>
       )}
 
