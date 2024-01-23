@@ -45,10 +45,8 @@ function Collapse({ coup_coeurs }) {
                   className="content"
                   style={{
                     height: toggle ? "fit-content" : "0px",
-                    overflow: "hidden",
-                    textOverflow: "ellipsis",
-                    whiteSpace: toggle ? "wrap" : "nowrap",
-                    maxWidth: "100%",
+                    overflowWrap: toggle ? "break-word" : "normal", // For wrap behavior
+                    whiteSpace: toggle ? "normal" : "nowrap",
                   }}
                 >
                   {toggle ? item.text : truncateText(item.text, 200)}
