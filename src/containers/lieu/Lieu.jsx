@@ -10,6 +10,14 @@ import { useEffect, useState } from "react";
 import { getDocs, collection } from "firebase/firestore";
 import { firestore } from "../../firebase"; // Adjust the path accordingly
 
+import "leaflet/dist/leaflet.css";
+
+
+
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+
+
+
 function Lieu() {
   const [data, setData] = useState([]);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -76,31 +84,54 @@ function Lieu() {
               <IoIosArrowBack className="return-icon-transparent" />
             </div>
             <Slider images={lieuData.images} />
-            <div className="direction">
-              <button className="lieux-content-button" onClick={openGoogleMaps}>
-                Embarquer
-              </button>
+          </div>
+          <div className="container ">
+            <AudioOrgan lecture={lieuData.lecture} />
+            <div className="texts-wrapper">
+              <p> {lieuData.history_one}</p>
+              <p>{lieuData.history_two}</p>
+              <p>{lieuData.history_three}</p>
             </div>
-          </div>
-           <div className="container ">
-          <AudioOrgan lecture={lieuData.lecture} />
-          <div className="texts-wrapper">
-            <p> {lieuData.history_one}</p>
-            <p>{lieuData.history_two}</p>
-            <p>{lieuData.history_three}</p>
-          </div>
-          <div className="coup-wrapper">
-            {lieuData.coup_coeurs && (
-              <h2>
-                {" "}
-                Découvrire notre séléction <br />
-                coup de coeur
-              </h2>
-            )}
-          </div>
-            <Collapse coup_coeurs={lieuData.coup_coeurs} id={lieuData.id} />{" "}
+            <div className="container map-section">
+              {lieuData && lieuData.position ? (
+                <MapContainer
+                  center={lieuData.position}
+                  zoom={16}
+                  scrollWheelZoom={false}
+                  style={{ maxHeight: "250px" }} // Adjust the height as needed
+                >
+                  <TileLayer
+                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                  />
+                  <Marker position={lieuData.position}>
+                    <Popup>{lieuData.title}</Popup>
+                  </Marker>
+                </MapContainer>
+              ) : null}
+              <div className="direction" id="direction">
+                <button
+                  className="lieux-content-button"
+                  onClick={openGoogleMaps}
+                >
+                  Embarquer
+                </button>
+              </div>
             </div>
-            
+            <div className="coup-wrapper">
+              {lieuData.coup_coeurs && (
+                <h2>
+                  {" "}
+                  Découvrire notre séléction <br />
+                  coup de coeur
+                </h2>
+              )}
+            </div>
+            <Collapse
+              coup_coeurs={lieuData.coup_coeurs}
+              id={lieuData.id}
+            />{" "}
+          </div>
         </>
       )}
 

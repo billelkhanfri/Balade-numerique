@@ -7,8 +7,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
-  margin-bottom: 20px;
+ 
+ 
 }
 
 .coup-wrapper h2 {
@@ -71,6 +71,7 @@
 
 .lieu-item {
   position: relative;
+  margin-bottom: 40px;
 }
 
 .underline {
@@ -224,4 +225,11 @@
 .collapseWrapper {
   background-color: #f0f0f0;
   padding: 25px 0;
+}
+.map-section{
+  margin: 20px ;
+
+}
+#direction{
+  padding-bottom: 0px;
 }
