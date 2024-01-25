@@ -35,7 +35,7 @@
 
   left: 50%;
   transform: translate(-50%, -50%); /* Correct centering */
-  bottom: 11vh;
+  bottom: 0vh;
 }
 
 .dots {
