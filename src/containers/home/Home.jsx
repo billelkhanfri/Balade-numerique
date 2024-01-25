@@ -7,7 +7,12 @@ import Weathers from "../../components/weather/Weather";
 import { useEffect, useState } from "react";
 import { getDocs, collection } from "firebase/firestore";
 import { firestore } from "../../firebase"; // Adjust the path accordingly
+import LandSlider from "../../components/landing/LandSlider";
 
+import slide1 from "../../assets/landing/b242040aee3ecd460a939090058821e0wh800jpeg.jpeg";
+import slide2 from "../../assets/landing/mmo9-1.webp";
+import slide3 from "../../assets/landing/rade+toulon+chavaroche-7IRQNT4a.webp";
+const slides = [slide1, slide2, slide3];
 const Accueil = () => {
   const [data, setData] = useState([]);
 
@@ -20,6 +25,7 @@ const Accueil = () => {
           ...doc.data(),
         }));
         setData(newData);
+        console.log(data)
       } catch (error) {
         console.error("Error fetching data from Firebase:", error);
       }
@@ -30,7 +36,10 @@ const Accueil = () => {
 
   return (
     <>
-      <Banner />
+      <LandSlider slides={slides} />
+
+      
+
       <div className="container ">
         <div className="thumbs-wrapping">
           <Weathers />

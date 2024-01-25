@@ -1,0 +1,229 @@
+.landing-page {
+  min-height: 100vh;
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+  width: 100vw;
+  
+}
+.animate {
+  animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0.8; /* Start with 0 opacity */
+  }
+  100% {
+    opacity: 1; /* End with full opacity */
+  }
+}
+.overlay {
+  background-color: #00000075;
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.introduction-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  width: 60%;
+}
+.introduction-text h1 {
+  color: var(--color-primary);
+  font-size: 80px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.introduction-text h4 {
+  font-size: 30px;
+  text-transform: uppercase;
+  color: white;
+  text-align: left;
+}
+.introduction-text p {
+  font-size: 20px;
+}
+/* start animation */
+.title.animated {
+  animation: cards 1s ease-in-out;
+}
+.big-title.animated {
+  animation: cards-2 1.2s ease-in-out;
+}
+.parag.animated {
+  animation: cards-3 1.2s ease-in-out;
+}
+.parag::before {
+  content: "";
+  width: 40px;
+  height: 4px;
+  background-color: var(--color-primary);
+  display: inline-block;
+}
+
+@keyframes cards {
+  from {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+}
+@keyframes cards-2 {
+  from {
+    transform: translateX(200px);
+    opacity: 20%;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+}
+@keyframes cards-3 {
+  from {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+}
+/* end animation */
+
+/* start slider */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  position: absolute;
+  bottom: 60px;
+  left: 64px;
+}
+.previous {
+  color: white;
+  width: 28px;
+  height: 28px;
+  z-index: 1;
+}
+
+.buttons button {
+  background-color: var(--color-primary);
+  width: 60px;
+  height: 60px;
+  border: transparent;
+  cursor: pointer;
+  opacity: 90%;
+  border-radius: 6px;
+}
+.buttons button:hover {
+  background-color: rgb(45 255 158);
+  opacity: 100%;
+}
+.dots-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  position: absolute;
+  top: 350px;
+  left: 72px;
+  text-align: center;
+  height: fit-content;
+}
+.dots {
+  width: 20px;
+  height: 20px;
+  color: #f9f9f9;
+  cursor: pointer;
+}
+.dots.circled {
+  border: 1px solid #f9f9f9;
+  border-radius: 90%;
+}
+.image-wrapper img {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  z-index: 2;
+}
+
+@media screen and (max-width: 1024px) {
+  .introduction-text h1 {
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .introduction-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    width: 75%;
+  }
+  button {
+    width: 48px;
+    height: 48px;
+  }
+  .introduction-text h1 {
+    font-size: 40px;
+  }
+  .introduction-text h4 {
+    font-size: 14px;
+  }
+  .introduction-text p {
+    font-size: 14px;
+  }
+
+  .buttons {
+    flex-direction: row;
+    gap: 15px;
+    bottom: 100px;
+    left: 16px;
+  }
+  .previous {
+    transform: rotate(270deg);
+    width: 24px;
+    height: 24px;
+  }
+  button {
+    width: 36px;
+    height: 36px;
+  }
+  .dots-wrapper {
+    left: 20px;
+    top: 120px;
+  }
+  .dots {
+    width: 20px;
+    height: 20px;
+    color: #f9f9f9;
+    cursor: pointer;
+  }
+  .dots.circled {
+    border: 1px solid #f9f9f9;
+    border-radius: 90%;
+  }
+}
+@media screen and (max-width: 425px) {
+  button {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+
+/* end slider */

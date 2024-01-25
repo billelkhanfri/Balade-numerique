@@ -227,4 +227,33 @@
   
 }
   
+.break {
+  /* Your existing styles for the break element */
+  height: 60px; /* Adjust as needed */
+}
+
+.navbar__bg {
+  /* Your existing styles for the background */
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(0);
+}
+
+.navbar {
+  /* Your existing styles for the navbar */
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(0);
+}
+
+/* Hidden state when scrolling up */
+.break.hidden,
+.navbar__bg.hidden,
+.navbar.hidden {
+  transform: translateY(-100%);
+}
+
+/* Toggle visibility for the break and navbar elements */
+.break.hidden,
+.navbar__bg.hidden {
+  display: none;
+}
 

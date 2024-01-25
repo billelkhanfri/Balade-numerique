@@ -74,7 +74,7 @@
 
 
 
-.banner-wrapper .banner-slogan p,span {
+ .banner-slogan p,span {
   background: var(--color-gradient-slogan); /* Use your gradient values or variable */
   background-clip: text;
     -webkit-background-clip: text;

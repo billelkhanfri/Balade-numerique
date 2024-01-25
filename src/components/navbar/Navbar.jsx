@@ -7,19 +7,45 @@ import { MdFavorite } from "react-icons/md";
 import { PiPathBold } from "react-icons/pi";
 
 import { Link, NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect} from "react";
 
 const Navbar = () => {
   const [menuOpen, setMeuOpen] = useState(false);
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+   const handleScroll = () => {
+     const currentScrollPos = window.pageYOffset;
+
+     setVisible((prevVisible) => {
+       const shouldShowNavbar =
+         currentScrollPos < prevScrollPos || currentScrollPos < 10;
+
+       if (shouldShowNavbar !== prevVisible) {
+         setPrevScrollPos(currentScrollPos);
+         return shouldShowNavbar;
+       }
+
+       return prevVisible;
+     });
+   };
+
+   useEffect(() => {
+     window.addEventListener("scroll", handleScroll);
+
+     return () => {
+       window.removeEventListener("scroll", handleScroll);
+     };
+   }, [prevScrollPos]);
 
   const toggleMenu = () => {
     setMeuOpen(!menuOpen);
   };
   return (
     <>
-      <div className="break"></div>
-      <div className="navbar__bg ">
-        <nav className="navbar">
+      <div className={`break ${visible ? "hidden" : "visible"}`}></div>
+      <div className={`navbar__bg ${visible ? "hidden" : "visible"}`}>
+        <nav className={`navbar ${visible ? "hidden" : "visible"}`}>
           <NavLink className=" link" to="/" activeclassname="active">
             <ul className="menu">
               <li className="menu-item">
@@ -56,7 +82,6 @@ const Navbar = () => {
           </NavLink>
 
           <ul className={` navbar-menu ${menuOpen ? "open" : ""}`}>
-           
             <Link to="/liens" className="link">
               <li className="navbar-item spesific">Liens utiles</li>
             </Link>
