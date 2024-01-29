@@ -22,48 +22,42 @@ const LandSlider = ({ slides }) => {
 
     return (
       <>
-        
-          <div
-            className="landing-page"
-            style={{ backgroundImage: `url(${slides[currentIndex]})` }}
-          >
-            <div className="image-wrapper">
-              <img src={Logo} alt="image de Toulon" />
-            </div>
-            <div className="banner-slogan">
-              <p>
-                Elle S'appelait <span className="telo">Telo</span>
-              </p>
-            </div>
-
-            <Landing
-              currentIndex={currentIndex}
-              setCurrentIndex={setCurrentIndex}
-            ></Landing>
-
-            <div className="buttons">
-              <button onClick={goToNext}>
-                <AiOutlineArrowUp className="previous" />
-              </button>
-              <button onClick={goToPrevious}>
-                <AiOutlineArrowDown className="previous" />
-              </button>
-            </div>
-
-            <div className="dots-wrapper">
-              {slides.map((slide, index) => (
-                <div
-                  key={index}
-                  className={`dots ${currentIndex === index ? "circled" : ""}`}
-                  onClick={() => goToSlide(index)}
-                >
-                  {" "}
-                  <GoDotFill />{" "}
-                </div>
-              ))}
-            </div>
+        <div
+          className="landing-page"
+          style={{ backgroundImage: `url(${slides[currentIndex]})` }}
+        >
+          <div className="image-wrapper">
+            <img src={Logo} alt="image de Toulon" />
           </div>
-        
+
+          <Landing
+            currentIndex={currentIndex}
+            setCurrentIndex={setCurrentIndex}
+          ></Landing>
+
+          <div className="buttons">
+            <button onClick={goToNext}>
+              <AiOutlineArrowUp className="previous" />
+            </button>
+            <button onClick={goToPrevious}>
+              <AiOutlineArrowDown className="previous" />
+            </button>
+          </div>
+
+          <div className="dots-wrapper">
+            {slides.map((slide, index) => (
+              <div
+                key={index}
+                className={`dots ${currentIndex === index ? "circled" : ""}`}
+                onClick={() => goToSlide(index)}
+              >
+                {" "}
+                <GoDotFill />{" "}
+              </div>
+            ))}
+          </div>
+           
+        </div>
       </>
     );
 };

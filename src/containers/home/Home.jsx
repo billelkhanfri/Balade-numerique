@@ -9,11 +9,18 @@ import { getDocs, collection } from "firebase/firestore";
 import { firestore } from "../../firebase"; // Adjust the path accordingly
 import LandSlider from "../../components/landing/LandSlider";
 
-import slide1 from "../../assets/landing/b242040aee3ecd460a939090058821e0wh800jpeg.jpeg";
-import slide2 from "../../assets/landing/mmo9-1.webp";
-import slide3 from "../../assets/landing/rade+toulon+chavaroche-7IRQNT4a.webp";
-const slides = [slide1, slide2, slide3];
+
+
 const Accueil = () => {
+  // const slide1 = "https:rm83.fr/balade/wp-content/uploads/2024/01/les-halles-vue-arriere.jpg"
+  const slide1 =
+    "https://rm83.fr/balade/wp-content/uploads/2024/01/DSCN0015.jpg";
+ const slide2 =
+   "https:rm83.fr/balade/wp-content/uploads/2024/01/les-halles-vue-arriere.jpg";
+  const slide3 =
+    "https://rm83.fr/balade/wp-content/uploads/2024/01/DSCN0070.jpg";
+ 
+  const slides = [slide1, slide2, slide3];
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -38,10 +45,13 @@ const Accueil = () => {
     <>
       <LandSlider slides={slides} />
 
-      
-
       <div className="container ">
         <div className="thumbs-wrapping">
+          <div className="banner-slogan-home">
+            <p>
+              Elle S'appelait <span className="telo">Telo</span>
+            </p>
+          </div>
           <Weathers />
           <FootMap />
           <p className="parcours-points">Les points du parcours</p>

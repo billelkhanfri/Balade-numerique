@@ -10,14 +10,14 @@ const Header = ({ currentIndex, setCurrentIndex }) => {
       p: "Explorez le charmant Vieux-Port de Toulon, imprégné d'histoire maritime. Admirez les bateaux de pêche, dégustez des fruits de mer frais et plongez-vous dans l'ambiance pittoresque de ce quartier emblématique.",
     },
     {
-      h4: "Parcours artistique à travers le quartier du Mourillon",
-      h1: "Rencontrez l'art local et la créativité",
-      p: "Flânez dans les ruelles du Mourillon, quartier bohème de Toulon, où l'art et la créativité s'expriment. Découvrez des galeries d'art, des boutiques uniques et laissez-vous inspirer par l'atmosphère artistique de ce quartier animé.",
+      h4: "Découvrez les Halles de Toulon",
+      h1: "Explorez la gastronomie locale",
+      p: "Plongez dans l'atmosphère vibrante des Halles de Toulon, où les saveurs locales et la gastronomie méditerranéenne se rencontrent. Découvrez les étals remplis de produits frais, rencontrez les artisans passionnés et laissez-vous séduire par la richesse culinaire de la région.",
     },
     {
-      h4: "Escapade naturelle au Mont Faron",
-      h1: "Randonnée panoramique avec vue sur la ville",
-      p: "Élevez-vous au-dessus de la ville en faisant une randonnée au Mont Faron. Profitez d'une vue imprenable sur Toulon, la mer Méditerranée et les îles environnantes. Une escapade naturelle qui offre une pause relaxante loin de l'agitation urbaine.",
+      h4: "Exploration de la vieille ville de Toulon",
+      h1: "Découvrez l'histoire locale",
+      p: "Plongez dans l'histoire en explorant la vieille ville de Toulon. Admirez la majestueuse cathédrale, imprégnez-vous de l'architecture ancienne et flânez dans les ruelles pittoresques. Découvrez les trésors cachés de la ville et ressentez son charme unique.",
     },
   ];
 
@@ -62,7 +62,7 @@ const Header = ({ currentIndex, setCurrentIndex }) => {
           <h4>{content.h4}</h4>
         </div>
         <div className={bigTitleClass}>
-          <h1>{content.h1}</h1>
+          <h2>{content.h1}</h2>
         </div>
         <div className={paragClass}>
           <p>{content.p}</p>
