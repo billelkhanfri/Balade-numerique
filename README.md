@@ -1,8 +1,34 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Balade Numérique
 
-Currently, two official plugins are available:
+Description brève du projet.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table des matières
+
+- [Technologies Utilisées](#technologies-utilisées)
+- [Installation](#installation)
+- [Utilisation](#utilisation)
+- [Auteurs](#auteurs)
+
+
+## Technologies Utilisées
+
+- React js, Vite
+- Leaflet
+
+
+## Installation
+
+```bash
+npm install
+
+```
+## Utilisation
+
+```bash
+npm run dev
+npm run build
+```
+
+## Auteur
+- Billel KHANFRI 
