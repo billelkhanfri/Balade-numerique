@@ -1,5 +1,5 @@
 
-# Balade Numérique à Toulon
+# Balade Numerique à Toulon
 
 La balade numerique a Toulon est une Progressive Web Application (PWA) qui permet aux utilisateurs de decouvrir les points pertinents de la ville de Toulon en suivant un parcours predifini et guide.
 
