@@ -7,7 +7,7 @@ La balade numerique a Toulon est une Progressive Web Application (PWA) qui perme
 
 La balade numerique a Toulon offre une experience immersive aux visiteurs de la ville, qu'ils soient des residents locaux ou des touristes en visite. Grace a son interface conviviale et a sa fonctionnalite de guidage, les utilisateurs peuvent explorer les sites historiques, culturels et pittoresques de Toulon de maniere interactive
 
-## Fonctionnalités Principales
+## Fonctionnalites Principales
 
 - Parcours Guide :  La PWA propose un parcours preetabli permettant aux utilisateurs de decouvrir les points d'interet de Toulon de maniere sequentielle.
 - Informations Contextuelles : A chaque point d'interet, les utilisateurs ont acces a des informations contextuelles detaillees sur le lieu qu'ils visitent.
@@ -24,14 +24,14 @@ La balade numerique a Toulon offre une experience immersive aux visiteurs de la 
 
 ## Installation
 
-Pour installer les dépendances, vous pouvez exécuter la commande suivante :
+Pour installer les dependances, vous pouvez executer la commande suivante :
 
 ```bash
 npm install
 ```
 
 ## Utilisation
-Pour utiliser le projet, exécutez la commande suivante :
+Pour utiliser le projet, executez la commande suivante :
 
 ```bash
 npm run dev
